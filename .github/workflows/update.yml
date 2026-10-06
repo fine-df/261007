@@ -90,6 +90,10 @@ jobs:
           grep -q 'IP-CIDR,10.0.0.0/8,DIRECT,no-resolve' live_clash.yaml
           grep -q 'GEOIP,CN,DIRECT' live_clash.yaml
           grep -q 'MATCH,Fine' live_clash.yaml
+          grep -q 'DOMAIN-SUFFIX,myqcloud.com,DIRECT' live_clash.yaml
+          grep -q 'DOMAIN-SUFFIX,tencentcos.cn,DIRECT' live_clash.yaml
+          grep -q 'DOMAIN-SUFFIX,mijia.com,DIRECT' live_clash.yaml
+          grep -q 'default-selected' live_clash.yaml
           if grep -Eq '^[-[:space:]]*GEOSITE,' live_clash.yaml; then
             echo 'GEOSITE rule detected; refusing to validate a config that requires remote geodata.'
             exit 1

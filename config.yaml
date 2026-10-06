@@ -61,6 +61,13 @@ shenzhen_probe:
   max_wait_seconds: 12
   fail_closed: true
   api_token_env: 'GLOBALPING_API_TOKEN'
+sticky:
+  # 粘性优质节点：订阅更新时，若"当前连接节点"仍满足下方深圳质量门槛则保持为首选，
+  # 仅当其退化（PING>=keep_ping_ms 或 掉包率>keep_loss_pct）才让位给池内新优质节点。
+  # 实测 shenzhen_probe.packets=4 → 掉包粒度 0/25/50/75/100%，故 keep_loss_pct=5.0 即"零丢包才算优秀"。
+  enabled: true
+  keep_ping_ms: 300
+  keep_loss_pct: 5.0
 checks:
   gemini_url: 'https://gemini.google.com/'
   google_play_url: 'https://play.google.com/store'

@@ -725,6 +725,42 @@ def build_outputs(nodes, output_rules):
     config={"mixed-port":7890,"allow-lan":True,"mode":"rule","dns":dns_config,"proxies":nodes,"proxy-groups":[{"name":"PROXY","type":"select","proxies":names+["DIRECT"]}],"rules":route_rules}
     clash_path=ROOT/output_rules["output"]["clash_file"]; clash_path.parent.mkdir(parents=True,exist_ok=True); clash_path.write_text(yaml.safe_dump(config,allow_unicode=True,sort_keys=False),encoding="utf-8")
 
+def node_is_quality(meta, sticky_cfg):
+    """Return True only if a node's Shenzhen probe metrics meet the 'keep' quality bar.
+
+    The bar is intentionally tighter than the publish gate (shenzhen_probe.reject_*):
+    a node may be publishable yet not 'excellent' enough to stay pinned as the primary.
+    """
+    if not isinstance(meta, dict): return False
+    try:
+        keep_ping=float(sticky_cfg.get("keep_ping_ms", 300))
+        keep_loss=float(sticky_cfg.get("keep_loss_pct", 5.0))
+    except (TypeError, ValueError):
+        keep_ping, keep_loss = 300.0, 5.0
+    ping=meta.get("shenzhen_ping_ms"); loss=meta.get("shenzhen_loss_pct")
+    if ping is None or loss is None: return False
+    return float(ping) < keep_ping and float(loss) <= keep_loss
+
+def choose_sticky_primary(ranked, previous_profile_nodes, ranking_meta, sticky_cfg):
+    """Decide which node should be the sticky primary for the published pool.
+
+    Rule (per user requirement 2026-10-06):
+      - If the currently-connected node (previous profile's first node) is still
+        Shenzhen-quality, keep it as primary (stable connection across updates).
+      - Else, pick the highest-ranked quality node from the pool.
+      - If no node meets the quality bar, return None (caller keeps current
+        ordering as best-effort rather than forcing a degraded pick).
+    """
+    prev0 = previous_profile_nodes[0] if previous_profile_nodes else None
+    if prev0 is not None:
+        fp0=fingerprint(prev0)
+        if any(fingerprint(n)==fp0 for n in ranked) and node_is_quality(ranking_meta.get(fp0), sticky_cfg):
+            return prev0
+    for n in ranked:
+        if node_is_quality(ranking_meta.get(fingerprint(n)), sticky_cfg):
+            return n
+    return None
+
 def rank_candidates(nodes, limit=20, metadata=None, max_per_server=2, max_per_org=3):
     """Rank verified nodes by score and diversity, returning the top `limit`.
 
@@ -983,6 +1019,17 @@ def run():
     retained_previous_ranked=retained_previous[:max_final]
     fresh_ranked=rank_candidates(fresh_selected,limit=max(0,max_final-len(retained_previous_ranked)),metadata=ranking_meta,max_per_server=int(rules["nodes"].get("max_per_server",2)),max_per_org=int(rules["nodes"].get("max_per_org",3)))
     ranked=retained_previous_ranked+fresh_ranked
+    # ★ 粘性优质节点（2026-10-06）：订阅更新时保持当前优秀节点为首选，
+    #   仅当其深圳 PING>=keep_ping_ms 或掉包率>keep_loss_pct 时才让位给新优质节点。
+    sticky_cfg=rules.get("sticky", {}) or {}
+    if sticky_cfg.get("enabled", True):
+        kept=choose_sticky_primary(ranked, previous_profile_nodes, ranking_meta, sticky_cfg)
+        if kept is not None:
+            fp_kept=fingerprint(kept)
+            ranked=[kept]+[n for n in ranked if fingerprint(n)!=fp_kept]
+            print("sticky: kept primary node %r (Shenzhen-quality)" % kept.get("name"))
+        else:
+            print("sticky: no Shenzhen-quality node available; keeping current pool order")
     report["ranking"]=[]
     for i,node in enumerate(ranked,1):
         entry=report_lookup.get(fingerprint(node),{})
