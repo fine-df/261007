@@ -495,12 +495,27 @@ class MihomoTester:
     def __init__(self,binary,cfg,port_offset=0):
         self.binary=binary; self.cfg=cfg; self.proc=None; self.tmp=None; self.log_handle=None; self.session=requests.Session()
         self.port_offset=int(port_offset)
-        self.proxy_port=17890+self.port_offset
-        self.controller_port=19090+self.port_offset
+        # 端口改由 start() 运行时经 OS 分配空闲端口（见 _alloc_port），
+        # 避免 test_nodes_parallel 多 worker 固定 idx*10 端口与机器上残留/其它 mihomo 冲突。
+        self.proxy_port=None
+        self.controller_port=None
+    @staticmethod
+    def _alloc_port():
+        """让 OS 分配一个当前空闲的临时端口并返回。关闭探测 socket 后立刻交还内核，
+        由 mihomo 在微小时窗后绑定——冲突概率极低，且远优于固定 idx*10 端口。"""
+        s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        try:
+            s.bind(("127.0.0.1", 0))
+            return s.getsockname()[1]
+        finally:
+            s.close()
     def start(self,nodes):
         names=[]; proxies=[]
         for idx,node in enumerate(nodes):
             name=f"N{idx:03d}"; names.append(name); proxy=dict(node); proxy["name"]=name; proxies.append(proxy)
+        # 运行时分配独立空闲端口，杜绝并行 worker 间及与机器残留 mihomo 的端口冲突
+        self.controller_port=self._alloc_port()
+        self.proxy_port=self._alloc_port()
         config={"mixed-port":self.proxy_port,"allow-lan":False,"mode":"rule","log-level":"error","external-controller":f"127.0.0.1:{self.controller_port}","proxies":proxies,"proxy-groups":[{"name":"TEST","type":"select","proxies":names}],"rules":["GEOIP,CN,DIRECT","MATCH,TEST"]}
         self.tmp=Path(tempfile.mkdtemp(prefix="fine-clash-")); (self.tmp/"config.yaml").write_text(yaml.safe_dump(config,allow_unicode=True,sort_keys=False),encoding="utf-8")
         # Preload local Mihomo geodata into the exact filenames Mihomo expects.
@@ -521,10 +536,23 @@ class MihomoTester:
             try:
                 response=self.session.get(f"http://127.0.0.1:{self.controller_port}/proxies",timeout=1)
                 response.raise_for_status()
-                return names
             except requests.RequestException as exc:
                 last_error=exc
                 time.sleep(0.2)
+                continue
+            # 校验本实例确实加载了 TEST 组：防连到错误/残留实例，或临时 config 未被加载。
+            # 这是此前 404 /proxies/TEST 的根因自检点——命中会带 mihomo.log 明确报错，而非静默 404。
+            try:
+                test_resp=self.session.get(f"http://127.0.0.1:{self.controller_port}/proxies/TEST",timeout=2)
+                test_resp.raise_for_status()
+            except requests.RequestException as exc:
+                detail=""
+                try:
+                    detail=self.log_path.read_text(encoding="utf-8",errors="replace")[-4000:]
+                except Exception:
+                    pass
+                raise RuntimeError(f"mihomo@{self.controller_port} responded but /proxies/TEST missing (wrong instance or config not loaded): {exc}; log={detail}")
+            return names
         detail=""
         try:
             self.log_handle.flush()

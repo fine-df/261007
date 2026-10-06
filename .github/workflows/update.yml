@@ -61,7 +61,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GLOBALPING_API_TOKEN: ${{ secrets.GLOBALPING_API_TOKEN }}
-        run: python fine_clash.py
+        run: |
+          python fine_clash.py || { echo '--- mihomo logs (build failed) ---'; find /tmp -maxdepth 2 -name mihomo.log -exec echo "== {} ==" \; -exec cat {} \; ; exit 1; }
 
       - name: Build single public profile
         if: ${{ hashFiles('data/fine_pool.yaml') != '' }}
