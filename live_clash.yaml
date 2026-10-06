@@ -1,4 +1,4 @@
-# fine-clash-unified-v3 | fine-clash-version:20261004110020 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
+# fine-clash-unified-v3 | fine-clash-version:20261004110021 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
 mixed-port: 7890
 allow-lan: true
 bind-address: '*'
@@ -10,156 +10,221 @@ tcp-concurrent: true
 profile:
   store-selected: true
 proxies:
-- encryption: none
-  network: ws
-  tls: true
+- name: 🇫🇷 France, Roubaix | 🌐 | [BL] [363ebc57]
   type: vless
   servername: fr.api-music-fa.com
-  ws-opts:
-    path: /api/voip/updates/static/fr2035
-    headers:
-      Host: fr.api-music-fa.com
+  server: 8.47.69.0
   client-fingerprint: qq
-  name: 🇫🇷 France, Roubaix | 🌐 | [BL] [363ebc57]
-  udp: true
-  port: 2053
-  server: 8.47.69.0
   uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-- encryption: none
-  network: ws
-  tls: true
-  type: vless
-  servername: fr.api-music-fa.com
+  udp: true
   ws-opts:
     path: /api/voip/updates/static/fr2035
     headers:
       Host: fr.api-music-fa.com
+  tls: true
+  network: ws
+  encryption: none
+  port: 2053
+- name: 🇫🇷 France, Roubaix | 🌐 | [BL] [92db1d7a]
+  type: vless
+  servername: fr.api-music-fa.com
+  server: 8.47.69.0
   client-fingerprint: firefox
-  name: 🇫🇷 France, Roubaix | 🌐 | [BL] [92db1d7a]
-  udp: true
-  port: 2053
-  server: 8.47.69.0
   uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-- encryption: none
-  network: ws
-  tls: true
-  type: vless
-  servername: fr.api-music-fa.com
+  udp: true
   ws-opts:
     path: /api/voip/updates/static/fr2035
     headers:
       Host: fr.api-music-fa.com
-  client-fingerprint: edge
-  name: 🇫🇷 France, Roubaix | 🌐 | [BL] [c5e5f551]
-  udp: true
-  port: 2053
-  server: 8.47.69.0
-  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-- encryption: none
-  network: ws
   tls: true
+  network: ws
+  encryption: none
+  port: 2053
+- name: 🇫🇷 France, Roubaix | 🌐 | [BL] [c5e5f551]
+  type: vless
+  servername: fr.api-music-fa.com
+  server: 8.47.69.0
+  client-fingerprint: edge
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  udp: true
+  ws-opts:
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
+  tls: true
+  network: ws
+  encryption: none
+  port: 2053
+- name: 🇫🇷 France, Roubaix | 🌐 | [BL] [529c9b7b]
   type: vless
   servername: vless.api-music-fa.com
+  server: 8.47.69.0
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  udp: true
   ws-opts:
     path: /api/voip/updates/static/fr2035
     headers:
       Host: fr.api-music-fa.com
-  name: 🇫🇷 France, Roubaix | 🌐 | [BL] [529c9b7b]
-  udp: true
-  port: 2053
-  server: 8.47.69.0
-  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-- network: ws
   tls: true
-  cipher: auto
+  network: ws
+  encryption: none
+  port: 2053
+- name: 🇭🇰 Hong Kong, Hong Kong | [BL]
   type: vmess
+  server: yg1.ygkkk.dpdns.org
+  alterId: 0
+  udp: true
+  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
   ws-opts:
     headers:
       Host: jmp1.907737.xyz
     path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
-  name: 🇭🇰 Hong Kong, Hong Kong | [BL]
-  alterId: 0
-  udp: true
-  port: 443
-  server: yg1.ygkkk.dpdns.org
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
-- network: ws
-  tls: true
   cipher: auto
+  network: ws
+  tls: true
+  port: 443
+- name: 未知 VMESS-369 | free-nodes
   type: vmess
   servername: jmp1.907737.xyz
+  server: yg1.ygkkk.dpdns.org
+  alterId: 0
+  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
   ws-opts:
     path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
     headers:
       Host: jmp1.907737.xyz
-  name: 未知 VMESS-369 | free-nodes
-  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
   port: 443
-  server: yg1.ygkkk.dpdns.org
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
-- encryption: none
-  network: ws
-  tls: true
+- name: 🇫🇷 France, Roubaix | 🌐 | [BL] [c113bbd0]
   type: vless
   servername: fr.api-music-fa.com
-  ws-opts:
-    path: /api/voip/updates/static/fr2035
-    headers:
-      Host: fr.api-music-fa.com
-  name: 🇫🇷 France, Roubaix | 🌐 | [BL] [c113bbd0]
-  udp: true
-  port: 2053
   server: 8.47.69.0
   uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-- encryption: none
-  network: ws
-  tls: true
-  type: vless
-  servername: fr.api-music-fa.com
+  udp: true
   ws-opts:
     path: /api/voip/updates/static/fr2035
     headers:
       Host: fr.api-music-fa.com
+  tls: true
+  network: ws
+  encryption: none
+  port: 2053
+- name: 🇫🇷 France, Roubaix | 🌐 | [BL] [f599cf1c]
+  type: vless
+  servername: fr.api-music-fa.com
+  server: 8.47.69.0
   client-fingerprint: chrome
-  name: 🇫🇷 France, Roubaix | 🌐 | [BL] [f599cf1c]
-  udp: true
-  port: 2053
-  server: 8.47.69.0
   uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
-- encryption: none
-  network: tcp
+  udp: true
+  ws-opts:
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
   tls: true
-  flow: xtls-rprx-vision
+  network: ws
+  encryption: none
+  port: 2053
+- name: 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL]
   type: vless
   servername: frost.sigy.me
+  server: 154.21.94.246
   client-fingerprint: random
-  name: 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL]
+  flow: xtls-rprx-vision
+  uuid: ab1249da-9ac8-44c7-89a3-2d337ab25cb2
   udp: true
+  tls: true
+  network: tcp
+  encryption: none
+  port: 443
   reality-opts:
     public-key: C8Qz7kuyHo9O0oBV9W7ltzL8aPLPzdb1vvt3UkJjtF0
     short-id: ea29b7b15bb24d49
-  port: 443
-  server: 154.21.94.246
-  uuid: ab1249da-9ac8-44c7-89a3-2d337ab25cb2
-- type: vless
-  name: 🇩🇪 Germany | [*CIDR] [5b5baf3c]
-  server: de12.h1cloud.net
-  port: 25095
+- name: 🇳🇱 The Netherlands [*CIDR] [93dee97d]
+  type: vless
+  servername: vusr-6ac431f4.adhil.uk
+  server: nl.alpheratzz.org
+  client-fingerprint: ios
+  flow: xtls-rprx-vision
+  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
   udp: true
-  uuid: 95003356-20f9-4c84-a21f-2f9c1fc285eb
+  tls: true
+  network: tcp
+  encryption: none
+  port: 8443
+- name: 🇳🇱 The Netherlands [*CIDR] [1fba55e2]
+  type: vless
+  servername: vusr-6ac431f4.adhil.uk
+  server: 196.240.125.253
+  client-fingerprint: qq
+  flow: xtls-rprx-vision
+  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
+  udp: true
+  tls: true
+  network: tcp
+  encryption: none
+  port: 8443
+- name: 🇫🇷 France, Roubaix | 🌐 | [BL] [29a05bd2]
+  type: vless
+  servername: vless.api-music-fa.com
+  server: 8.47.69.0
+  client-fingerprint: chrome
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  udp: true
+  ws-opts:
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
+  tls: true
+  network: ws
+  encryption: none
+  port: 2053
+- name: 🇫🇷 France, Roubaix | 🌐 | [BL] [78b2ecd0]
+  type: vless
+  servername: vless.api-music-fa.com
+  server: 8.47.69.0
+  client-fingerprint: safari
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  udp: true
+  ws-opts:
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
+  tls: true
+  network: ws
+  encryption: none
+  port: 2053
+- type: vless
+  name: 🇫🇷 France, Roubaix | 🌐 | [BL]
+  server: 8.47.69.0
+  port: 2053
+  udp: true
+  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
   encryption: none
   tls: true
-  servername: www.chip.de
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: pvXuNe35fkSbA-CVmh6_b3ADAXLY8tBONjnwE8HM8yY
-    short-id: 397c81bed08f3f78
-  network: grpc
-  grpc-opts:
-    grpc-service-name: f3d967fe8981
+  servername: vless.api-music-fa.com
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /api/voip/updates/static/fr2035
+    headers:
+      Host: fr.api-music-fa.com
 - type: vless
-  name: 🇳🇱 The Netherlands [*CIDR] [93dee97d]
+  name: 🇳🇱 The Netherlands [*CIDR] [798f3666]
   server: nl.alpheratzz.org
+  port: 8443
+  udp: true
+  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
+  encryption: none
+  tls: true
+  servername: vusr-6ac431f4.adhil.uk
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  network: tcp
+- type: vless
+  name: 🇳🇱 The Netherlands [*CIDR] [22842c3a]
+  server: 196.240.125.253
   port: 8443
   udp: true
   uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
@@ -170,23 +235,8 @@ proxies:
   client-fingerprint: ios
   network: tcp
 - type: vless
-  name: 🇦🇪 United Arab Emirates, Abu Dhabi | [BL]
-  server: 157.228.155.238
-  port: 443
-  udp: true
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
-  encryption: none
-  tls: true
-  servername: addons.mozilla.org
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  reality-opts:
-    public-key: 5BDht3tAZdKEKpJymGlRK9JugOnieA-kMSWz_0FoE0I
-    short-id: 6f76ad09
-  network: tcp
-- type: vless
-  name: 🇳🇱 The Netherlands [*CIDR] [1fba55e2]
-  server: 196.240.125.253
+  name: 🇳🇱 The Netherlands [*CIDR] [5a52dbec]
+  server: nl.alpheratzz.org
   port: 8443
   udp: true
   uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
@@ -194,52 +244,53 @@ proxies:
   tls: true
   servername: vusr-6ac431f4.adhil.uk
   flow: xtls-rprx-vision
-  client-fingerprint: qq
+  client-fingerprint: edge
   network: tcp
 - type: vless
-  name: 🇫🇷 France, Roubaix | 🌐 | [BL] [29a05bd2]
-  server: 8.47.69.0
-  port: 2053
+  name: 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [BL]
+  server: 150.241.79.232
+  port: 443
   udp: true
-  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
   encryption: none
   tls: true
-  servername: vless.api-music-fa.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /api/voip/updates/static/fr2035
-    headers:
-      Host: fr.api-music-fa.com
-- type: vless
-  name: 🇩🇪 Germany | [*CIDR] [0588ec31]
-  server: de12.h1cloud.net
-  port: 25089
-  udp: true
-  uuid: 95003356-20f9-4c84-a21f-2f9c1fc285eb
-  encryption: none
-  tls: true
-  servername: www.chip.de
+  servername: de2.srv.vbuste.ru
+  flow: xtls-rprx-vision
   client-fingerprint: chrome
   reality-opts:
-    public-key: 3ZxTHjZ8XHP2aYzLEKUPI3xQ5jYQYrSrIEXlUlULUEA
-    short-id: 56d9d9fba348e5e6
+    public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
+    short-id: 4be4110078ebed4a
   network: tcp
 - type: vless
-  name: 🇫🇷 France, Roubaix | 🌐 | [BL] [78b2ecd0]
-  server: 8.47.69.0
-  port: 2053
+  name: 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL]
+  server: mo.asrarshimi.ir
+  port: 4040
   udp: true
-  uuid: 9d672694-c146-422e-b3b5-3717a38a0fcc
+  uuid: 59ab9bbf-3f08-4992-bbf3-4faddceb8e49
   encryption: none
   tls: true
-  servername: vless.api-music-fa.com
+  servername: www.actionvfx.com
+  client-fingerprint: qq
+  reality-opts:
+    public-key: _OmNcv89o5SDt4H3ButRX9UynGIVwNZR250w4Zie-yk
+    short-id: 73693dea6faae051
+  network: tcp
+- type: vless
+  name: 🇳🇴 Norway [*CIDR]
+  server: 176.108.252.139
+  port: 9881
+  udp: true
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  encryption: none
+  tls: true
+  servername: dl.google.com
   client-fingerprint: safari
-  network: ws
-  ws-opts:
-    path: /api/voip/updates/static/fr2035
-    headers:
-      Host: fr.api-music-fa.com
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: aabb
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
 proxy-groups:
 - name: GLOBAL
   type: select
@@ -254,13 +305,17 @@ proxy-groups:
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [c113bbd0]
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [f599cf1c]
   - 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL]
-  - 🇩🇪 Germany | [*CIDR] [5b5baf3c]
   - 🇳🇱 The Netherlands [*CIDR] [93dee97d]
-  - 🇦🇪 United Arab Emirates, Abu Dhabi | [BL]
   - 🇳🇱 The Netherlands [*CIDR] [1fba55e2]
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [29a05bd2]
-  - 🇩🇪 Germany | [*CIDR] [0588ec31]
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [78b2ecd0]
+  - 🇫🇷 France, Roubaix | 🌐 | [BL]
+  - 🇳🇱 The Netherlands [*CIDR] [798f3666]
+  - 🇳🇱 The Netherlands [*CIDR] [22842c3a]
+  - 🇳🇱 The Netherlands [*CIDR] [5a52dbec]
+  - 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [BL]
+  - 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL]
+  - 🇳🇴 Norway [*CIDR]
   default-selected: 🇫🇷 France, Roubaix | 🌐 | [BL] [363ebc57]
 - name: Fine
   type: select
@@ -276,13 +331,17 @@ proxy-groups:
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [c113bbd0]
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [f599cf1c]
   - 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL]
-  - 🇩🇪 Germany | [*CIDR] [5b5baf3c]
   - 🇳🇱 The Netherlands [*CIDR] [93dee97d]
-  - 🇦🇪 United Arab Emirates, Abu Dhabi | [BL]
   - 🇳🇱 The Netherlands [*CIDR] [1fba55e2]
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [29a05bd2]
-  - 🇩🇪 Germany | [*CIDR] [0588ec31]
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [78b2ecd0]
+  - 🇫🇷 France, Roubaix | 🌐 | [BL]
+  - 🇳🇱 The Netherlands [*CIDR] [798f3666]
+  - 🇳🇱 The Netherlands [*CIDR] [22842c3a]
+  - 🇳🇱 The Netherlands [*CIDR] [5a52dbec]
+  - 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [BL]
+  - 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL]
+  - 🇳🇴 Norway [*CIDR]
   default-selected: 🇫🇷 France, Roubaix | 🌐 | [BL] [363ebc57]
 - name: AUTO
   type: url-test
@@ -296,13 +355,17 @@ proxy-groups:
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [c113bbd0]
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [f599cf1c]
   - 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL]
-  - 🇩🇪 Germany | [*CIDR] [5b5baf3c]
   - 🇳🇱 The Netherlands [*CIDR] [93dee97d]
-  - 🇦🇪 United Arab Emirates, Abu Dhabi | [BL]
   - 🇳🇱 The Netherlands [*CIDR] [1fba55e2]
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [29a05bd2]
-  - 🇩🇪 Germany | [*CIDR] [0588ec31]
   - 🇫🇷 France, Roubaix | 🌐 | [BL] [78b2ecd0]
+  - 🇫🇷 France, Roubaix | 🌐 | [BL]
+  - 🇳🇱 The Netherlands [*CIDR] [798f3666]
+  - 🇳🇱 The Netherlands [*CIDR] [22842c3a]
+  - 🇳🇱 The Netherlands [*CIDR] [5a52dbec]
+  - 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [BL]
+  - 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL]
+  - 🇳🇴 Norway [*CIDR]
   url: https://play.google.com/store
   interval: 900
   timeout: 8000
