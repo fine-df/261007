@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T14:59:06.438371+00:00",
+  "generated_at": "2026-10-06T15:21:42.356486+00:00",
   "sources": 15,
   "nodes_discovered": 200,
   "previous_profile_candidates": 20,
@@ -7,16 +7,17 @@
     {
       "fingerprint": "363ebc570861b03bfbc8",
       "name": "🇫🇷 France, Roubaix | 🌐 | [BL] [363ebc57]",
-      "score": 86,
+      "score": 82,
       "gemini": true,
       "google_play": true,
-      "clean": 80,
+      "clean": 60,
       "lifespan_days": 2,
-      "shenzhen_ping_ms": 163.3,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS16276 OVH SAS",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "2f942c8fa5946338b72f",
@@ -30,7 +31,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS906 DMIT Cloud Services",
-      "asn": null
+      "asn": null,
+      "country": "US"
     },
     {
       "fingerprint": "5a52dbec3f3be8778a2b",
@@ -44,7 +46,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "dfe836428527d419941f",
@@ -58,7 +61,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS213520 Senko Digital LLC",
-      "asn": null
+      "asn": null,
+      "country": "DE"
     },
     {
       "fingerprint": "0d71c8bf81e6426480f6",
@@ -72,7 +76,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "8c4cf36791116ef531af",
@@ -86,7 +91,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "48513d6ca9aacb902375",
@@ -100,7 +106,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "aea0db89ca71ca2b95d8",
@@ -114,7 +121,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "800185b0269caeab549b",
@@ -128,35 +136,38 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "c6a3aac18d482e1a1059",
       "name": "🇦🇪 United Arab Emirates, Abu Dhabi | [BL]",
-      "score": 62,
-      "gemini": true,
-      "google_play": true,
+      "score": 17,
+      "gemini": false,
+      "google_play": false,
       "clean": 60,
       "lifespan_days": 0,
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "9bf08e25b840539bab33",
       "name": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇪 🇳🇱 | [BL]",
-      "score": 82,
-      "gemini": true,
-      "google_play": true,
+      "score": 17,
+      "gemini": false,
+      "google_play": false,
       "clean": 60,
       "lifespan_days": 0,
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "1b4e0831046499fabc7d",
@@ -170,7 +181,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": "AS13335 Cloudflare, Inc.",
-      "asn": null
+      "asn": null,
+      "country": "SE"
     },
     {
       "fingerprint": "aa34042ae1c0c7f7b7c2",
@@ -184,7 +196,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "eaeab8d15c96ae159434",
@@ -198,7 +211,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "76422da1e47cb7fa600a",
@@ -212,7 +226,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "64bd8d31ad9d7a2abd5e",
@@ -226,7 +241,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "2c3a2199325e1b3cb2cf",
@@ -239,28 +255,15 @@
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
-      "org": "AS215540 GLOBAL CONNECTIVITY SOLUTIONS LLP",
-      "asn": null
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "ea8594534639f8867e7a",
       "name": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "score": 77,
-      "gemini": true,
-      "google_play": true,
-      "clean": 60,
-      "lifespan_days": 0,
-      "shenzhen_ping_ms": null,
-      "shenzhen_loss_pct": null,
-      "shenzhen_status": "not-tested",
-      "org": null,
-      "asn": null
-    },
-    {
-      "fingerprint": "2162d57c0836ad2dede6",
-      "name": "🇩🇪 Germany | [*CIDR]",
-      "score": 57,
-      "gemini": true,
+      "score": 12,
+      "gemini": false,
       "google_play": false,
       "clean": 60,
       "lifespan_days": 0,
@@ -268,7 +271,23 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
+    },
+    {
+      "fingerprint": "2162d57c0836ad2dede6",
+      "name": "🇩🇪 Germany | [*CIDR]",
+      "score": 12,
+      "gemini": false,
+      "google_play": false,
+      "clean": 60,
+      "lifespan_days": 0,
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f6be4e2b4c2e655f133a",
@@ -282,7 +301,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "738d00cddce677d3c720",
@@ -296,7 +316,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "76736159d23e197eda86",
@@ -310,7 +331,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "6e8039abaa0e76053972",
@@ -324,7 +346,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "0063a80606cb428d1ab2",
@@ -338,7 +361,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "97f7e5da790980881ecd",
@@ -352,21 +376,23 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "92db1d7a79930bfa344e",
       "name": "🇫🇷 France, Roubaix | 🌐 | [BL] [92db1d7a]",
-      "score": 86,
+      "score": 82,
       "gemini": true,
       "google_play": true,
-      "clean": 80,
+      "clean": 60,
       "lifespan_days": 2,
-      "shenzhen_ping_ms": 164.1,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS16276 OVH SAS",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "93dee97d7687214659dd",
@@ -380,7 +406,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "c137828767cba581e8b2",
@@ -394,7 +421,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS213520 Senko Digital LLC",
-      "asn": null
+      "asn": null,
+      "country": "DE"
     },
     {
       "fingerprint": "7bb3c97dfe938afcbe91",
@@ -408,7 +436,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "7cc1d444eea51b6c2760",
@@ -422,7 +451,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "2cdc923fda6de2ce6436",
@@ -436,7 +466,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "73f8143d669bfe740b1f",
@@ -450,7 +481,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "46dac452cf94633028aa",
@@ -464,7 +496,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "b40511bdfabe70062dc5",
@@ -478,35 +511,38 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "0181d3f06bb168d96913",
       "name": "🇦🇪 United Arab Emirates, Abu Dhabi | [BL]",
-      "score": 66,
-      "gemini": true,
+      "score": 41,
+      "gemini": false,
       "google_play": false,
       "clean": 80,
       "lifespan_days": 0,
-      "shenzhen_ping_ms": 392.2,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
       "org": "AS200740 FIRST SERVER LIMITED",
-      "asn": null
+      "asn": null,
+      "country": "FR"
     },
     {
       "fingerprint": "55f55958d3a2f9ab9035",
       "name": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇪 🇳🇱 | [BL]",
-      "score": 82,
-      "gemini": true,
-      "google_play": true,
+      "score": 17,
+      "gemini": false,
+      "google_play": false,
       "clean": 60,
       "lifespan_days": 0,
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "9fd93f0f727de3d47cae",
@@ -519,8 +555,9 @@
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
-      "org": null,
-      "asn": null
+      "org": "AS13335 Cloudflare, Inc.",
+      "asn": null,
+      "country": "US"
     },
     {
       "fingerprint": "cb7313592a490d06c4af",
@@ -534,7 +571,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "5f20485ebfc85bf35d99",
@@ -548,7 +586,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "82e17944282d283b1546",
@@ -562,7 +601,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "22d8eaf169b12ce5ca69",
@@ -576,21 +616,23 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "cbb934efd7d9b97a8e32",
       "name": "🇳🇱 The Netherlands | [SNI-RU] rutube.ru",
-      "score": 37,
+      "score": 17,
       "gemini": false,
-      "google_play": true,
+      "google_play": false,
       "clean": 60,
       "lifespan_days": 0,
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
-      "org": "AS215540 GLOBAL CONNECTIVITY SOLUTIONS LLP",
-      "asn": null
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "9a9861cb1b0a826c9cab",
@@ -604,7 +646,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "1f0d64ab1eea06721bb6",
@@ -618,7 +661,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "27ed0d726bc1811b303a",
@@ -632,7 +676,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "fcc6069042f91440ea6a",
@@ -646,7 +691,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "40f6012f4cade62da835",
@@ -660,7 +706,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "da54176ccaf4bc8a75e5",
@@ -674,7 +721,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "abaa3ce6a9754e64dcba",
@@ -688,13 +736,14 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "ee17472a4c00ae1f960d",
       "name": "🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰",
-      "score": 58,
-      "gemini": false,
+      "score": 83,
+      "gemini": true,
       "google_play": true,
       "clean": 80,
       "lifespan_days": 2,
@@ -702,21 +751,23 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS36352 HostPapa",
-      "asn": null
+      "asn": null,
+      "country": "IE"
     },
     {
       "fingerprint": "c5e5f5517a79347db7b8",
       "name": "🇫🇷 France, Roubaix | 🌐 | [BL] [c5e5f551]",
-      "score": 86,
+      "score": 82,
       "gemini": true,
       "google_play": true,
-      "clean": 80,
+      "clean": 60,
       "lifespan_days": 2,
-      "shenzhen_ping_ms": 164.4,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS16276 OVH SAS",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "1fba55e275e5fffc7733",
@@ -730,7 +781,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "33684b32d84af3d8d869",
@@ -744,7 +796,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS210644 AEZA GROUP LLC",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "1edcbbb798e9f1032d0b",
@@ -758,7 +811,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f0032e5a823a4b3b5a99",
@@ -772,7 +826,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "852aa0142ac64ba8f587",
@@ -786,7 +841,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "02d1251482932e091fb8",
@@ -800,7 +856,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "d4c5114b6f33d31b005e",
@@ -814,7 +871,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "755fceda4708cea5d4be",
@@ -828,7 +886,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "3216cf4c43f9710d2543",
@@ -842,21 +901,23 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "90e035ae08e37a2c0178",
       "name": "🌐 Anycast-IP | 🇨🇦 🇩🇪 🇮🇪 🇳🇱 | [BL]",
-      "score": 82,
-      "gemini": true,
-      "google_play": true,
+      "score": 17,
+      "gemini": false,
+      "google_play": false,
       "clean": 60,
       "lifespan_days": 0,
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "1356146fd5bf90ff72a8",
@@ -869,8 +930,9 @@
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
-      "org": null,
-      "asn": null
+      "org": "AS13335 Cloudflare, Inc.",
+      "asn": null,
+      "country": "US"
     },
     {
       "fingerprint": "a26f40b12c42dfbf2fe3",
@@ -884,7 +946,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "0cc2169e24b62518bb5f",
@@ -898,7 +961,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f5926b4e1ce34c0894f0",
@@ -912,7 +976,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "b43e5a8856a387b04913",
@@ -926,12 +991,13 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "81a7c76d93ade53e156a",
       "name": "🇳🇱 The Netherlands | [SNI-RU] rutube.ru",
-      "score": 32,
+      "score": 12,
       "gemini": false,
       "google_play": false,
       "clean": 60,
@@ -940,7 +1006,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "d1b775561dc2324b2214",
@@ -954,7 +1021,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "cde97a0b9c336049dc08",
@@ -968,7 +1036,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "c067962578a52ced5779",
@@ -982,7 +1051,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "6a43d457a0d14fa17598",
@@ -996,7 +1066,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "31d65f3f8d15a5b61b25",
@@ -1010,7 +1081,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "40af69cb802784424749",
@@ -1024,7 +1096,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "c0b34ed6b72acd2f4982",
@@ -1038,49 +1111,53 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "db36d7c8f2c32d167aee",
       "name": "🇭🇰_HK_中国香港->🇩🇪_DE_德国",
-      "score": 15,
-      "gemini": false,
-      "google_play": false,
-      "clean": 60,
+      "score": 84,
+      "gemini": true,
+      "google_play": true,
+      "clean": 80,
       "lifespan_days": 2,
-      "shenzhen_ping_ms": null,
-      "shenzhen_loss_pct": null,
-      "shenzhen_status": "not-tested",
-      "org": null,
-      "asn": null
+      "shenzhen_ping_ms": 2105.0,
+      "shenzhen_loss_pct": 0.0,
+      "shenzhen_status": "cached",
+      "org": "AS63949 Akamai Connected Cloud",
+      "asn": null,
+      "country": "DE"
     },
     {
       "fingerprint": "529c9b7b8ca068ddaacf",
       "name": "🇫🇷 France, Roubaix | 🌐 | [BL] [529c9b7b]",
-      "score": 86,
+      "score": 82,
       "gemini": true,
       "google_play": true,
-      "clean": 80,
+      "clean": 60,
       "lifespan_days": 1,
-      "shenzhen_ping_ms": 165.0,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS16276 OVH SAS",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "29a05bd26ba544275e34",
       "name": "🇫🇷 France, Roubaix | 🌐 | [BL] [29a05bd2]",
-      "score": 66,
+      "score": 82,
       "gemini": true,
-      "google_play": false,
-      "clean": 80,
+      "google_play": true,
+      "clean": 60,
       "lifespan_days": 0,
-      "shenzhen_ping_ms": 329.1,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS16276 OVH SAS",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f00bd276f4c4fd69d65d",
@@ -1094,7 +1171,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS207957 SERV.HOST GROUP LTD",
-      "asn": null
+      "asn": null,
+      "country": "DE"
     },
     {
       "fingerprint": "9d017d8531b6e2a1b54b",
@@ -1108,7 +1186,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "1f444df318ab53252117",
@@ -1122,7 +1201,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "09344713d4996518d359",
@@ -1136,7 +1216,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "6be79ad3f8d9850b3fcf",
@@ -1150,7 +1231,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "1d063adae1186bbdd8ac",
@@ -1164,21 +1246,23 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "dae310caa28d8430a7fa",
       "name": "🇦🇪 United Arab Emirates, Abu Dhabi | [BL]",
-      "score": 52,
-      "gemini": false,
+      "score": 81,
+      "gemini": true,
       "google_play": true,
-      "clean": 60,
+      "clean": 80,
       "lifespan_days": 0,
-      "shenzhen_ping_ms": null,
-      "shenzhen_loss_pct": null,
-      "shenzhen_status": "not-tested",
-      "org": null,
-      "asn": null
+      "shenzhen_ping_ms": 593.0,
+      "shenzhen_loss_pct": 25.0,
+      "shenzhen_status": "ok",
+      "org": "AS200740 FIRST SERVER LIMITED",
+      "asn": null,
+      "country": "FR"
     },
     {
       "fingerprint": "8debce275792beb786be",
@@ -1192,7 +1276,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "fa42945c1cfb18e55f98",
@@ -1206,7 +1291,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "65ad40129baa29d9b7f7",
@@ -1220,7 +1306,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS210644 AEZA GROUP LLC",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "f2a8912921f1c6162c49",
@@ -1234,7 +1321,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "5eeea99ff9ad2b28c21e",
@@ -1248,7 +1336,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "0ad06084a036006336ff",
@@ -1262,7 +1351,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "4cefb907594724b656ae",
@@ -1276,13 +1366,14 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "86c48e7d768c1964b99c",
       "name": "🇳🇱 The Netherlands | [SNI-RU] rutube.ru",
-      "score": 62,
-      "gemini": true,
+      "score": 17,
+      "gemini": false,
       "google_play": false,
       "clean": 60,
       "lifespan_days": 0,
@@ -1290,7 +1381,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "d6af1cf1fa03e38e0e13",
@@ -1304,7 +1396,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "99276b212470628d7d49",
@@ -1318,7 +1411,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "16fdf8f46242d8656342",
@@ -1332,7 +1426,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "85aff8d5cc0ac337d6fb",
@@ -1346,7 +1441,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "421b17c699631d8be8fe",
@@ -1360,7 +1456,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "9adcb88376da8bc2b1cd",
@@ -1374,7 +1471,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "27f2d5516d02098e7074",
@@ -1388,7 +1486,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "e557e0ec655ef2b943a1",
@@ -1402,13 +1501,14 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "e9bd72ff8c4e3d4ede37",
       "name": "🇭🇰 Hong Kong, Hong Kong | [BL]",
-      "score": 61,
-      "gemini": false,
+      "score": 86,
+      "gemini": true,
       "google_play": true,
       "clean": 80,
       "lifespan_days": 2,
@@ -1416,21 +1516,23 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS45102 Alibaba (US) Technology Co., Ltd.",
-      "asn": null
+      "asn": null,
+      "country": "HK"
     },
     {
       "fingerprint": "78b2ecd05ed59e7edeb4",
       "name": "🇫🇷 France, Roubaix | 🌐 | [BL] [78b2ecd0]",
-      "score": 86,
+      "score": 82,
       "gemini": true,
       "google_play": true,
-      "clean": 80,
+      "clean": 60,
       "lifespan_days": 0,
-      "shenzhen_ping_ms": 253.6,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS16276 OVH SAS",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "165d1c5bc85cbb97a823",
@@ -1444,7 +1546,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": "AS24940 Hetzner Online GmbH",
-      "asn": null
+      "asn": null,
+      "country": "FI"
     },
     {
       "fingerprint": "0b116370d96ec88d58be",
@@ -1458,7 +1561,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "c7c7dcc73cade8c80148",
@@ -1472,7 +1576,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "ceb71b7268536ab2b8bb",
@@ -1486,7 +1591,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "170f580f551b80e6ce86",
@@ -1500,7 +1606,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "442276b643941161b672",
@@ -1514,21 +1621,23 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "38dfd31a7b96816278e0",
       "name": "🇦🇪 United Arab Emirates, Abu Dhabi | [BL]",
-      "score": 86,
+      "score": 42,
       "gemini": true,
-      "google_play": true,
-      "clean": 80,
+      "google_play": false,
+      "clean": 60,
       "lifespan_days": 0,
-      "shenzhen_ping_ms": 779.4,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
       "org": "AS200740 FIRST SERVER LIMITED",
-      "asn": null
+      "asn": null,
+      "country": "FR"
     },
     {
       "fingerprint": "09c94fb254ecb5984cf8",
@@ -1542,7 +1651,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "9cafaaac194d43af2d32",
@@ -1556,7 +1666,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "97d007cf2fc12ba614c8",
@@ -1570,7 +1681,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS210644 AEZA GROUP LLC",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "2f8f9340f11878428398",
@@ -1584,7 +1696,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "d38989374ed1938c3158",
@@ -1598,7 +1711,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "541e04cdca01a0af72bd",
@@ -1612,7 +1726,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "4d3122b3d6fdaedaa5fe",
@@ -1626,7 +1741,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "30867b1236353bb27d8a",
@@ -1640,7 +1756,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "07a487e52329cae6d510",
@@ -1654,7 +1771,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "d48b5d71f47271279312",
@@ -1668,7 +1786,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f7cd19bc500c0d6a9607",
@@ -1682,7 +1801,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "cce3072653a793ea3392",
@@ -1696,7 +1816,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "bce6318a97e72e9df913",
@@ -1710,7 +1831,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "48c94f2a05696c5ba7c5",
@@ -1724,7 +1846,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "0dca2c37ed236546869b",
@@ -1738,7 +1861,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "34947901c98ae6552308",
@@ -1752,7 +1876,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": "AS16509 Amazon.com, Inc.",
-      "asn": null
+      "asn": null,
+      "country": "JP"
     },
     {
       "fingerprint": "d265ed00e03739e35627",
@@ -1766,21 +1891,23 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS45102 Alibaba (US) Technology Co., Ltd.",
-      "asn": null
+      "asn": null,
+      "country": "HK"
     },
     {
       "fingerprint": "7491889ea17f7fa8bd61",
       "name": "🇫🇷 France, Roubaix | 🌐 | [BL]",
-      "score": 86,
+      "score": 82,
       "gemini": true,
       "google_play": true,
-      "clean": 80,
+      "clean": 60,
       "lifespan_days": 0,
-      "shenzhen_ping_ms": 255.5,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS16276 OVH SAS",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "acf95808453f8c38bf62",
@@ -1794,7 +1921,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": "AS24940 Hetzner Online GmbH",
-      "asn": null
+      "asn": null,
+      "country": "FI"
     },
     {
       "fingerprint": "46a486fc1e672206cb94",
@@ -1808,7 +1936,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "a9e3aed6d4bf6425f9be",
@@ -1822,7 +1951,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f4ec9704f51790b190c1",
@@ -1836,7 +1966,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "a146a8fafb88e9a5eb69",
@@ -1850,7 +1981,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "e7c584a648b9bc8ea891",
@@ -1864,21 +1996,23 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "70a483406e0185c037e7",
       "name": "🇦🇪 United Arab Emirates, Abu Dhabi | [BL]",
-      "score": 81,
+      "score": 37,
       "gemini": true,
-      "google_play": true,
-      "clean": 80,
+      "google_play": false,
+      "clean": 60,
       "lifespan_days": 0,
-      "shenzhen_ping_ms": 3957.0,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "ok",
-      "org": "AS200740 FIRST SERVER LIMITED",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "fd37ff2c977c35d91f94",
@@ -1892,7 +2026,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "cd3f16217942f6f75d28",
@@ -1906,7 +2041,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "04575977b0e3cd6027a9",
@@ -1919,8 +2055,9 @@
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
-      "org": null,
-      "asn": null
+      "org": "AS13335 Cloudflare, Inc.",
+      "asn": null,
+      "country": "US"
     },
     {
       "fingerprint": "a0b71f901ee884cc5ea0",
@@ -1934,7 +2071,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "78d888a1d45f520d2070",
@@ -1948,7 +2086,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "0fa6717a91b3af4413e3",
@@ -1962,7 +2101,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "e96ccbee2b474185adaa",
@@ -1976,7 +2116,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "06f2f5c27624a3d6cc59",
@@ -1990,7 +2131,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "0af9d3158cd06c833426",
@@ -2004,7 +2146,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "3a821f0c63a83c14c61a",
@@ -2018,7 +2161,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "8d93e2a45f2b2f657682",
@@ -2032,7 +2176,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "44f4f5b9f3d1d7aae12f",
@@ -2046,7 +2191,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS207957 SERV.HOST GROUP LTD",
-      "asn": null
+      "asn": null,
+      "country": "DE"
     },
     {
       "fingerprint": "d4928a4fd047f11629f6",
@@ -2060,7 +2206,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "12b78202608b63d4d427",
@@ -2074,7 +2221,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "7ef2750168f8c72871dd",
@@ -2088,7 +2236,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "102af23419303e35923c",
@@ -2102,21 +2251,23 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS4760 HKT Limited",
-      "asn": null
+      "asn": null,
+      "country": "HK"
     },
     {
       "fingerprint": "c113bbd0c8e509bcd8ad",
       "name": "🇫🇷 France, Roubaix | 🌐 | [BL] [c113bbd0]",
-      "score": 86,
+      "score": 82,
       "gemini": true,
       "google_play": true,
-      "clean": 80,
+      "clean": 60,
       "lifespan_days": 2,
-      "shenzhen_ping_ms": 167.5,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS16276 OVH SAS",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "798f3666ed9943a45bc5",
@@ -2130,7 +2281,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "f47dc32e032cad231371",
@@ -2144,7 +2296,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": "AS24940 Hetzner Online GmbH",
-      "asn": null
+      "asn": null,
+      "country": "FI"
     },
     {
       "fingerprint": "792dc00e2ed35ce0d95e",
@@ -2158,7 +2311,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "1bace288c4ab8523111e",
@@ -2172,7 +2326,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "4b6d870c47e90d9e3f92",
@@ -2186,7 +2341,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "2c4bd00dcf13e8b14656",
@@ -2200,7 +2356,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "62dfe090969e973e59e3",
@@ -2214,21 +2371,23 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "72e01679851ba9f36075",
       "name": "🇦🇪 United Arab Emirates, Abu Dhabi | [BL]",
-      "score": 86,
+      "score": 62,
       "gemini": true,
-      "google_play": true,
-      "clean": 80,
+      "google_play": false,
+      "clean": 60,
       "lifespan_days": 0,
-      "shenzhen_ping_ms": 524.2,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS200740 FIRST SERVER LIMITED",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f3ce93ed022120f441f9",
@@ -2242,7 +2401,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "165cf6822d32f4156038",
@@ -2256,7 +2416,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": "AS13335 Cloudflare, Inc.",
-      "asn": null
+      "asn": null,
+      "country": "SE"
     },
     {
       "fingerprint": "27ba6843cf8cab3378ef",
@@ -2270,7 +2431,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "731781703e9b0b426e69",
@@ -2284,7 +2446,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "ffc9c5739290a5fd4163",
@@ -2298,7 +2461,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "7b78300a95887d947b15",
@@ -2312,7 +2476,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "ed56ac30f7d3f0910143",
@@ -2326,35 +2491,38 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f999c6bf3ac947298e88",
       "name": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]",
-      "score": 82,
-      "gemini": true,
-      "google_play": true,
+      "score": 17,
+      "gemini": false,
+      "google_play": false,
       "clean": 60,
       "lifespan_days": 0,
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "5b5baf3cd4c5a4d48315",
       "name": "🇩🇪 Germany | [*CIDR]",
-      "score": 57,
+      "score": 17,
       "gemini": false,
-      "google_play": true,
+      "google_play": false,
       "clean": 60,
       "lifespan_days": 0,
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "e496a7a46749d4067309",
@@ -2368,7 +2536,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "7dbe6f72c6e3c393bdca",
@@ -2382,21 +2551,23 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "00571d25473198e02c1a",
       "name": "🇳🇴 Norway [*CIDR]",
-      "score": 81,
+      "score": 57,
       "gemini": true,
       "google_play": true,
-      "clean": 80,
+      "clean": 60,
       "lifespan_days": 0,
-      "shenzhen_ping_ms": 487.4,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS207957 SERV.HOST GROUP LTD",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "d64b197b777b7640336f",
@@ -2410,7 +2581,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "69a06195d45c6ca906e1",
@@ -2424,7 +2596,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "596cd3a2360493da24d9",
@@ -2438,7 +2611,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "3c81ddc1188b86afcd3e",
@@ -2452,21 +2626,23 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f599cf1cec3456bb5eb9",
       "name": "🇫🇷 France, Roubaix | 🌐 | [BL] [f599cf1c]",
-      "score": 84,
+      "score": 80,
       "gemini": true,
       "google_play": true,
-      "clean": 80,
+      "clean": 60,
       "lifespan_days": 2,
-      "shenzhen_ping_ms": 168.2,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS16276 OVH SAS",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "22842c3a5cf9c5c0801e",
@@ -2480,7 +2656,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "98a405f6554743a49521",
@@ -2494,7 +2671,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "timeout",
       "org": "AS213520 Senko Digital LLC",
-      "asn": null
+      "asn": null,
+      "country": "DE"
     },
     {
       "fingerprint": "508603caaa54904f8c61",
@@ -2508,7 +2686,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "9a4d95702e05527307db",
@@ -2522,7 +2701,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "2dc97471be5a9dd7bbde",
@@ -2536,7 +2716,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "2537eee6da32344135cb",
@@ -2550,7 +2731,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "e4da2169c068cf562d3b",
@@ -2564,21 +2746,23 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "2687346b919d19dae3e9",
       "name": "🇦🇪 United Arab Emirates, Abu Dhabi | [BL]",
-      "score": 86,
-      "gemini": true,
-      "google_play": true,
-      "clean": 80,
+      "score": 17,
+      "gemini": false,
+      "google_play": false,
+      "clean": 60,
       "lifespan_days": 0,
-      "shenzhen_ping_ms": 782.2,
-      "shenzhen_loss_pct": 0.0,
-      "shenzhen_status": "cached",
-      "org": "AS200740 FIRST SERVER LIMITED",
-      "asn": null
+      "shenzhen_ping_ms": null,
+      "shenzhen_loss_pct": null,
+      "shenzhen_status": "not-tested",
+      "org": null,
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "18ca320ae2e974d324c3",
@@ -2592,7 +2776,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "652d879faf9028e40ccb",
@@ -2606,7 +2791,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": "AS13335 Cloudflare, Inc.",
-      "asn": null
+      "asn": null,
+      "country": "SE"
     },
     {
       "fingerprint": "ee6b2f143a4b94834817",
@@ -2620,7 +2806,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "e67ed67506b675e25711",
@@ -2634,7 +2821,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "60de61a77104e4a8d880",
@@ -2648,7 +2836,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "345ccca8ef858859c9be",
@@ -2662,7 +2851,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "06b1ce603afaeb1ecffd",
@@ -2676,7 +2866,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "d387cd4b24e05b99b01c",
@@ -2690,21 +2881,23 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f59df4d2199ac206b1f6",
       "name": "🇩🇪 Germany | [*CIDR]",
-      "score": 77,
-      "gemini": true,
-      "google_play": true,
+      "score": 12,
+      "gemini": false,
+      "google_play": false,
       "clean": 60,
       "lifespan_days": 0,
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "fb7f8d30d857f6734c15",
@@ -2718,7 +2911,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f77ce1889a3a91568f4b",
@@ -2732,12 +2926,13 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "f74c0a16130a360c1b90",
       "name": "🇳🇴 Norway [*CIDR]",
-      "score": 77,
+      "score": 57,
       "gemini": true,
       "google_play": true,
       "clean": 60,
@@ -2745,8 +2940,9 @@
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
-      "org": null,
-      "asn": null
+      "org": "AS207957 SERV.HOST GROUP LTD",
+      "asn": null,
+      "country": "DE"
     },
     {
       "fingerprint": "b771c2dd1e871c1cb13c",
@@ -2760,7 +2956,8 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "c3e967110a1e6ab67efc",
@@ -2774,7 +2971,8 @@
       "shenzhen_loss_pct": 0.0,
       "shenzhen_status": "cached",
       "org": "AS58065 Orion Network Limited",
-      "asn": null
+      "asn": null,
+      "country": "NL"
     },
     {
       "fingerprint": "c2f4c0269a9826de34c5",
@@ -2788,21 +2986,23 @@
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
       "org": null,
-      "asn": null
+      "asn": null,
+      "country": null
     },
     {
       "fingerprint": "0c9eaabef24cbaf43447",
       "name": "🇭🇰_HK_中国香港->🇫🇷_FR_法国",
-      "score": 14,
+      "score": 38,
       "gemini": false,
       "google_play": false,
-      "clean": 60,
+      "clean": 80,
       "lifespan_days": 2,
       "shenzhen_ping_ms": null,
       "shenzhen_loss_pct": null,
       "shenzhen_status": "not-tested",
-      "org": null,
-      "asn": null
+      "org": "AS29066 velia.net Internetdienste GmbH",
+      "asn": null,
+      "country": "FR"
     }
   ],
   "incompatible_filtered": 0,
@@ -2810,45 +3010,13 @@
     {
       "rank": 1,
       "score": 86,
-      "shenzhen_ping_ms": 163.3,
-      "shenzhen_loss_pct": 0.0,
-      "server": "8.47.69.0",
-      "type": "vless"
-    },
-    {
-      "rank": 2,
-      "score": 86,
-      "shenzhen_ping_ms": 164.1,
-      "shenzhen_loss_pct": 0.0,
-      "server": "8.47.69.0",
-      "type": "vless"
-    },
-    {
-      "rank": 3,
-      "score": 86,
-      "shenzhen_ping_ms": 164.4,
-      "shenzhen_loss_pct": 0.0,
-      "server": "8.47.69.0",
-      "type": "vless"
-    },
-    {
-      "rank": 4,
-      "score": 86,
-      "shenzhen_ping_ms": 165.0,
-      "shenzhen_loss_pct": 0.0,
-      "server": "8.47.69.0",
-      "type": "vless"
-    },
-    {
-      "rank": 5,
-      "score": 61,
       "shenzhen_ping_ms": 187.2,
       "shenzhen_loss_pct": 0.0,
       "server": "yg1.ygkkk.dpdns.org",
       "type": "vmess"
     },
     {
-      "rank": 6,
+      "rank": 2,
       "score": 86,
       "shenzhen_ping_ms": 194.6,
       "shenzhen_loss_pct": 0.0,
@@ -2856,23 +3024,7 @@
       "type": "vmess"
     },
     {
-      "rank": 7,
-      "score": 86,
-      "shenzhen_ping_ms": 167.5,
-      "shenzhen_loss_pct": 0.0,
-      "server": "8.47.69.0",
-      "type": "vless"
-    },
-    {
-      "rank": 8,
-      "score": 84,
-      "shenzhen_ping_ms": 168.2,
-      "shenzhen_loss_pct": 0.0,
-      "server": "8.47.69.0",
-      "type": "vless"
-    },
-    {
-      "rank": 9,
+      "rank": 3,
       "score": 86,
       "shenzhen_ping_ms": 203.0,
       "shenzhen_loss_pct": 0.0,
@@ -2880,7 +3032,7 @@
       "type": "vless"
     },
     {
-      "rank": 10,
+      "rank": 4,
       "score": 86,
       "shenzhen_ping_ms": 261.4,
       "shenzhen_loss_pct": 0.0,
@@ -2888,7 +3040,7 @@
       "type": "vless"
     },
     {
-      "rank": 11,
+      "rank": 5,
       "score": 86,
       "shenzhen_ping_ms": 268.6,
       "shenzhen_loss_pct": 0.0,
@@ -2896,31 +3048,7 @@
       "type": "vless"
     },
     {
-      "rank": 12,
-      "score": 66,
-      "shenzhen_ping_ms": 329.1,
-      "shenzhen_loss_pct": 0.0,
-      "server": "8.47.69.0",
-      "type": "vless"
-    },
-    {
-      "rank": 13,
-      "score": 86,
-      "shenzhen_ping_ms": 253.6,
-      "shenzhen_loss_pct": 0.0,
-      "server": "8.47.69.0",
-      "type": "vless"
-    },
-    {
-      "rank": 14,
-      "score": 86,
-      "shenzhen_ping_ms": 255.5,
-      "shenzhen_loss_pct": 0.0,
-      "server": "8.47.69.0",
-      "type": "vless"
-    },
-    {
-      "rank": 15,
+      "rank": 6,
       "score": 86,
       "shenzhen_ping_ms": 266.8,
       "shenzhen_loss_pct": 0.0,
@@ -2928,7 +3056,7 @@
       "type": "vless"
     },
     {
-      "rank": 16,
+      "rank": 7,
       "score": 86,
       "shenzhen_ping_ms": 267.2,
       "shenzhen_loss_pct": 0.0,
@@ -2936,7 +3064,7 @@
       "type": "vless"
     },
     {
-      "rank": 17,
+      "rank": 8,
       "score": 86,
       "shenzhen_ping_ms": 269.3,
       "shenzhen_loss_pct": 0.0,
@@ -2944,7 +3072,7 @@
       "type": "vless"
     },
     {
-      "rank": 18,
+      "rank": 9,
       "score": 86,
       "shenzhen_ping_ms": 269.4,
       "shenzhen_loss_pct": 0.0,
@@ -2952,7 +3080,7 @@
       "type": "vless"
     },
     {
-      "rank": 19,
+      "rank": 10,
       "score": 81,
       "shenzhen_ping_ms": 190.9,
       "shenzhen_loss_pct": 0.0,
@@ -2960,7 +3088,7 @@
       "type": "vless"
     },
     {
-      "rank": 20,
+      "rank": 11,
       "score": 81,
       "shenzhen_ping_ms": 257.0,
       "shenzhen_loss_pct": 0.0,
@@ -2968,14 +3096,46 @@
       "type": "vless"
     },
     {
-      "rank": 21,
+      "rank": 12,
       "score": 86,
       "shenzhen_ping_ms": 247.6,
       "shenzhen_loss_pct": 0.0,
       "server": "196.240.125.3",
       "type": "vless"
+    },
+    {
+      "rank": 13,
+      "score": 86,
+      "shenzhen_ping_ms": 250.8,
+      "shenzhen_loss_pct": 0.0,
+      "server": "196.240.125.3",
+      "type": "vless"
+    },
+    {
+      "rank": 14,
+      "score": 86,
+      "shenzhen_ping_ms": 277.1,
+      "shenzhen_loss_pct": 0.0,
+      "server": "nl.alpheratzz.org",
+      "type": "vless"
+    },
+    {
+      "rank": 15,
+      "score": 83,
+      "shenzhen_ping_ms": 334.6,
+      "shenzhen_loss_pct": 0.0,
+      "server": "v4.hdacd.com",
+      "type": "vmess"
+    },
+    {
+      "rank": 16,
+      "score": 81,
+      "shenzhen_ping_ms": 264.5,
+      "shenzhen_loss_pct": 0.0,
+      "server": "mo.asrarshimi.ir",
+      "type": "vless"
     }
   ],
   "published": true,
-  "selected": 21
+  "selected": 16
 }
