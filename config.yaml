@@ -1,0 +1,76 @@
+sources:
+  recent_days: 30
+  min_stars: 30
+  require_recent_push: false
+  repositories_per_query: 20
+  max_repositories: 80
+  max_sources: 120
+  max_candidate_files_per_repo: 6
+  max_source_bytes: 8000000
+  min_nodes_per_source: 2
+  queries:
+    - 'clash subscription in:name,description,readme archived:false stars:>=30'
+    - 'v2ray subscription in:name,description,readme archived:false stars:>=30'
+    - 'free clash nodes in:name,description,readme archived:false stars:>=30'
+    - 'free v2ray nodes in:name,description,readme archived:false stars:>=30'
+    - 'proxy subscription in:name,description,readme archived:false stars:>=30'
+    - 'vpn subscription in:name,description,readme archived:false stars:>=30'
+    - 'clash config in:name,description,readme archived:false stars:>=30'
+    - 'v2ray config in:name,description,readme archived:false stars:>=30'
+    - 'free node in:name,description,readme archived:false stars:>=20'
+    - '订阅 in:name,description,readme archived:false'
+    - '节点 in:name,description,readme archived:false'
+    - '机场 in:name,description,readme archived:false'
+    - 'topic:clash archived:false stars:>=20'
+    - 'topic:v2ray archived:false stars:>=20'
+    - 'topic:proxy archived:false stars:>=20'
+    - 'topic:free-proxy archived:false stars:>=10'
+    - 'clash nodes in:name,description,readme archived:false stars:>=5'
+    - 'v2ray nodes in:name,description,readme archived:false stars:>=5'
+    - 'free proxy in:name,description,readme archived:false stars:>=5'
+direct_urls: []
+curated_nodes_file: ''
+nodes:
+  allowed_types: [vmess, vless, trojan, ss]
+  max_test_nodes: 200
+  min_final_nodes: 1
+  max_final_nodes: 20
+  max_per_server: 2
+  max_per_org: 3
+  validation_workers: 8
+  endpoint_workers: 6
+  test_timeout_seconds: 8
+  controller_startup_seconds: 1.5
+  switch_wait_seconds: 0.5
+  candidate_gate: 'gemini_or_play'
+  score_threshold: 70
+  min_clean_score: 65
+shenzhen_probe:
+  enabled: true
+  city: 'Shenzhen'
+  protocol: 'TCP'
+  packets: 4
+  reject_above_ms: 400
+  reject_loss_pct: 25
+  cache_days: 1
+  workers: 6
+  poll_interval_seconds: 1
+  max_wait_seconds: 12
+  fail_closed: true
+  api_token_env: 'GLOBALPING_API_TOKEN'
+checks:
+  gemini_url: 'https://gemini.google.com/'
+  google_play_url: 'https://play.google.com/store'
+  google_204_url: 'https://www.google.com/generate_204'
+  ipinfo_url: 'https://ipinfo.io/json'
+  success_statuses: [200, 204, 301, 302]
+  challenge_markers:
+    - 'unusual traffic'
+    - 'our systems have detected unusual traffic'
+    - 'captcha'
+    - 'access denied'
+output:
+  clash_file: 'data/fine_pool.yaml'
+  history_file: 'data/history.json'
+  source_file: 'data/sources.json'
+  report_file: 'data/last_run.json'
