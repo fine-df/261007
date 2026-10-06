@@ -9432,7 +9432,12 @@
     "last_seen": "2026-10-06",
     "pass_count": 0,
     "play_pass_count": 0,
-    "seen_count": 1
+    "seen_count": 1,
+    "shenzhen_checked_at": "2026-10-06T15:07:18.964951+00:00",
+    "shenzhen_loss_pct": 0.0,
+    "shenzhen_ping_ms": 3957.0,
+    "shenzhen_probe_city": "Shenzhen",
+    "shenzhen_status": "ok"
   },
   "70c48c8c673bad42cd73": {
     "first_seen": "2026-10-01",
@@ -13014,7 +13019,7 @@
     "pass_count": 1,
     "play_pass_count": 1,
     "seen_count": 1,
-    "shenzhen_checked_at": "2026-10-06T14:56:20.414905+00:00",
+    "shenzhen_checked_at": "2026-10-06T15:07:18.964991+00:00",
     "shenzhen_loss_pct": null,
     "shenzhen_ping_ms": null,
     "shenzhen_probe_city": null,
