@@ -8,15 +8,34 @@ import build_final as bf
 
 
 def test_final_proxy_groups_use_single_fine_group_with_auto_and_direct():
-    groups = bf.build_proxy_groups(["Fine-1", "Fine-2"])
+    fine_names = ["Fine-1", "Fine-2"]
+    groups = bf.build_proxy_groups(fine_names)
     by_name = {g["name"]: g for g in groups}
-    assert by_name["GLOBAL"]["proxies"] == ["DIRECT", "Fine-1", "Fine-2"]
-    assert by_name["Fine"]["default-selected"] == "AUTO"
-    assert by_name["Fine"]["proxies"] == ["AUTO", "DIRECT", "Fine-1", "Fine-2"]
-    assert by_name["AUTO"]["proxies"] == ["Fine-1", "Fine-2"]
+    assert by_name["GLOBAL"]["proxies"] == ["DIRECT"] + fine_names
+    # Sticky-first: the first (quality-ranked) node is pinned as default-selected so the
+    # connection persists across subscription updates instead of re-picking via AUTO.
+    # AUTO remains selectable in the list as a one-tap latency fallback.
+    assert by_name["Fine"]["default-selected"] == fine_names[0]
+    assert by_name["Fine"]["proxies"] == ["AUTO", "DIRECT"] + fine_names
+    assert by_name["AUTO"]["proxies"] == fine_names
     assert by_name["AUTO"]["type"] == "url-test"
     assert by_name["AUTO"]["hidden"] is True
     assert by_name["AUTO"]["tolerance"] == 250
+
+def test_sticky_primary_is_pinned_as_default_selected():
+    # The pool is intentionally ordered quality-first by fine_clash.py's sticky
+    # ordering (previous connected node if still Shenzhen-quality, else freshest
+    # quality node). build_proxy_groups must pin that first node as the default
+    # so the user's active connection survives a subscription refresh.
+    fine_names = ["Fine-KEPT", "Fine-B", "Fine-C"]
+    groups = bf.build_proxy_groups(fine_names)
+    by_name = {g["name"]: g for g in groups}
+    assert by_name["Fine"]["default-selected"] == "Fine-KEPT"
+    assert by_name["GLOBAL"]["default-selected"] == "Fine-KEPT"
+    # AUTO must remain available, not be the default.
+    assert by_name["Fine"]["default-selected"] != "AUTO"
+    assert "AUTO" in by_name["Fine"]["proxies"]
+
 
 def test_load_previous_published_nodes_uses_safe_continuity_reserve(tmp_path: Path, monkeypatch):
     profile = tmp_path / "live_clash.yaml"
