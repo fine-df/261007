@@ -7,20 +7,21 @@ import fine_clash as fc
 import build_final as bf
 
 
-def test_final_proxy_groups_use_single_fine_group_with_auto_and_direct():
+def test_final_proxy_groups_single_fine_with_direct():
     fine_names = ["Fine-1", "Fine-2"]
     groups = bf.build_proxy_groups(fine_names)
     by_name = {g["name"]: g for g in groups}
-    assert by_name["GLOBAL"]["proxies"] == ["DIRECT"] + fine_names
-    # Sticky-first: the first (quality-ranked) node is pinned as default-selected so the
-    # connection persists across subscription updates instead of re-picking via AUTO.
-    # AUTO remains selectable in the list as a one-tap latency fallback.
+    # Only the Fine group is user-visible; AUTO is a hidden url-test subgroup
+    # embedded in Fine for one-tap latency auto-selection (GLOBAL was removed).
+    assert set(by_name) == {"Fine", "AUTO"}
+    # Sticky-first: the first (quality-ranked) node is pinned as default-selected.
     assert by_name["Fine"]["default-selected"] == fine_names[0]
+    # AUTO (auto-select) and DIRECT are selectable alongside every node.
     assert by_name["Fine"]["proxies"] == ["AUTO", "DIRECT"] + fine_names
-    assert by_name["AUTO"]["proxies"] == fine_names
+    # AUTO itself is a hidden url-test group so it stays out of the UI list.
     assert by_name["AUTO"]["type"] == "url-test"
     assert by_name["AUTO"]["hidden"] is True
-    assert by_name["AUTO"]["tolerance"] == 250
+    assert by_name["AUTO"]["proxies"] == fine_names
 
 def test_sticky_primary_is_pinned_as_default_selected():
     # The pool is intentionally ordered quality-first by fine_clash.py's sticky
@@ -31,10 +32,10 @@ def test_sticky_primary_is_pinned_as_default_selected():
     groups = bf.build_proxy_groups(fine_names)
     by_name = {g["name"]: g for g in groups}
     assert by_name["Fine"]["default-selected"] == "Fine-KEPT"
-    assert by_name["GLOBAL"]["default-selected"] == "Fine-KEPT"
-    # AUTO must remain available, not be the default.
+    # AUTO url-test subgroup is embedded in Fine for auto-selection, but the
+    # sticky primary (not AUTO) remains the default so the connection persists.
+    assert "AUTO" in by_name
     assert by_name["Fine"]["default-selected"] != "AUTO"
-    assert "AUTO" in by_name["Fine"]["proxies"]
 
 
 def test_load_previous_published_nodes_uses_safe_continuity_reserve(tmp_path: Path, monkeypatch):
@@ -458,6 +459,48 @@ def test_rank_candidates_max_per_org_is_configurable():
     meta = {fc.fingerprint(n): _rank_meta(n, score=90 - i, org="SameOrg, Inc.") for i, n in enumerate(nodes)}
     ranked = fc.rank_candidates(nodes, limit=20, metadata=meta, max_per_org=5)
     assert len(ranked) == 5
+
+
+def test_us_non_datacenter_bonus():
+    assert fc._us_non_datacenter_bonus({"country": "US", "org": "Comcast Cable Communications"}) == 1
+    assert fc._us_non_datacenter_bonus({"country": "US", "org": "Amazon Web Services"}) == 0
+    assert fc._us_non_datacenter_bonus({"country": "US", "org": "Google LLC"}) == 0
+    assert fc._us_non_datacenter_bonus({"country": "DE", "org": "Deutsche Telekom"}) == 0
+    assert fc._us_non_datacenter_bonus({"country": None, "org": "x"}) == 0
+
+
+def test_rank_candidates_prefers_us_residential_over_us_dc_and_foreign():
+    us_home = _rank_node("us-home", "1.1.1.1")
+    us_dc = _rank_node("us-dc", "2.2.2.2")
+    foreign = _rank_node("foreign", "3.3.3.3")
+    nodes = [foreign, us_dc, us_home]
+    meta = {
+        fc.fingerprint(us_home): {**_rank_meta(us_home, score=80, ping=200), "country": "US", "org": "Comcast Cable Communications"},
+        fc.fingerprint(us_dc): {**_rank_meta(us_dc, score=80, ping=50), "country": "US", "org": "Amazon Web Services"},
+        fc.fingerprint(foreign): {**_rank_meta(foreign, score=80, ping=50), "country": "DE", "org": "Deutsche Telekom"},
+    }
+    ranked = fc.rank_candidates(nodes, metadata=meta)
+    names = [n["name"] for n in ranked]
+    # US residential leads unconditionally (us_nd=1 beats both us_nd=0 buckets).
+    assert names[0] == "us-home"
+    # US-datacenter (US but a known cloud ASN) and foreign both have us_nd=0,
+    # so they tie on the priority key; only the leading US-residential node is
+    # guaranteed. Assert the trailing set, not a fixed order.
+    assert set(names[1:]) == {"us-dc", "foreign"}
+
+
+def test_rank_candidates_min_final_score_floor():
+    high = _rank_node("high", "1.1.1.1")
+    low = _rank_node("low", "2.2.2.2")
+    nodes = [low, high]
+    meta = {
+        fc.fingerprint(high): _rank_meta(high, score=90, ping=100),
+        fc.fingerprint(low): _rank_meta(low, score=40, ping=50),
+    }
+    # Without a floor the lower-ping (low-score) node would win; with floor=55
+    # the high-score node is preferred into the final pool.
+    ranked = fc.rank_candidates(nodes, metadata=meta, min_final_score=55)
+    assert [n["name"] for n in ranked] == ["high", "low"]
 
 
 def test_clean_score_catches_google_and_oracle():

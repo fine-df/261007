@@ -46,12 +46,15 @@ def build_proxy_groups(fine_names):
     # `fine_names[0]` is the sticky-quality primary chosen by fine_clash.py's
     # sticky ordering (previous node if still Shenzhen-quality, else freshest
     # quality node). Pinning it as the default-selected keeps the connection
-    # stable across subscription updates instead of re-picking on every reload.
-    # `AUTO` (url-test) stays in the list as a one-tap fallback if the user
-    # ever wants mihomo to auto-rotate by latency again.
+    # stable across subscription updates.
+    # 2026-10-06 调整：
+    #   - 去除冗余 GLOBAL 组：其内容与 FINE 重复，且从未被 rules 引用
+    #     （MATCH,Fine 是唯一兜底路由），属死组，删除精简。
+    #   - AUTO(url-test, hidden) 作为子组挂进 Fine：用户既保留"一键自动测速
+    #     选优"（选 AUTO 项即可），也能手动选具体节点 / 选 DIRECT 直连。
+    #     这样只有 Fine 一个顶层可见组，但内置了自动选优能力。
     primary=fine_names[0]
     return [
-        {"name":"GLOBAL","type":"select","proxies":["DIRECT"]+fine_names,"default-selected":primary},
         {"name":"Fine","type":"select","proxies":["AUTO","DIRECT"]+fine_names,"default-selected":primary},
         {"name":"AUTO","type":"url-test","proxies":fine_names,"url":"https://play.google.com/store","interval":900,"timeout":8000,"tolerance":250,"lazy":False,"hidden":True},
     ]
