@@ -761,16 +761,44 @@ def choose_sticky_primary(ranked, previous_profile_nodes, ranking_meta, sticky_c
             return n
     return None
 
-def rank_candidates(nodes, limit=20, metadata=None, max_per_server=2, max_per_org=3):
-    """Rank verified nodes by score and diversity, returning the top `limit`.
+# US datacenter/cloud org markers (substring match, lowercased org/asn).
+# Used to exclude known hosting/cloud ASN when prioritizing US residential/ISP nodes.
+US_DATACENTER_ORG_MARKERS = (
+    "datacenter", "hosting", "cloud", "server", "colocation", " vps", "leaseweb",
+    "ovh", "amazon", "google ", "microsoft", "linode", "vultr", "hetzner", "contabo",
+    "digitalocean", "oracle", "alibaba", "tencent", "azure", "scaleway", "ionos",
+    "m247", "datacamp", "nova ", "choopa", "as-hosting", "proxyprovider", "digital",
+)
+
+def _us_non_datacenter_bonus(meta):
+    """1 if node is a US residential/ISP (non-datacenter) node, else 0.
+
+    Top sorting priority so US优质非机房 nodes are preferred in the final pool
+    (2026-10-06 专项加强美国优质节点). Relies on meta['country']=='US' and
+    meta['org']/meta['asn'] not matching known datacenter/cloud markers.
+    Missing country falls back to 0 (treated as non-prioritized).
+    """
+    country = str(meta.get("country") or "").upper()
+    if country != "US":
+        return 0
+    org = str(meta.get("org") or meta.get("asn") or "").lower()
+    if any(k in org for k in US_DATACENTER_ORG_MARKERS):
+        return 0
+    return 1
+
+
+def rank_candidates(nodes, limit=20, metadata=None, max_per_server=2, max_per_org=3, min_final_score=0):
+    """Rank verified nodes by US-residential priority, score, and diversity.
 
     Sorting priority (higher first unless noted):
-      1. total_score (desc)
-      2. shenzhen_ping_ms (asc)
-      3. shenzhen_loss_pct (asc)
-      4. stability (desc)
-      5. lifespan (desc)
-      6. fingerprint (asc, deterministic tiebreak)
+      1. us_non_datacenter (1 if US residential/ISP, else 0)   # 2026-10-06
+      2. above_min_final_score (1 if score >= min_final_score) # 2026-10-06 软地板
+      3. total_score (desc)
+      4. shenzhen_ping_ms (asc)
+      5. shenzhen_loss_pct (asc)
+      6. stability (desc)
+      7. lifespan (desc)
+      8. fingerprint (asc, deterministic tiebreak)
 
     Diversity caps applied greedily in sorted order:
       - duplicate fingerprint -> keep only the highest-scored node
@@ -778,8 +806,10 @@ def rank_candidates(nodes, limit=20, metadata=None, max_per_server=2, max_per_or
       - same org/ASN -> keep at most `max_per_org`
 
     `metadata` is a fingerprint -> dict lookup (score, shenzhen_ping_ms,
-    shenzhen_loss_pct, stability, lifespan, org, asn). Missing fields fall back
-    safely, so ranking never raises.
+    shenzhen_loss_pct, stability, lifespan, org, asn, country). Missing fields
+    fall back safely, so ranking never raises. `min_final_score` (from
+    config nodes.min_final_score) is a soft floor: nodes below it sort after
+    nodes at/above it, so the final pool prefers high-score nodes.
     """
     metadata=metadata or {}
     try: limit=max(1,int(limit))
@@ -788,20 +818,25 @@ def rank_candidates(nodes, limit=20, metadata=None, max_per_server=2, max_per_or
     except (TypeError,ValueError): max_per_server=2
     try: max_per_org=max(1,int(max_per_org))
     except (TypeError,ValueError): max_per_org=3
+    try: min_final_score=max(0,float(min_final_score))
+    except (TypeError,ValueError): min_final_score=0.0
     enriched=[]
     for node in nodes:
         fp=fingerprint(node); meta=metadata.get(fp,{})
+        score=_safe_float(meta.get("score"),0.0)
         enriched.append({
             "node":node,"fp":fp,
-            "score":_safe_float(meta.get("score"),0.0),
+            "score":score,
             "ping":_safe_float(meta.get("shenzhen_ping_ms"),float("inf")),
             "loss":_safe_float(meta.get("shenzhen_loss_pct"),float("inf")),
             "stability":_safe_float(meta.get("stability"),0.0),
             "lifespan":_safe_float(meta.get("lifespan"),0.0),
+            "us_nd":_us_non_datacenter_bonus(meta),
+            "above_floor":1 if score>=min_final_score else 0,
             "server":str(node.get("server") or "").strip().lower(),
             "org":str(meta.get("org") or meta.get("asn") or "").strip().lower(),
         })
-    enriched.sort(key=lambda e:(-e["score"],e["ping"],e["loss"],-e["stability"],-e["lifespan"],e["fp"]))
+    enriched.sort(key=lambda e:(-e["us_nd"],-e["above_floor"],-e["score"],e["ping"],e["loss"],-e["stability"],-e["lifespan"],e["fp"]))
     seen_fp=set(); server_count={}; org_count={}; picked=[]
     for e in enriched:
         if e["fp"] in seen_fp: continue
@@ -971,7 +1006,7 @@ def run():
         candidate=candidate_gate_passes(item,gate,clean,min_clean)
 
         asn_obj=ipinfo_data.get("asn"); asn_value=asn_obj.get("asn") if isinstance(asn_obj,dict) else asn_obj
-        entry={"fingerprint":fp,"name":node["name"],"score":score,"gemini":item["gemini"],"google_play":item["google_play"],"clean":clean,"lifespan_days":lifespan_days(row),"shenzhen_ping_ms":None,"shenzhen_loss_pct":None,"shenzhen_status":"not-tested","org":ipinfo_data.get("org"),"asn":asn_value}
+        entry={"fingerprint":fp,"name":node["name"],"score":score,"gemini":item["gemini"],"google_play":item["google_play"],"clean":clean,"lifespan_days":lifespan_days(row),"shenzhen_ping_ms":None,"shenzhen_loss_pct":None,"shenzhen_status":"not-tested","org":ipinfo_data.get("org"),"asn":asn_value,"country":ipinfo_data.get("country")}
         report["results"].append(entry); report_lookup[fp]=entry
 
         shenzhen_cfg=rules.get("shenzhen_probe",{})
@@ -1009,7 +1044,7 @@ def run():
     ranking_meta={}
     for node in selected:
         fp=fingerprint(node); entry=report_lookup.get(fp,{}); row=history.get(fp,{})
-        ranking_meta[fp]={"score":entry.get("score",0),"shenzhen_ping_ms":entry.get("shenzhen_ping_ms"),"shenzhen_loss_pct":entry.get("shenzhen_loss_pct"),"stability":min(1.0,row.get("pass_count",0)/max(1,row.get("seen_count",1))),"lifespan":lifespan_days(row),"org":entry.get("org"),"asn":entry.get("asn")}
+        ranking_meta[fp]={"score":entry.get("score",0),"shenzhen_ping_ms":entry.get("shenzhen_ping_ms"),"shenzhen_loss_pct":entry.get("shenzhen_loss_pct"),"stability":min(1.0,row.get("pass_count",0)/max(1,row.get("seen_count",1))),"lifespan":lifespan_days(row),"org":entry.get("org"),"asn":entry.get("asn"),"country":entry.get("country")}
     max_final=int(rules["nodes"].get("max_final_nodes",20))
     # Reserve slots for previously published nodes that still pass all current gates.
     selected_fps={fingerprint(x) for x in selected}
@@ -1017,7 +1052,7 @@ def run():
     retained_fps={fingerprint(n) for n in retained_previous}
     fresh_selected=[n for n in selected if fingerprint(n) not in retained_fps]
     retained_previous_ranked=retained_previous[:max_final]
-    fresh_ranked=rank_candidates(fresh_selected,limit=max(0,max_final-len(retained_previous_ranked)),metadata=ranking_meta,max_per_server=int(rules["nodes"].get("max_per_server",2)),max_per_org=int(rules["nodes"].get("max_per_org",3)))
+    fresh_ranked=rank_candidates(fresh_selected,limit=max(0,max_final-len(retained_previous_ranked)),metadata=ranking_meta,max_per_server=int(rules["nodes"].get("max_per_server",2)),max_per_org=int(rules["nodes"].get("max_per_org",3)),min_final_score=int(rules["nodes"].get("min_final_score",0)))
     ranked=retained_previous_ranked+fresh_ranked
     # ★ 粘性优质节点（2026-10-06）：订阅更新时保持当前优秀节点为首选，
     #   仅当其深圳 PING>=keep_ping_ms 或掉包率>keep_loss_pct 时才让位给新优质节点。
