@@ -1,4 +1,4 @@
-# fine-clash-unified-v3 | fine-clash-version:20261004110023 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
+# fine-clash-unified-v3 | fine-clash-version:20261004110024 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
 mixed-port: 7890
 allow-lan: true
 bind-address: '*'
@@ -10,211 +10,127 @@ tcp-concurrent: true
 profile:
   store-selected: true
 proxies:
-- port: 443
-  udp: true
-  tls: true
-  server: yg1.ygkkk.dpdns.org
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
-  alterId: 0
-  ws-opts:
-    headers:
-      Host: jmp1.907737.xyz
-    path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
-  network: ws
-  type: vmess
-  cipher: auto
+- uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
   name: 🇭🇰 Hong Kong, Hong Kong | [BL]
-- port: 443
+  udp: true
   tls: true
   server: yg1.ygkkk.dpdns.org
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
-  servername: jmp1.907737.xyz
+  network: ws
+  port: 443
+  alterId: 0
+  ws-opts:
+    headers:
+      Host: jmp1.907737.xyz
+    path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
+  type: vmess
+  cipher: auto
+- uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
+  name: 未知 VMESS-369 | free-nodes
+  tls: true
+  server: yg1.ygkkk.dpdns.org
+  network: ws
+  port: 443
   alterId: 0
   ws-opts:
     path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
     headers:
       Host: jmp1.907737.xyz
-  network: ws
   type: vmess
+  servername: jmp1.907737.xyz
   cipher: auto
-  name: 未知 VMESS-369 | free-nodes
-- port: 443
-  flow: xtls-rprx-vision
-  udp: true
-  encryption: none
-  tls: true
+- uuid: ab1249da-9ac8-44c7-89a3-2d337ab25cb2
   name: 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL]
+  udp: true
+  tls: true
   server: 154.21.94.246
-  uuid: ab1249da-9ac8-44c7-89a3-2d337ab25cb2
-  servername: frost.sigy.me
   network: tcp
+  encryption: none
+  port: 443
+  flow: xtls-rprx-vision
+  client-fingerprint: random
   type: vless
   reality-opts:
     public-key: C8Qz7kuyHo9O0oBV9W7ltzL8aPLPzdb1vvt3UkJjtF0
     short-id: ea29b7b15bb24d49
-  client-fingerprint: random
-- port: 8443
-  flow: xtls-rprx-vision
-  udp: true
-  encryption: none
-  tls: true
-  name: 🇳🇱 The Netherlands [*CIDR] [93dee97d]
-  server: nl.alpheratzz.org
-  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
-  servername: vusr-6ac431f4.adhil.uk
-  network: tcp
-  type: vless
-  client-fingerprint: ios
-- port: 8443
-  flow: xtls-rprx-vision
-  udp: true
-  encryption: none
-  tls: true
-  name: 🇳🇱 The Netherlands [*CIDR] [1fba55e2]
-  server: 196.240.125.253
-  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
-  servername: vusr-6ac431f4.adhil.uk
-  network: tcp
-  type: vless
-  client-fingerprint: qq
-- port: 8443
-  flow: xtls-rprx-vision
-  udp: true
-  encryption: none
-  tls: true
-  name: 🇳🇱 The Netherlands [*CIDR] [798f3666]
-  server: nl.alpheratzz.org
-  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
-  servername: vusr-6ac431f4.adhil.uk
-  network: tcp
-  type: vless
-  client-fingerprint: safari
-- port: 8443
-  flow: xtls-rprx-vision
-  udp: true
-  encryption: none
-  tls: true
-  name: 🇳🇱 The Netherlands [*CIDR] [22842c3a]
-  server: 196.240.125.253
-  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
-  servername: vusr-6ac431f4.adhil.uk
-  network: tcp
-  type: vless
-  client-fingerprint: ios
-- port: 8443
-  flow: xtls-rprx-vision
-  udp: true
-  encryption: none
-  tls: true
-  name: 🇳🇱 The Netherlands [*CIDR] [5a52dbec]
-  server: nl.alpheratzz.org
-  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
-  servername: vusr-6ac431f4.adhil.uk
-  network: tcp
-  type: vless
-  client-fingerprint: edge
-- port: 443
-  flow: xtls-rprx-vision
-  udp: true
-  encryption: none
-  tls: true
+  servername: frost.sigy.me
+- uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
   name: 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [BL]
+  udp: true
+  tls: true
   server: 150.241.79.232
-  uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
-  servername: de2.srv.vbuste.ru
   network: tcp
+  encryption: none
+  port: 443
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
   type: vless
   reality-opts:
     public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
     short-id: 4be4110078ebed4a
-  client-fingerprint: chrome
-- port: 4040
-  udp: true
-  encryption: none
-  tls: true
+  servername: de2.srv.vbuste.ru
+- uuid: 59ab9bbf-3f08-4992-bbf3-4faddceb8e49
   name: 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL] [33684b32]
+  udp: true
+  tls: true
   server: mo.asrarshimi.ir
-  uuid: 59ab9bbf-3f08-4992-bbf3-4faddceb8e49
-  servername: www.actionvfx.com
   network: tcp
+  encryption: none
+  port: 4040
+  client-fingerprint: qq
   type: vless
   reality-opts:
     public-key: _OmNcv89o5SDt4H3ButRX9UynGIVwNZR250w4Zie-yk
     short-id: 73693dea6faae051
-  client-fingerprint: qq
-- port: 9881
-  udp: true
-  encryption: none
-  tls: true
-  name: 🇳🇴 Norway [*CIDR]
-  server: 176.108.252.139
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  servername: dl.google.com
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-  type: vless
-  reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-    short-id: aabb
-  client-fingerprint: safari
-- type: vless
-  name: 🇳🇱 The Netherlands [*CIDR] [69a06195]
-  server: 196.240.125.3
-  port: 8443
-  udp: true
-  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
-  encryption: none
-  tls: true
-  servername: vusr-6ac431f4.adhil.uk
-  flow: xtls-rprx-vision
-  client-fingerprint: safari
-  network: tcp
-- type: vless
-  name: 🇳🇱 The Netherlands [*CIDR] [12b78202]
-  server: 196.240.125.3
-  port: 8443
-  udp: true
-  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
-  encryption: none
-  tls: true
-  servername: vusr-6ac431f4.adhil.uk
-  flow: xtls-rprx-vision
-  client-fingerprint: qq
-  network: tcp
-- type: vless
-  name: 🇳🇱 The Netherlands [*CIDR] [c3e96711]
-  server: nl.alpheratzz.org
-  port: 8443
-  udp: true
-  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
-  encryption: none
-  tls: true
-  servername: vusr-6ac431f4.adhil.uk
-  flow: xtls-rprx-vision
-  client-fingerprint: qq
-  network: tcp
-- type: vmess
+  servername: www.actionvfx.com
+- uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   name: 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
+  udp: true
   server: v4.hdacd.com
   port: 30804
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
+  type: vmess
   cipher: auto
-  udp: true
-- type: vless
+- uuid: 59ab9bbf-3f08-4992-bbf3-4faddceb8e49
   name: 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL] [97d007cf]
-  server: mo.asrarshimi.ir
-  port: 4040
   udp: true
-  uuid: 59ab9bbf-3f08-4992-bbf3-4faddceb8e49
-  encryption: none
   tls: true
-  servername: www.actionvfx.com
+  server: mo.asrarshimi.ir
+  network: tcp
+  encryption: none
+  port: 4040
   client-fingerprint: edge
+  type: vless
   reality-opts:
     public-key: _OmNcv89o5SDt4H3ButRX9UynGIVwNZR250w4Zie-yk
     short-id: 73693dea6faae051
+  servername: www.actionvfx.com
+- type: vless
+  name: 🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru [a8130772]
+  server: 78.17.209.157
+  port: 8443
+  udp: true
+  uuid: be2568ed-9b3f-4071-86aa-444891fe2887
+  encryption: none
+  tls: true
+  servername: api-maps.yandex.ru
+  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  reality-opts:
+    public-key: V_AnDtQn2g3kTFu19MUBCwA0LzmYeU68FlnIHcvlADg
+  network: tcp
+- type: vless
+  name: 🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru [348fc7f2]
+  server: 78.17.209.157
+  port: 8443
+  udp: true
+  uuid: be2568ed-9b3f-4071-86aa-444891fe2887
+  encryption: none
+  tls: true
+  servername: api-maps.yandex.ru
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: V_AnDtQn2g3kTFu19MUBCwA0LzmYeU68FlnIHcvlADg
   network: tcp
 proxy-groups:
 - name: Fine
@@ -225,19 +141,12 @@ proxy-groups:
   - 🇭🇰 Hong Kong, Hong Kong | [BL]
   - 未知 VMESS-369 | free-nodes
   - 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL]
-  - 🇳🇱 The Netherlands [*CIDR] [93dee97d]
-  - 🇳🇱 The Netherlands [*CIDR] [1fba55e2]
-  - 🇳🇱 The Netherlands [*CIDR] [798f3666]
-  - 🇳🇱 The Netherlands [*CIDR] [22842c3a]
-  - 🇳🇱 The Netherlands [*CIDR] [5a52dbec]
   - 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [BL]
   - 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL] [33684b32]
-  - 🇳🇴 Norway [*CIDR]
-  - 🇳🇱 The Netherlands [*CIDR] [69a06195]
-  - 🇳🇱 The Netherlands [*CIDR] [12b78202]
-  - 🇳🇱 The Netherlands [*CIDR] [c3e96711]
   - 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
   - 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL] [97d007cf]
+  - 🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru [a8130772]
+  - 🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru [348fc7f2]
   default-selected: 🇭🇰 Hong Kong, Hong Kong | [BL]
 - name: AUTO
   type: url-test
@@ -245,19 +154,12 @@ proxy-groups:
   - 🇭🇰 Hong Kong, Hong Kong | [BL]
   - 未知 VMESS-369 | free-nodes
   - 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL]
-  - 🇳🇱 The Netherlands [*CIDR] [93dee97d]
-  - 🇳🇱 The Netherlands [*CIDR] [1fba55e2]
-  - 🇳🇱 The Netherlands [*CIDR] [798f3666]
-  - 🇳🇱 The Netherlands [*CIDR] [22842c3a]
-  - 🇳🇱 The Netherlands [*CIDR] [5a52dbec]
   - 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | 🌐 | [BL]
   - 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL] [33684b32]
-  - 🇳🇴 Norway [*CIDR]
-  - 🇳🇱 The Netherlands [*CIDR] [69a06195]
-  - 🇳🇱 The Netherlands [*CIDR] [12b78202]
-  - 🇳🇱 The Netherlands [*CIDR] [c3e96711]
   - 🇭🇰_HK_中国香港->🇮🇪_IE_爱尔兰
   - 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL] [97d007cf]
+  - 🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru [a8130772]
+  - 🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru [348fc7f2]
   url: https://play.google.com/store
   interval: 900
   timeout: 8000
