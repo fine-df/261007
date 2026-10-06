@@ -7,13 +7,52 @@ import fine_clash as fc
 import build_final as bf
 
 
-def test_final_proxy_groups_expose_explicit_fine_and_global_nodes():
+def test_final_proxy_groups_use_single_fine_group_with_auto_and_direct():
     groups = bf.build_proxy_groups(["Fine-1", "Fine-2"])
     by_name = {g["name"]: g for g in groups}
     assert by_name["GLOBAL"]["proxies"] == ["DIRECT", "Fine-1", "Fine-2"]
-    assert by_name["Fine"]["default-selected"] == "Fine-Auto"
-    assert by_name["Fine"]["proxies"] == ["Fine-Auto", "Fine-1", "Fine-2"]
-    assert by_name["Fine-Auto"]["proxies"] == ["Fine-1", "Fine-2"]
+    assert by_name["Fine"]["default-selected"] == "AUTO"
+    assert by_name["Fine"]["proxies"] == ["AUTO", "DIRECT", "Fine-1", "Fine-2"]
+    assert by_name["AUTO"]["proxies"] == ["Fine-1", "Fine-2"]
+    assert by_name["AUTO"]["type"] == "url-test"
+    assert by_name["AUTO"]["hidden"] is True
+
+def test_load_previous_published_nodes_uses_safe_continuity_reserve(tmp_path: Path, monkeypatch):
+    profile = tmp_path / "live_clash.yaml"
+    profile.write_text(
+        "# fine-clash-version:1\n"
+        "proxies:\n"
+        "  - name: old-1\n"
+        "    type: trojan\n"
+        "    server: example.com\n"
+        "    port: 443\n"
+        "    password: secret\n"
+        "    tls: true\n"
+        "  - name: old-2\n"
+        "    type: vless\n"
+        "    server: example.org\n"
+        "    port: 443\n"
+        "    uuid: 123e4567-e89b-12d3-a456-426614174000\n"
+        "    tls: true\n"
+        "  - name: old-3\n"
+        "    type: trojan\n"
+        "    server: old.example\n"
+        "    port: 443\n"
+        "    password: secret\n"
+        "    tls: true\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(fc, "resolved_server_is_safe", lambda server: True)
+    nodes = fc.load_previous_published_nodes(profile, max_nodes=2)
+    assert [node["name"] for node in nodes] == ["old-1", "old-2"]
+
+
+def test_shenzhen_quality_gates_are_tightened():
+    cfg = fc.load_rules()
+    assert cfg["shenzhen_probe"]["reject_above_ms"] == 350
+    assert cfg["shenzhen_probe"]["reject_loss_pct"] == 10
+    assert cfg["retention"]["enabled"] is True
+    assert cfg["retention"]["max_previous_nodes"] == 5
 
 def test_final_config_is_fine_only():
     cfg = bf.build_config([{"name":"Fine-1","type":"trojan","server":"example.com","port":443,"password":"secret","tls":True}])
