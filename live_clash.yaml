@@ -1,4 +1,4 @@
-# fine-clash-unified-v3 | fine-clash-version:20261004110038 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
+# fine-clash-unified-v3 | fine-clash-version:20261004110039 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
 mixed-port: 7890
 allow-lan: true
 bind-address: '*'
@@ -11,150 +11,173 @@ profile:
   store-selected: true
 proxies:
 - uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-  tls: true
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: GunService
-  servername: github.com
-  type: vless
   udp: true
-  name: 🇳🇱 The Netherlands, Amsterdam | [BL] [3eb6e5eb]
+  tls: true
   port: 8444
-  encryption: none
   server: 185.192.22.159
   network: grpc
+  client-fingerprint: chrome
   reality-opts:
     public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
     short-id: 457fab2ac885dbe0
-- uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-  tls: true
-  client-fingerprint: firefox
-  servername: jp3.nztvpn.com
-  type: vless
-  udp: true
-  name: 🇯🇵 Japan | 🌐 | [BL]
-  port: 443
+  grpc-opts:
+    grpc-service-name: GunService
   encryption: none
-  server: 142.91.108.25
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM
-    short-id: ea36c03d86f91287
-- uuid: fe0721ac-c577-4938-b7ca-8ab5f43bb8da
-  tls: true
-  client-fingerprint: random
-  servername: www.amazon.com
+  servername: github.com
   type: vless
+  name: 🇳🇱 The Netherlands, Amsterdam | [BL] [3eb6e5eb]
+- uuid: 3fcec4e4-a674-44d2-8cae-c253cec43b9c
   udp: true
-  name: .𖥔 ݁ ˖ִ🛸༄˖°. | [BL] [081c952b]
-  port: 9443
-  encryption: none
-  server: 156.224.77.171
-  network: tcp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
-    short-id: b390142456517acc
-- uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  type: vmess
-  udp: true
-  name: 🇭🇰_HK_中国香港
-  cipher: auto
-  port: 30836
-  server: v36.hdacd.com
-- type: vless
-  name: 🇨🇭 Switzerland | 🌐 | [*CIDR] [e9f2dadb]
-  server: ns.l90909l.vip
+  tls: true
   port: 2096
-  udp: true
-  uuid: 3fcec4e4-a674-44d2-8cae-c253cec43b9c
-  encryption: none
-  tls: true
-  servername: id.vk.com
+  server: ns.l90909l.vip
+  network: grpc
   client-fingerprint: edge
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  network: grpc
   grpc-opts:
     grpc-service-name: vless-grpc-reality
-- type: vless
-  name: 🇨🇭 Switzerland | 🌐 [*CIDR]
-  server: ns.l90909l.vip
-  port: 2096
-  udp: true
-  uuid: 3fcec4e4-a674-44d2-8cae-c253cec43b9c
   encryption: none
-  tls: true
   servername: id.vk.com
+  type: vless
+  name: 🇨🇭 Switzerland | 🌐 | [*CIDR] [e9f2dadb]
+- uuid: 3fcec4e4-a674-44d2-8cae-c253cec43b9c
+  udp: true
+  tls: true
+  port: 2096
+  server: ns.l90909l.vip
+  network: grpc
   client-fingerprint: random
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  network: grpc
   grpc-opts:
     grpc-service-name: vless-grpc-reality
-- type: vless
-  name: 🇺🇦 Ukraine, Kyiv | [BL] [78c5b13e]
-  server: 122.8.45.3
-  port: 8443
-  udp: true
-  uuid: 8ff8938c-49b6-b22f-a934-b55e91154ca3
   encryption: none
+  servername: id.vk.com
+  type: vless
+  name: 🇨🇭 Switzerland | 🌐 [*CIDR] [239265e3]
+- uuid: 8ff8938c-49b6-b22f-a934-b55e91154ca3
+  udp: true
   tls: true
-  servername: www.hp.com
+  port: 8443
+  server: 122.8.45.3
+  network: grpc
   client-fingerprint: ios
   reality-opts:
     public-key: QzFNQqkvBnDKIyjXUHJQe9jruaw9G5AV44vDC-qvnlo
-  network: grpc
   grpc-opts:
     grpc-service-name: TunService
-- type: vless
-  name: 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] [28050377]
-  server: ns.ll0ll.vip
-  port: 2096
-  udp: true
-  uuid: f13b36ac-3765-4458-8a4d-08575038c463
   encryption: none
+  servername: www.hp.com
+  type: vless
+  name: 🇺🇦 Ukraine, Kyiv | [BL] [78c5b13e]
+- uuid: f13b36ac-3765-4458-8a4d-08575038c463
+  udp: true
   tls: true
-  servername: id.vk.com
+  port: 2096
+  server: ns.ll0ll.vip
+  network: grpc
   client-fingerprint: firefox
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  network: grpc
   grpc-opts:
     grpc-service-name: vless-grpc-reality
-- type: vless
-  name: 🌐 Anycast-IP | 🇦🇹 🇩🇪 | [SNI-RU] id.vk.com
-  server: ns.ll0ll.vip
-  port: 2096
-  udp: true
-  uuid: f13b36ac-3765-4458-8a4d-08575038c463
   encryption: none
-  tls: true
   servername: id.vk.com
+  type: vless
+  name: 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] [28050377]
+- uuid: f13b36ac-3765-4458-8a4d-08575038c463
+  udp: true
+  tls: true
+  port: 2096
+  server: ns.ll0ll.vip
+  network: grpc
   client-fingerprint: chrome
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  network: grpc
   grpc-opts:
     grpc-service-name: vless-grpc-reality
-- type: vless
-  name: 🇦🇺 Australia | 🌐 | [BL]
-  server: lv-bridge.shadowshroom.org
-  port: 6443
-  udp: true
-  uuid: f7f48934-f14c-4819-b225-36e89bda5491
   encryption: none
+  servername: id.vk.com
+  type: vless
+  name: 🌐 Anycast-IP | 🇦🇹 🇩🇪 | [SNI-RU] id.vk.com
+- uuid: 3fcec4e4-a674-44d2-8cae-c253cec43b9c
+  udp: true
   tls: true
-  servername: lv-bridge.shadowshroom.org
-  flow: xtls-rprx-vision
-  client-fingerprint: random
+  port: 2096
+  server: 153.76.161.57
+  network: grpc
+  client-fingerprint: ios
   reality-opts:
-    public-key: o19q9ZfdCq7w_jJZ4EJsOCTo03qv4s5jCncFOx7WLig
-  network: tcp
-- type: vless
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+  encryption: none
+  servername: id.vk.com
+  type: vless
   name: 🇨🇭 Switzerland | 🌐 | [*CIDR] [aa2d6713]
+- uuid: 513e7ad9-318b-4495-8f5b-d88c4302fdc1
+  udp: true
+  ws-opts:
+    path: /3a7lzIHlgUuz2QnV1CaQ
+    headers:
+      Host: msk.ai-boost.tech
+  tls: true
+  port: 443
+  server: msk.ai-boost.tech
+  network: ws
+  client-fingerprint: edge
+  encryption: none
+  servername: msk.ai-boost.tech
+  type: vless
+  name: 🇳🇱 The Netherlands [*CIDR]
+- uuid: f13b36ac-3765-4458-8a4d-08575038c463
+  udp: true
+  tls: true
+  port: 2096
+  server: 80.87.194.253
+  network: grpc
+  client-fingerprint: edge
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+  encryption: none
+  servername: id.vk.com
+  type: vless
+  name: 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] [f0a6288d]
+- uuid: 85fe968d-fbb5-40dc-8422-30635eccb149
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  port: 443
+  server: c20s5.portablesubmarines.com
+  network: tcp
+  client-fingerprint: edge
+  reality-opts:
+    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
+    short-id: 051f20c2344a2dfd
+  encryption: none
+  servername: portal.citygrainla.com
+  type: vless
+  name: 🇳🇱 The Netherlands, Amsterdam | [BL] [3e306734]
+- uuid: 85fe968d-fbb5-40dc-8422-30635eccb149
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  port: 443
+  server: c20s5.portablesubmarines.com
+  network: tcp
+  client-fingerprint: qq
+  reality-opts:
+    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
+    short-id: 051f20c2344a2dfd
+  encryption: none
+  servername: portal.citygrainla.com
+  type: vless
+  name: 🇳🇱 The Netherlands, Amsterdam | [BL] [d8ff56eb]
+- type: vless
+  name: 🇨🇭 Switzerland | 🌐 [*CIDR] [aef00acf]
   server: 153.76.161.57
   port: 2096
   udp: true
@@ -162,14 +185,82 @@ proxies:
   encryption: none
   tls: true
   servername: id.vk.com
-  client-fingerprint: ios
+  client-fingerprint: random
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   network: grpc
   grpc-opts:
     grpc-service-name: vless-grpc-reality
 - type: vless
-  name: 🇳🇱 The Netherlands [*CIDR]
+  name: 🇨🇭 Switzerland | 🌐 [*CIDR] [78fedc28]
+  server: 153.76.161.57
+  port: 2096
+  udp: true
+  uuid: 3fcec4e4-a674-44d2-8cae-c253cec43b9c
+  encryption: none
+  tls: true
+  servername: id.vk.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+- type: vless
+  name: 🇪🇸 Spain, Madrid (Chamartín) | [BL] [8385f73c]
+  server: 45.198.55.200
+  port: 25136
+  udp: true
+  uuid: c1c13ef7-affa-47e1-8967-25cc67679c10
+  encryption: none
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: nkmfL3QCskKAfBUk-OiTgcWyIXGmXrZVtDEoio0Qo1w
+    short-id: f78838fbd85e59ae
+  network: tcp
+- type: vless
+  name: 🇪🇸 Spain, Madrid (Chamartín) | [BL] [82d288d8]
+  server: es3.h1cloud.net
+  port: 25136
+  udp: true
+  uuid: c1c13ef7-affa-47e1-8967-25cc67679c10
+  encryption: none
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: nkmfL3QCskKAfBUk-OiTgcWyIXGmXrZVtDEoio0Qo1w
+    short-id: f78838fbd85e59ae
+  network: tcp
+- type: vless
+  name: 🇱🇹 Lithuania, Vilnius | [BL]
+  server: b58e68t.lt1.h1clayd.click
+  port: 443
+  udp: true
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  encryption: none
+  tls: true
+  servername: b58e68t.lt1.h1clayd.click
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
+    short-id: 2301ac8aee8bf6d4
+  network: tcp
+- type: vless
+  name: 🇸🇬 Singapore, Singapore | [BL]
+  server: gz2.vatilon.cc
+  port: 8447
+  udp: true
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+  encryption: none
+  tls: true
+  servername: 48.maoming.org
+  client-fingerprint: chrome
+  network: tcp
+- type: vless
+  name: 🌐 Anycast-IP | 🇩🇪 [*CIDR]
   server: msk.ai-boost.tech
   port: 443
   udp: true
@@ -177,73 +268,28 @@ proxies:
   encryption: none
   tls: true
   servername: msk.ai-boost.tech
-  client-fingerprint: edge
+  client-fingerprint: random
   network: ws
   ws-opts:
     path: /3a7lzIHlgUuz2QnV1CaQ
     headers:
       Host: msk.ai-boost.tech
 - type: vless
-  name: 🇳🇱 The Netherlands, Amsterdam | [BL] [f7a7dee4]
-  server: 5.101.118.146
+  name: 🌐 Anycast-IP | 🇳🇱 [*CIDR]
+  server: msk.ai-boost.tech
   port: 443
   udp: true
-  uuid: 698b212d-ca12-4794-8256-252a6e1b4533
+  uuid: 513e7ad9-318b-4495-8f5b-d88c4302fdc1
   encryption: none
   tls: true
-  servername: m3k8.vpnpolar.online
-  client-fingerprint: chrome
+  servername: msk.ai-boost.tech
   network: ws
   ws-opts:
-    path: /beeline
+    path: /3a7lzIHlgUuz2QnV1CaQ
     headers:
-      Host: m3k8.vpnpolar.online
+      Host: msk.ai-boost.tech
 - type: vless
-  name: 🇺🇦 Ukraine, Kyiv | [BL] [8eb322cc]
-  server: lv-bridge.shadowshroom.org
-  port: 8443
-  udp: true
-  uuid: f7f48934-f14c-4819-b225-36e89bda5491
-  encryption: none
-  tls: true
-  servername: lv-bridge.shadowshroom.org
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  reality-opts:
-    public-key: 5JnZHD1YD9Ibt9hPzp-ogzMRVWvYxthhcEqRK8btrDU
-  network: tcp
-- type: vless
-  name: 🇷🇺 Russia | [*CIDR]
-  server: 93.188.184.150
-  port: 443
-  udp: true
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
-  encryption: none
-  tls: true
-  servername: ru-1-2.unturned-rust-dead.lol
-  client-fingerprint: edge
-  reality-opts:
-    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ru-api
-- type: vless
-  name: 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL]
-  server: 217.60.63.207
-  port: 443
-  udp: true
-  uuid: 698b212d-ca12-4794-8256-252a6e1b4533
-  encryption: none
-  tls: true
-  servername: m3k8.vpnpolar.online
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /beeline
-    headers:
-      Host: m3k8.vpnpolar.online
-- type: vless
-  name: 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] [f0a6288d]
+  name: 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR]
   server: 80.87.194.253
   port: 2096
   udp: true
@@ -251,57 +297,12 @@ proxies:
   encryption: none
   tls: true
   servername: id.vk.com
-  client-fingerprint: edge
+  client-fingerprint: firefox
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   network: grpc
   grpc-opts:
     grpc-service-name: vless-grpc-reality
-- type: vless
-  name: 🇳🇱 The Netherlands, Amsterdam | [BL] [3e306734]
-  server: c20s5.portablesubmarines.com
-  port: 443
-  udp: true
-  uuid: 85fe968d-fbb5-40dc-8422-30635eccb149
-  encryption: none
-  tls: true
-  servername: portal.citygrainla.com
-  flow: xtls-rprx-vision
-  client-fingerprint: edge
-  reality-opts:
-    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
-    short-id: 051f20c2344a2dfd
-  network: tcp
-- type: vless
-  name: 🇳🇱 The Netherlands, Amsterdam | [BL] [d8ff56eb]
-  server: c20s5.portablesubmarines.com
-  port: 443
-  udp: true
-  uuid: 85fe968d-fbb5-40dc-8422-30635eccb149
-  encryption: none
-  tls: true
-  servername: portal.citygrainla.com
-  flow: xtls-rprx-vision
-  client-fingerprint: qq
-  reality-opts:
-    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
-    short-id: 051f20c2344a2dfd
-  network: tcp
-- type: vless
-  name: 🇳🇱 The Netherlands, Amsterdam | [BL] [5d6e5c85]
-  server: 83.228.199.3
-  port: 443
-  udp: true
-  uuid: 698b212d-ca12-4794-8256-252a6e1b4533
-  encryption: none
-  tls: true
-  servername: m3k8.vpnpolar.online
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /beeline
-    headers:
-      Host: m3k8.vpnpolar.online
 proxy-groups:
 - name: Fine
   type: select
@@ -309,49 +310,49 @@ proxy-groups:
   - AUTO
   - DIRECT
   - 🇳🇱 The Netherlands, Amsterdam | [BL] [3eb6e5eb]
-  - 🇯🇵 Japan | 🌐 | [BL]
-  - .𖥔 ݁ ˖ִ🛸༄˖°. | [BL] [081c952b]
-  - 🇭🇰_HK_中国香港
   - 🇨🇭 Switzerland | 🌐 | [*CIDR] [e9f2dadb]
-  - 🇨🇭 Switzerland | 🌐 [*CIDR]
+  - 🇨🇭 Switzerland | 🌐 [*CIDR] [239265e3]
   - 🇺🇦 Ukraine, Kyiv | [BL] [78c5b13e]
   - 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] [28050377]
   - 🌐 Anycast-IP | 🇦🇹 🇩🇪 | [SNI-RU] id.vk.com
-  - 🇦🇺 Australia | 🌐 | [BL]
   - 🇨🇭 Switzerland | 🌐 | [*CIDR] [aa2d6713]
   - 🇳🇱 The Netherlands [*CIDR]
-  - 🇳🇱 The Netherlands, Amsterdam | [BL] [f7a7dee4]
-  - 🇺🇦 Ukraine, Kyiv | [BL] [8eb322cc]
-  - 🇷🇺 Russia | [*CIDR]
-  - 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL]
   - 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] [f0a6288d]
   - 🇳🇱 The Netherlands, Amsterdam | [BL] [3e306734]
   - 🇳🇱 The Netherlands, Amsterdam | [BL] [d8ff56eb]
-  - 🇳🇱 The Netherlands, Amsterdam | [BL] [5d6e5c85]
+  - 🇨🇭 Switzerland | 🌐 [*CIDR] [aef00acf]
+  - 🇨🇭 Switzerland | 🌐 [*CIDR] [78fedc28]
+  - 🇪🇸 Spain, Madrid (Chamartín) | [BL] [8385f73c]
+  - 🇪🇸 Spain, Madrid (Chamartín) | [BL] [82d288d8]
+  - 🇱🇹 Lithuania, Vilnius | [BL]
+  - 🇸🇬 Singapore, Singapore | [BL]
+  - 🌐 Anycast-IP | 🇩🇪 [*CIDR]
+  - 🌐 Anycast-IP | 🇳🇱 [*CIDR]
+  - 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR]
   default-selected: 🇳🇱 The Netherlands, Amsterdam | [BL] [3eb6e5eb]
 - name: AUTO
   type: url-test
   proxies:
   - 🇳🇱 The Netherlands, Amsterdam | [BL] [3eb6e5eb]
-  - 🇯🇵 Japan | 🌐 | [BL]
-  - .𖥔 ݁ ˖ִ🛸༄˖°. | [BL] [081c952b]
-  - 🇭🇰_HK_中国香港
   - 🇨🇭 Switzerland | 🌐 | [*CIDR] [e9f2dadb]
-  - 🇨🇭 Switzerland | 🌐 [*CIDR]
+  - 🇨🇭 Switzerland | 🌐 [*CIDR] [239265e3]
   - 🇺🇦 Ukraine, Kyiv | [BL] [78c5b13e]
   - 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] [28050377]
   - 🌐 Anycast-IP | 🇦🇹 🇩🇪 | [SNI-RU] id.vk.com
-  - 🇦🇺 Australia | 🌐 | [BL]
   - 🇨🇭 Switzerland | 🌐 | [*CIDR] [aa2d6713]
   - 🇳🇱 The Netherlands [*CIDR]
-  - 🇳🇱 The Netherlands, Amsterdam | [BL] [f7a7dee4]
-  - 🇺🇦 Ukraine, Kyiv | [BL] [8eb322cc]
-  - 🇷🇺 Russia | [*CIDR]
-  - 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL]
   - 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] [f0a6288d]
   - 🇳🇱 The Netherlands, Amsterdam | [BL] [3e306734]
   - 🇳🇱 The Netherlands, Amsterdam | [BL] [d8ff56eb]
-  - 🇳🇱 The Netherlands, Amsterdam | [BL] [5d6e5c85]
+  - 🇨🇭 Switzerland | 🌐 [*CIDR] [aef00acf]
+  - 🇨🇭 Switzerland | 🌐 [*CIDR] [78fedc28]
+  - 🇪🇸 Spain, Madrid (Chamartín) | [BL] [8385f73c]
+  - 🇪🇸 Spain, Madrid (Chamartín) | [BL] [82d288d8]
+  - 🇱🇹 Lithuania, Vilnius | [BL]
+  - 🇸🇬 Singapore, Singapore | [BL]
+  - 🌐 Anycast-IP | 🇩🇪 [*CIDR]
+  - 🌐 Anycast-IP | 🇳🇱 [*CIDR]
+  - 🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR]
   url: https://play.google.com/store
   interval: 900
   timeout: 8000
