@@ -1,4 +1,4 @@
-# fine-clash-unified-v3 | fine-clash-version:20261004110047 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
+# fine-clash-unified-v3 | fine-clash-version:20261004110048 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
 mixed-port: 7890
 allow-lan: true
 bind-address: '*'
@@ -10,213 +10,183 @@ tcp-concurrent: true
 profile:
   store-selected: true
 proxies:
-- grpc-opts:
-    grpc-service-name: nl-grpc
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
-  reality-opts:
-    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-  type: vless
-  servername: nl-1-6.unturned-rust-dead.lol
-  server: nl-1-6.unturned-rust-dead.lol
-  encryption: none
-  name: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [c8a50fa3]
-  client-fingerprint: random
-  udp: true
-  tls: true
-  port: 443
-  network: grpc
-- grpc-opts:
-    grpc-service-name: nl-grpc
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
-  reality-opts:
-    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-  type: vless
-  servername: nl-1-6.unturned-rust-dead.lol
-  server: nl-1-6.unturned-rust-dead.lol
-  encryption: none
-  name: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [7adc4a84]
-  client-fingerprint: chrome
-  udp: true
-  tls: true
-  port: 443
-  network: grpc
-- uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
-  alterId: 0
+- cipher: auto
   type: vmess
-  server: yg1.ygkkk.dpdns.org
-  cipher: auto
-  name: 🇭🇰 Hong Kong, Hong Kong | [BL]
   udp: true
   ws-opts:
     headers:
       Host: jmp1.907737.xyz
     path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
-  tls: true
   port: 443
+  tls: true
+  alterId: 0
   network: ws
-- grpc-opts:
-    grpc-service-name: nl-grpc
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  name: 🇭🇰 Hong Kong, Hong Kong | [BL]
+  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
+  server: yg1.ygkkk.dpdns.org
+- encryption: none
   reality-opts:
     public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-  type: vless
-  servername: nl-1-6.unturned-rust-dead.lol
-  server: nl-1-6.unturned-rust-dead.lol
-  encryption: none
-  name: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [5eec4fcc]
-  client-fingerprint: ios
   udp: true
-  tls: true
   port: 443
-  network: grpc
-- grpc-opts:
-    grpc-service-name: nl-grpc
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
-  reality-opts:
-    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-  type: vless
+  tls: true
+  client-fingerprint: firefox
   servername: nl-1-6.unturned-rust-dead.lol
-  server: nl-1-6.unturned-rust-dead.lol
-  encryption: none
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  grpc-opts:
+    grpc-service-name: nl-grpc
+  network: grpc
   name: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [fc59c315]
-  client-fingerprint: firefox
-  udp: true
-  tls: true
-  port: 443
-  network: grpc
-- uuid: d0b32482-67aa-426d-8735-ab6c7ceb65bd
   type: vless
+  server: nl-1-6.unturned-rust-dead.lol
+- encryption: none
   flow: xtls-rprx-vision
-  servername: cdn.intercom-home.online
-  server: 178.107.58.80
-  encryption: none
-  name: 🇬🇧 United Kingdom, Hatfield | [BL]
-  client-fingerprint: firefox
-  udp: true
-  tls: true
-  port: 8443
-  network: tcp
-- uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
-  reality-opts:
-    public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
-    short-id: fb442438e2223836
-  type: vless
-  flow: xtls-rprx-vision
-  servername: swerka.loknietotop.digital
-  server: swerka.loknietotop.digital
-  encryption: none
-  name: 🇸🇪 Sweden, Stockholm | [BL]
-  client-fingerprint: firefox
-  udp: true
-  tls: true
-  port: 443
-  network: tcp
-- uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
   reality-opts:
     public-key: III2StgFziJtisbaKDYlEF2qYwBHJZnzZH5DHdwuFQ8
     short-id: d110331f200987ae
-  type: vless
-  flow: xtls-rprx-vision
+  udp: true
+  port: 443
+  tls: true
+  client-fingerprint: firefox
   servername: finaluty.loknietotop.digital
-  server: finaluty.loknietotop.digital
-  encryption: none
+  uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
+  network: tcp
   name: 🇫🇮 Finland, Helsinki | [BL]
-  client-fingerprint: firefox
-  udp: true
-  tls: true
-  port: 443
-  network: tcp
-- uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
-  reality-opts:
-    public-key: r1MW0o1DsC6EEWN-KPKnoXszb1trxlKShRIgOpxqHBk
-    short-id: d98e7afec9c0c359
   type: vless
-  flow: xtls-rprx-vision
-  servername: zahvatpribaltovonline.vvzzkontaktezzvv.garden
-  server: zahvatpribaltovonline.vvzzkontaktezzvv.garden
-  encryption: none
-  name: 🇪🇪 Estonia, Tallinn | 🌐 | [BL]
-  client-fingerprint: firefox
+  server: finaluty.loknietotop.digital
+- cipher: auto
+  type: vmess
   udp: true
-  tls: true
-  port: 443
-  network: tcp
-- type: vmess
-  name: 🇩🇪 Germany, Frankfurt am Main (Innenstadt III) | [BL]
-  server: de-d21e56c13c.shamanapp.online
-  port: 33744
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
   ws-opts:
     headers:
       Host: de-d21e56c13c.shamanapp.online:33744
     path: /ShamanVMESS2026
+  port: 33744
+  alterId: 0
+  network: ws
+  name: 🇩🇪 Germany, Frankfurt am Main (Innenstadt III) | [BL]
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  server: de-d21e56c13c.shamanapp.online
+- type: vmess
+  name: 🇺🇸 United States, Reston | [BL]
+  server: panel-production-7b8f.up.railway.app
+  port: 443
+  uuid: 31a3725e-7883-435d-ab58-4fd1edfda73b
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  servername: panel-production-7b8f.up.railway.app
+  ws-opts:
+    headers:
+      Host: panel-production-7b8f.up.railway.app
+    path: /gw/29bfb482-59d5-451e-8609-e5a8026d11e2?ed=2560
 - type: vless
-  name: 🇵🇱 Poland, Warsaw | [BL]
-  server: lineartronic-iii.subaru-volga.com
+  name: 🇺🇸 United States | 🌐 | [BL]
+  server: 04b51566-9333-492b-b680-8f80752411f9.fly.dev
   port: 443
   udp: true
-  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
+  uuid: fe15a643-4c5e-e133-f560-3b79074162da
   encryption: none
   tls: true
-  servername: lineartronic-iii.subaru-volga.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: HGQg7VrNlEhfOEjLR1LNeBZaVJg-J1f4DhxqOp-orjA
-    short-id: 6facda
-  network: tcp
+  servername: 04b51566-9333-492b-b680-8f80752411f9.fly.dev
+  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /ws/fe15a643-4c5e-e133-f560-3b79074162da
+    headers:
+      Host: 04b51566-9333-492b-b680-8f80752411f9.fly.dev
 - type: vless
-  name: 🌐 Anycast-IP | 🇪🇪 🇳🇱 | [BL]
-  server: play.murka.fun
+  name: 🇺🇸 United States, Chicago | [BL] [fa982d64]
+  server: freeus.aiage.work
   port: 443
   udp: true
-  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   encryption: none
   tls: true
-  servername: play.murka.fun
+  servername: freeus.aiage.work
   flow: xtls-rprx-vision
+  client-fingerprint: qq
+  reality-opts:
+    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
+    short-id: ccaf7283610c6fa8
+  network: tcp
+- type: vless
+  name: 🇺🇸 United States, Chicago | [BL] [d31ff88b]
+  server: freeus.aiage.work
+  port: 443
+  udp: true
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
+  tls: true
+  servername: freeus.aiage.work
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
+    short-id: ccaf7283610c6fa8
+  network: tcp
+- type: vless
+  name: 🇩🇪 Germany, Maisach | [BL] [c7b3aa94]
+  server: de-1-1.unturned-rust-dead.lol
+  port: 443
+  udp: true
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  encryption: none
+  tls: true
+  servername: de-1-1.unturned-rust-dead.lol
   client-fingerprint: random
   reality-opts:
-    public-key: 1iDRaqLgk1t6J54DlCZP0AFfRv8KxUTEa3bpL5nJrD4
-    short-id: 1f82ac
-  network: tcp
+    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
+  network: grpc
+  grpc-opts:
+    grpc-service-name: de-grpc
+- type: vless
+  name: 🇩🇪 Germany, Maisach | [BL] [9dd01b84]
+  server: de-1-1.unturned-rust-dead.lol
+  port: 443
+  udp: true
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  encryption: none
+  tls: true
+  servername: de-1-1.unturned-rust-dead.lol
+  client-fingerprint: safari
+  reality-opts:
+    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
+  network: grpc
+  grpc-opts:
+    grpc-service-name: de-grpc
 proxy-groups:
 - name: Fine
   type: select
   proxies:
   - AUTO
   - DIRECT
-  - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [c8a50fa3]
-  - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [7adc4a84]
   - 🇭🇰 Hong Kong, Hong Kong | [BL]
-  - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [5eec4fcc]
   - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [fc59c315]
-  - 🇬🇧 United Kingdom, Hatfield | [BL]
-  - 🇸🇪 Sweden, Stockholm | [BL]
   - 🇫🇮 Finland, Helsinki | [BL]
-  - 🇪🇪 Estonia, Tallinn | 🌐 | [BL]
   - 🇩🇪 Germany, Frankfurt am Main (Innenstadt III) | [BL]
-  - 🇵🇱 Poland, Warsaw | [BL]
-  - 🌐 Anycast-IP | 🇪🇪 🇳🇱 | [BL]
-  default-selected: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [c8a50fa3]
+  - 🇺🇸 United States, Reston | [BL]
+  - 🇺🇸 United States | 🌐 | [BL]
+  - 🇺🇸 United States, Chicago | [BL] [fa982d64]
+  - 🇺🇸 United States, Chicago | [BL] [d31ff88b]
+  - 🇩🇪 Germany, Maisach | [BL] [c7b3aa94]
+  - 🇩🇪 Germany, Maisach | [BL] [9dd01b84]
+  default-selected: 🇭🇰 Hong Kong, Hong Kong | [BL]
 - name: AUTO
   type: url-test
   proxies:
-  - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [c8a50fa3]
-  - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [7adc4a84]
   - 🇭🇰 Hong Kong, Hong Kong | [BL]
-  - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [5eec4fcc]
   - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [fc59c315]
-  - 🇬🇧 United Kingdom, Hatfield | [BL]
-  - 🇸🇪 Sweden, Stockholm | [BL]
   - 🇫🇮 Finland, Helsinki | [BL]
-  - 🇪🇪 Estonia, Tallinn | 🌐 | [BL]
   - 🇩🇪 Germany, Frankfurt am Main (Innenstadt III) | [BL]
-  - 🇵🇱 Poland, Warsaw | [BL]
-  - 🌐 Anycast-IP | 🇪🇪 🇳🇱 | [BL]
+  - 🇺🇸 United States, Reston | [BL]
+  - 🇺🇸 United States | 🌐 | [BL]
+  - 🇺🇸 United States, Chicago | [BL] [fa982d64]
+  - 🇺🇸 United States, Chicago | [BL] [d31ff88b]
+  - 🇩🇪 Germany, Maisach | [BL] [c7b3aa94]
+  - 🇩🇪 Germany, Maisach | [BL] [9dd01b84]
   url: https://play.google.com/store
   interval: 900
   timeout: 8000
