@@ -1,4 +1,4 @@
-# fine-clash-unified-v3 | fine-clash-version:20261004110046 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
+# fine-clash-unified-v3 | fine-clash-version:20261004110047 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
 mixed-port: 7890
 allow-lan: true
 bind-address: '*'
@@ -10,295 +10,178 @@ tcp-concurrent: true
 profile:
   store-selected: true
 proxies:
-- servername: nl-1-6.unturned-rust-dead.lol
-  tls: true
+- grpc-opts:
+    grpc-service-name: nl-grpc
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  reality-opts:
+    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
+  type: vless
+  servername: nl-1-6.unturned-rust-dead.lol
   server: nl-1-6.unturned-rust-dead.lol
+  encryption: none
   name: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [c8a50fa3]
-  udp: true
-  network: grpc
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
-  port: 443
   client-fingerprint: random
-  encryption: none
-  grpc-opts:
-    grpc-service-name: nl-grpc
-  type: vless
-  reality-opts:
-    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-- servername: nl-1-6.unturned-rust-dead.lol
-  tls: true
-  server: nl-1-6.unturned-rust-dead.lol
-  name: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [7adc4a84]
   udp: true
+  tls: true
+  port: 443
   network: grpc
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
-  port: 443
-  client-fingerprint: chrome
-  encryption: none
-  grpc-opts:
+- grpc-opts:
     grpc-service-name: nl-grpc
-  type: vless
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
   reality-opts:
     public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-- servername: www.samsung.com
-  tls: true
-  server: se3.h1cloud.net
-  name: 🇸🇪 Sweden, Älvsjö | [BL] [75759fca]
-  udp: true
-  network: tcp
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  port: 25119
+  type: vless
+  servername: nl-1-6.unturned-rust-dead.lol
+  server: nl-1-6.unturned-rust-dead.lol
+  encryption: none
+  name: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [7adc4a84]
   client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  encryption: none
-  type: vless
-  reality-opts:
-    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
-    short-id: 10f517
-- servername: www.samsung.com
+  udp: true
   tls: true
-  server: se3.h1cloud.net
-  name: 🇸🇪 Sweden, Älvsjö | [BL] [bae4854b]
-  udp: true
-  network: tcp
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  port: 25119
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  encryption: none
-  type: vless
-  reality-opts:
-    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
-    short-id: 10f517
-- type: vmess
-  name: 🇺🇸 United States, Santa Clarita (Canyon Country) | [BL] [1879dc93]
-  server: 142.171.48.179
-  port: 28167
-  uuid: 71e6d255-8054-42be-8b35-d28d82e97653
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    headers:
-      Host: gw.alicdn.com
-    path: /
-- type: vmess
-  name: 🇺🇸 United States, Santa Clarita (Canyon Country) | [BL] [18e8dd71]
-  server: 142.171.48.179
-  port: 28167
-  uuid: c20f5c31-488e-44c7-b26a-8be8e0737066
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    headers:
-      Host: gw.alicdn.com
-    path: /
-- type: vmess
-  name: 🇭🇰 Hong Kong, Hong Kong | [BL]
-  server: yg1.ygkkk.dpdns.org
   port: 443
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
+  network: grpc
+- uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
   alterId: 0
+  type: vmess
+  server: yg1.ygkkk.dpdns.org
   cipher: auto
+  name: 🇭🇰 Hong Kong, Hong Kong | [BL]
   udp: true
-  network: ws
-  tls: true
   ws-opts:
     headers:
       Host: jmp1.907737.xyz
     path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
-- type: vless
-  name: 🇬🇧 United Kingdom, London | [BL] [0b66982d]
-  server: 45.142.127.24
-  port: 443
-  udp: true
-  uuid: b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
-  encryption: none
   tls: true
-  servername: rnxq-1lpi3m.linmeisoft.com
-  client-fingerprint: qq
-  network: ws
-  ws-opts:
-    path: /b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
-    headers:
-      Host: rnxq-1lpi3m.linmeisoft.com
-- type: vless
-  name: 🇬🇧 United Kingdom, London | [BL] [cd747d7c]
-  server: 217.60.63.5
   port: 443
-  udp: true
-  uuid: b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
-  encryption: none
-  tls: true
-  servername: rnxq-1lpi3m.linmeisoft.com
-  client-fingerprint: ios
   network: ws
-  ws-opts:
-    path: /b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
-    headers:
-      Host: rnxq-1lpi3m.linmeisoft.com
-- type: vless
-  name: 🇬🇧 United Kingdom, London | [BL] [d01eb2c9]
-  server: 135.136.176.183
-  port: 443
-  udp: true
-  uuid: b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
+- grpc-opts:
+    grpc-service-name: nl-grpc
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  reality-opts:
+    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
+  type: vless
+  servername: nl-1-6.unturned-rust-dead.lol
+  server: nl-1-6.unturned-rust-dead.lol
   encryption: none
-  tls: true
-  servername: rnxq-1lpi3m.linmeisoft.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
-    headers:
-      Host: rnxq-1lpi3m.linmeisoft.com
-- type: vless
   name: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [5eec4fcc]
-  server: nl-1-6.unturned-rust-dead.lol
-  port: 443
-  udp: true
-  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
-  encryption: none
-  tls: true
-  servername: nl-1-6.unturned-rust-dead.lol
   client-fingerprint: ios
-  reality-opts:
-    public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-  network: grpc
-  grpc-opts:
-    grpc-service-name: nl-grpc
-- type: vless
-  name: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [fc59c315]
-  server: nl-1-6.unturned-rust-dead.lol
-  port: 443
   udp: true
+  tls: true
+  port: 443
+  network: grpc
+- grpc-opts:
+    grpc-service-name: nl-grpc
   uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
-  encryption: none
-  tls: true
-  servername: nl-1-6.unturned-rust-dead.lol
-  client-fingerprint: firefox
   reality-opts:
     public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
-  network: grpc
-  grpc-opts:
-    grpc-service-name: nl-grpc
-- type: vless
-  name: 🇬🇧 United Kingdom, Hatfield | [BL]
-  server: 178.107.58.80
-  port: 8443
-  udp: true
-  uuid: d0b32482-67aa-426d-8735-ab6c7ceb65bd
+  type: vless
+  servername: nl-1-6.unturned-rust-dead.lol
+  server: nl-1-6.unturned-rust-dead.lol
   encryption: none
-  tls: true
-  servername: cdn.intercom-home.online
-  flow: xtls-rprx-vision
+  name: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [fc59c315]
   client-fingerprint: firefox
-  network: tcp
-- type: vless
-  name: 🇸🇪 Sweden, Stockholm | [BL]
-  server: swerka.loknietotop.digital
+  udp: true
+  tls: true
   port: 443
-  udp: true
-  uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
-  encryption: none
-  tls: true
-  servername: swerka.loknietotop.digital
+  network: grpc
+- uuid: d0b32482-67aa-426d-8735-ab6c7ceb65bd
+  type: vless
   flow: xtls-rprx-vision
+  servername: cdn.intercom-home.online
+  server: 178.107.58.80
+  encryption: none
+  name: 🇬🇧 United Kingdom, Hatfield | [BL]
   client-fingerprint: firefox
+  udp: true
+  tls: true
+  port: 8443
+  network: tcp
+- uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
   reality-opts:
     public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
     short-id: fb442438e2223836
-  network: tcp
-- type: vless
-  name: 🇫🇮 Finland, Helsinki | [BL]
-  server: finaluty.loknietotop.digital
-  port: 443
-  udp: true
-  uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
-  encryption: none
-  tls: true
-  servername: finaluty.loknietotop.digital
+  type: vless
   flow: xtls-rprx-vision
+  servername: swerka.loknietotop.digital
+  server: swerka.loknietotop.digital
+  encryption: none
+  name: 🇸🇪 Sweden, Stockholm | [BL]
   client-fingerprint: firefox
+  udp: true
+  tls: true
+  port: 443
+  network: tcp
+- uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
   reality-opts:
     public-key: III2StgFziJtisbaKDYlEF2qYwBHJZnzZH5DHdwuFQ8
     short-id: d110331f200987ae
-  network: tcp
-- type: vless
-  name: 🇪🇪 Estonia, Tallinn | 🌐 | [BL]
-  server: zahvatpribaltovonline.vvzzkontaktezzvv.garden
-  port: 443
-  udp: true
-  uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
-  encryption: none
-  tls: true
-  servername: zahvatpribaltovonline.vvzzkontaktezzvv.garden
+  type: vless
   flow: xtls-rprx-vision
+  servername: finaluty.loknietotop.digital
+  server: finaluty.loknietotop.digital
+  encryption: none
+  name: 🇫🇮 Finland, Helsinki | [BL]
   client-fingerprint: firefox
+  udp: true
+  tls: true
+  port: 443
+  network: tcp
+- uuid: ace33fb8-c593-4b17-8f72-f3359b6e9638
   reality-opts:
     public-key: r1MW0o1DsC6EEWN-KPKnoXszb1trxlKShRIgOpxqHBk
     short-id: d98e7afec9c0c359
-  network: tcp
-- type: vless
-  name: 🇰🇿 Kazakhstan, Almaty | [BL]
-  server: 176.12.74.226
-  port: 443
-  udp: true
-  uuid: 9ee57d03-dcf5-488b-aff7-305301879353
-  encryption: none
-  tls: true
-  servername: kz-first.yourzloy.site
+  type: vless
   flow: xtls-rprx-vision
-  client-fingerprint: random
-  reality-opts:
-    public-key: vL7_EY1_SpsyEROqEDtLaatpZEmna_VixzsEfWI5wDo
-    short-id: aef88ffbbfde7dea
-  network: tcp
-- type: vless
-  name: 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL]
-  server: 45.88.12.47
-  port: 2083
-  udp: true
-  uuid: 51b7e147-a320-44be-ae95-3f3a80b7d3d7
+  servername: zahvatpribaltovonline.vvzzkontaktezzvv.garden
+  server: zahvatpribaltovonline.vvzzkontaktezzvv.garden
   encryption: none
+  name: 🇪🇪 Estonia, Tallinn | 🌐 | [BL]
+  client-fingerprint: firefox
+  udp: true
   tls: true
-  servername: cert.viktorthebest.lol
-  client-fingerprint: random
+  port: 443
+  network: tcp
+- type: vmess
+  name: 🇩🇪 Germany, Frankfurt am Main (Innenstadt III) | [BL]
+  server: de-d21e56c13c.shamanapp.online
+  port: 33744
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  alterId: 0
+  cipher: auto
+  udp: true
   network: ws
   ws-opts:
-    path: /vless-ws
+    headers:
+      Host: de-d21e56c13c.shamanapp.online:33744
+    path: /ShamanVMESS2026
 - type: vless
-  name: 🇳🇱 The Netherlands | 🌐 [*CIDR]
-  server: maple.hubnori.ink
+  name: 🇵🇱 Poland, Warsaw | [BL]
+  server: lineartronic-iii.subaru-volga.com
   port: 443
   udp: true
-  uuid: 6c21cf57-a9a9-4075-ad9f-631152bd911e
+  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
   encryption: none
   tls: true
-  servername: maple.hubnori.ink
-  flow: xtls-rprx-vision
-  client-fingerprint: firefox
+  servername: lineartronic-iii.subaru-volga.com
+  client-fingerprint: random
   reality-opts:
-    public-key: IBbBWAFM5_ZvoudwNh_09i461W0SLjLxHeRo1TMWMHY
-    short-id: d574a560c675152e
+    public-key: HGQg7VrNlEhfOEjLR1LNeBZaVJg-J1f4DhxqOp-orjA
+    short-id: 6facda
   network: tcp
 - type: vless
-  name: 🌐 Anycast-IP | 🇫🇷 🇵🇱 [*CIDR]
-  server: ember.datanexi.store
+  name: 🌐 Anycast-IP | 🇪🇪 🇳🇱 | [BL]
+  server: play.murka.fun
   port: 443
   udp: true
-  uuid: 6c21cf57-a9a9-4075-ad9f-631152bd911e
+  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
   encryption: none
   tls: true
-  servername: ember.datanexi.store
+  servername: play.murka.fun
   flow: xtls-rprx-vision
-  client-fingerprint: firefox
+  client-fingerprint: random
   reality-opts:
-    public-key: irnW7-3RKbH3SLv-RrPR27DQTLiIV8GYj2N8CRVgCBQ
-    short-id: c7e7592543e1fe96
+    public-key: 1iDRaqLgk1t6J54DlCZP0AFfRv8KxUTEa3bpL5nJrD4
+    short-id: 1f82ac
   network: tcp
 proxy-groups:
 - name: Fine
@@ -308,48 +191,32 @@ proxy-groups:
   - DIRECT
   - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [c8a50fa3]
   - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [7adc4a84]
-  - 🇸🇪 Sweden, Älvsjö | [BL] [75759fca]
-  - 🇸🇪 Sweden, Älvsjö | [BL] [bae4854b]
-  - 🇺🇸 United States, Santa Clarita (Canyon Country) | [BL] [1879dc93]
-  - 🇺🇸 United States, Santa Clarita (Canyon Country) | [BL] [18e8dd71]
   - 🇭🇰 Hong Kong, Hong Kong | [BL]
-  - 🇬🇧 United Kingdom, London | [BL] [0b66982d]
-  - 🇬🇧 United Kingdom, London | [BL] [cd747d7c]
-  - 🇬🇧 United Kingdom, London | [BL] [d01eb2c9]
   - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [5eec4fcc]
   - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [fc59c315]
   - 🇬🇧 United Kingdom, Hatfield | [BL]
   - 🇸🇪 Sweden, Stockholm | [BL]
   - 🇫🇮 Finland, Helsinki | [BL]
   - 🇪🇪 Estonia, Tallinn | 🌐 | [BL]
-  - 🇰🇿 Kazakhstan, Almaty | [BL]
-  - 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL]
-  - 🇳🇱 The Netherlands | 🌐 [*CIDR]
-  - 🌐 Anycast-IP | 🇫🇷 🇵🇱 [*CIDR]
+  - 🇩🇪 Germany, Frankfurt am Main (Innenstadt III) | [BL]
+  - 🇵🇱 Poland, Warsaw | [BL]
+  - 🌐 Anycast-IP | 🇪🇪 🇳🇱 | [BL]
   default-selected: 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [c8a50fa3]
 - name: AUTO
   type: url-test
   proxies:
   - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [c8a50fa3]
   - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [7adc4a84]
-  - 🇸🇪 Sweden, Älvsjö | [BL] [75759fca]
-  - 🇸🇪 Sweden, Älvsjö | [BL] [bae4854b]
-  - 🇺🇸 United States, Santa Clarita (Canyon Country) | [BL] [1879dc93]
-  - 🇺🇸 United States, Santa Clarita (Canyon Country) | [BL] [18e8dd71]
   - 🇭🇰 Hong Kong, Hong Kong | [BL]
-  - 🇬🇧 United Kingdom, London | [BL] [0b66982d]
-  - 🇬🇧 United Kingdom, London | [BL] [cd747d7c]
-  - 🇬🇧 United Kingdom, London | [BL] [d01eb2c9]
   - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [5eec4fcc]
   - 🇳🇱 The Netherlands, Eygelshoven | 🌐 | [BL] [fc59c315]
   - 🇬🇧 United Kingdom, Hatfield | [BL]
   - 🇸🇪 Sweden, Stockholm | [BL]
   - 🇫🇮 Finland, Helsinki | [BL]
   - 🇪🇪 Estonia, Tallinn | 🌐 | [BL]
-  - 🇰🇿 Kazakhstan, Almaty | [BL]
-  - 🌐 Anycast-IP | 🇬🇧 🇳🇱 | [BL]
-  - 🇳🇱 The Netherlands | 🌐 [*CIDR]
-  - 🌐 Anycast-IP | 🇫🇷 🇵🇱 [*CIDR]
+  - 🇩🇪 Germany, Frankfurt am Main (Innenstadt III) | [BL]
+  - 🇵🇱 Poland, Warsaw | [BL]
+  - 🌐 Anycast-IP | 🇪🇪 🇳🇱 | [BL]
   url: https://play.google.com/store
   interval: 900
   timeout: 8000
