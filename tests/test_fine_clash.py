@@ -92,6 +92,7 @@ def test_final_config_is_fine_only():
         assert rules.index(rule) < geoip_cn
     for rule in bf.WECHAT_DIRECT + bf.XIAOMI_DIRECT:
         assert rule in rules
+        assert rules.index(rule) < geoip_cn
     assert "IP-CIDR,192.168.0.0/16,DIRECT,no-resolve" in rules
     assert "MATCH,Fine" in rules
     assert rules[-1] == "MATCH,Fine"
