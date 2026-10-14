@@ -14,12 +14,10 @@ https://raw.githubusercontent.com/fine-df/Fine-clash/refs/heads/main/live_clash.
 
 | 流量 | 出口 |
 |---|---|
-| 中国大陆 IP / 中国内网 | DIRECT |
+| 中国大陆 IP / 局域网 | DIRECT |
 | WPS / 金山文档 | DIRECT |
 | 小米系、微信系服务 | DIRECT |
-| Ozon | Fine（代理） |
-| Amazon / Seller Central | Fine |
-| 其他需要代理的海外流量 | Fine |
+| 其他所有流量 | Fine |
 
 - `Fine`：唯一主操作组。
 - `AUTO`：Fine 内部隐藏的自动测速子组，选择 `Fine -> AUTO` 时自动测速选优。
@@ -29,10 +27,9 @@ https://raw.githubusercontent.com/fine-df/Fine-clash/refs/heads/main/live_clash.
 
 核心原则：
 
-- Fine 是唯一代理节点池，也是全部海外代理流量的默认出口。
-- Ozon 及其常见服务/CDN 域名明确进入 Fine，避免被后续 `GEOIP,CN,DIRECT` 误判直连。
-- WPS / 金山文档、小米系、微信系域名直连；中国大陆 IP 直连。
-- 视频、商店下载和其他大流量海外网站进入 Fine；`MATCH` 也落到 Fine。
+- Fine 是唯一代理节点池；除表中明确列出的直连流量外，其余流量默认走 Fine。
+- `GEOIP,CN,DIRECT` 用于中国大陆 IP 直连；`MATCH,Fine` 是最终兜底规则。
+- WPS / 金山文档、小米系、微信系域名直连。
 - Fine 节点来自 GitHub 公开源发现与验证链。
 - 不再维护第二个最终订阅文件；旧 `fine_final.yaml` 已退出生产链路。
 - 订阅按 Mihomo / Clash.Meta 兼容语法设计，避免平台专用网卡名、固定 routing-mark 等设置。
