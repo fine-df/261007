@@ -12,7 +12,7 @@ def test_final_proxy_groups_single_fine_with_direct():
     groups = bf.build_proxy_groups(fine_names)
     by_name = {g["name"]: g for g in groups}
     # Only the Fine group is user-visible; AUTO is a hidden url-test subgroup
-    # embedded in Fine for one-tap latency auto-selection (GLOBAL was removed).
+    # embedded in Fine for one-tap latency auto-selection (only Fine and AUTO are generated).
     assert set(by_name) == {"Fine", "AUTO"}
     # Sticky-first: the first (quality-ranked) node is pinned as default-selected.
     assert by_name["Fine"]["default-selected"] == fine_names[0]
@@ -79,9 +79,22 @@ def test_final_config_is_fine_only():
     cfg = bf.build_config([{"name":"Fine-1","type":"trojan","server":"example.com","port":443,"password":"secret","tls":True}])
     assert cfg["mode"] == "rule"
     assert [n["name"] for n in cfg["proxies"]] == ["Fine-1"]
-    assert "DOMAIN-SUFFIX,ozon.ru,DIRECT" in cfg["rules"]
-    assert cfg["rules"].index("DOMAIN-SUFFIX,ozon.ru,DIRECT") < cfg["rules"].index("MATCH,Fine")
-    assert "MATCH,Fine" in cfg["rules"]
+    rules = cfg["rules"]
+    groups = {group["name"]: group for group in cfg["proxy-groups"]}
+    assert set(groups) == {"Fine", "AUTO"}
+    assert "DOMAIN-SUFFIX,ozon.ru,DIRECT" not in rules
+    geoip_cn = rules.index("GEOIP,CN,DIRECT")
+    for rule in bf.OZON_PROXY:
+        assert rule in rules
+        assert rules.index(rule) < geoip_cn  # Ozon must proxy even if its IP geolocates to China
+    for rule in bf.WPS_DIRECT:
+        assert rule in rules
+        assert rules.index(rule) < geoip_cn
+    for rule in bf.WECHAT_DIRECT + bf.XIAOMI_DIRECT:
+        assert rule in rules
+    assert "IP-CIDR,192.168.0.0/16,DIRECT,no-resolve" in rules
+    assert "MATCH,Fine" in rules
+    assert rules[-1] == "MATCH,Fine"
 
 def test_candidate_gate_modes_are_explicit():
     item = {"gemini": False, "google_play": False, "google": {"ok": True}}
