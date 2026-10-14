@@ -12,8 +12,9 @@ SRC = Path("data/fine_pool.yaml")
 
 VIDEO_DOMAINS=["youtube.com","youtu.be","ytimg.com","googlevideo.com","netflix.com","nflxvideo.net","nflximg.net","twitch.tv","ttvnw.net","vimeo.com"]
 STORE_DOMAINS=["play.google.com","googleplay.com","dl.google.com","gvt1.com","gvt2.com","microsoft.com","microsoftstore.com","apps.microsoft.com","steampowered.com","steamcommunity.com"]
-OZON_DIRECT=["DOMAIN-SUFFIX,ozon.ru,DIRECT"]
+OZON_PROXY=["DOMAIN-SUFFIX,ozon.ru,Fine","DOMAIN-SUFFIX,ozon.com,Fine","DOMAIN-SUFFIX,ozonusercontent.com,Fine","DOMAIN-SUFFIX,ozoncdn.ru,Fine","DOMAIN-SUFFIX,ozoncdn.com,Fine","DOMAIN-SUFFIX,o3.ru,Fine","DOMAIN-SUFFIX,ozone.ru,Fine","DOMAIN-SUFFIX,ozonpartners.ru,Fine","DOMAIN-SUFFIX,ozon.tech,Fine","DOMAIN-SUFFIX,ozon.by,Fine","DOMAIN-SUFFIX,ozon.kz,Fine"]
 WECHAT_DIRECT=["DOMAIN-SUFFIX,weixin.qq.com,DIRECT","DOMAIN-SUFFIX,wx.qq.com,DIRECT","DOMAIN-SUFFIX,wechat.com,DIRECT","DOMAIN-SUFFIX,qpic.cn,DIRECT","DOMAIN-SUFFIX,qlogo.cn,DIRECT","DOMAIN-SUFFIX,gtimg.cn,DIRECT","DOMAIN-SUFFIX,gtimg.com,DIRECT","DOMAIN-SUFFIX,qq.com,DIRECT","DOMAIN-SUFFIX,tenpay.com,DIRECT","DOMAIN-SUFFIX,wechatpay.cn,DIRECT","DOMAIN-SUFFIX,tencent.com,DIRECT","DOMAIN-SUFFIX,tencent-cloud.com,DIRECT","DOMAIN-SUFFIX,myqcloud.com,DIRECT","DOMAIN-SUFFIX,tencentcos.cn,DIRECT"]
+WPS_DIRECT=["DOMAIN-SUFFIX,wps.cn,DIRECT","DOMAIN-SUFFIX,wps.com,DIRECT","DOMAIN-SUFFIX,kdocs.cn,DIRECT","DOMAIN-SUFFIX,kdocs.com,DIRECT","DOMAIN-SUFFIX,kingsoft.com,DIRECT"]
 XIAOMI_DIRECT=["DOMAIN-SUFFIX,mi.com,DIRECT","DOMAIN-SUFFIX,xiaomi.com,DIRECT","DOMAIN-SUFFIX,miwifi.com,DIRECT","DOMAIN-SUFFIX,miui.com,DIRECT","DOMAIN-SUFFIX,mijia.com,DIRECT","DOMAIN-SUFFIX,xiaomi.cn,DIRECT"]
 LOCAL_IOT_DIRECT=["IP-CIDR,224.0.0.0/4,DIRECT,no-resolve","IP-CIDR,169.254.0.0/16,DIRECT,no-resolve"]
 PRIVATE_DIRECT=["DOMAIN-SUFFIX,lan,DIRECT","DOMAIN-SUFFIX,local,DIRECT","DOMAIN-SUFFIX,localhost,DIRECT","DOMAIN-SUFFIX,cn,DIRECT","DOMAIN-SUFFIX,com.cn,DIRECT","DOMAIN-SUFFIX,net.cn,DIRECT","DOMAIN-SUFFIX,gov.cn,DIRECT","DOMAIN-SUFFIX,edu.cn,DIRECT","IP-CIDR,10.0.0.0/8,DIRECT,no-resolve","IP-CIDR,172.16.0.0/12,DIRECT,no-resolve","IP-CIDR,192.168.0.0/16,DIRECT,no-resolve","IP-CIDR,127.0.0.0/8,DIRECT,no-resolve"]
@@ -48,7 +49,7 @@ def build_proxy_groups(fine_names):
     # quality node). Pinning it as the default-selected keeps the connection
     # stable across subscription updates.
     # 2026-10-06 调整：
-    #   - 去除冗余 GLOBAL 组：其内容与 FINE 重复，且从未被 rules 引用
+    #   - 去除冗余的第二个选择组：其内容与 Fine 重复，且没有路由引用
     #     （MATCH,Fine 是唯一兜底路由），属死组，删除精简。
     #   - AUTO(url-test, hidden) 作为子组挂进 Fine：用户既保留"一键自动测速
     #     选优"（选 AUTO 项即可），也能手动选具体节点 / 选 DIRECT 直连。
@@ -63,7 +64,7 @@ def build_config(fine_nodes):
     if not fine_nodes: raise ValueError("Fine pool must be non-empty")
     fine_nodes=unique_node_names(fine_nodes)
     fine_names=[n["name"] for n in fine_nodes]
-    rules=OZON_DIRECT+LOCAL_IOT_DIRECT+PRIVATE_DIRECT+WECHAT_DIRECT+XIAOMI_DIRECT+suffix_rules(VIDEO_DOMAINS,"Fine")+suffix_rules(STORE_DOMAINS,"Fine")+["GEOIP,CN,DIRECT","MATCH,Fine"]
+    rules=LOCAL_IOT_DIRECT+WPS_DIRECT+PRIVATE_DIRECT+OZON_PROXY+WECHAT_DIRECT+XIAOMI_DIRECT+suffix_rules(VIDEO_DOMAINS,"Fine")+suffix_rules(STORE_DOMAINS,"Fine")+["GEOIP,CN,DIRECT","MATCH,Fine"]
     return {
         "mixed-port":7890,"allow-lan":True,"bind-address":"*","mode":"rule","log-level":"warning","ipv6":False,"unified-delay":False,"tcp-concurrent":True,
         "profile":{"store-selected":True},
@@ -86,7 +87,7 @@ def main():
             if m: previous_version=int(m.group(1))
         except OSError: pass
     version=str(previous_version+1) if previous_version else datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
-    header=f"# fine-clash-unified-v3 | fine-clash-version:{version} | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine\n"
+    header=f"# fine-clash-unified-v3 | fine-clash-version:{version} | Fine=validated-pool | Ozon->Fine | CN->DIRECT | MATCH->Fine\n"
     OUT.write_text(header+dumped,encoding="utf-8")
     print(f"written {OUT}: Fine={len(config['proxies'])} validated nodes; rules={len(config['rules'])}")
 

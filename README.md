@@ -14,8 +14,10 @@ https://raw.githubusercontent.com/fine-df/Fine-clash/refs/heads/main/live_clash.
 
 | 流量 | 出口 |
 |---|---|
-| 中国大陆网站 / 中国内网 | DIRECT |
-| Ozon | DIRECT |
+| 中国大陆 IP / 中国内网 | DIRECT |
+| WPS / 金山文档 | DIRECT |
+| 小米系、微信系服务 | DIRECT |
+| Ozon | Fine（代理） |
 | Amazon / Seller Central | Fine |
 | 其他需要代理的海外流量 | Fine |
 
@@ -25,15 +27,11 @@ https://raw.githubusercontent.com/fine-df/Fine-clash/refs/heads/main/live_clash.
 - Fine 内的具体节点：需要时可人工固定某个节点。
 - 定期更新时，上一版完整优质节点池会进入连续性保留位，仍需通过当轮完整验证；合格的旧节点优先保留，不会因源刷新直接消失；新节点只在旧节点失效退出后补入。
 
-另有独立的 `GLOBAL` 手动接管模式：
-
-- 正常情况下不参与默认规则分流。
-- 明确切换 Mihomo 到 `global` 模式后，可在 `GLOBAL` 中手动选择任意节点，使全部流量走该节点。
-- 切回 `rule` 模式后，恢复上述自动分流。
-
 核心原则：
 
 - Fine 是唯一代理节点池，也是全部海外代理流量的默认出口。
+- Ozon 及其常见服务/CDN 域名明确进入 Fine，避免被后续 `GEOIP,CN,DIRECT` 误判直连。
+- WPS / 金山文档、小米系、微信系域名直连；中国大陆 IP 直连。
 - 视频、商店下载和其他大流量海外网站进入 Fine；`MATCH` 也落到 Fine。
 - Fine 节点来自 GitHub 公开源发现与验证链。
 - 不再维护第二个最终订阅文件；旧 `fine_final.yaml` 已退出生产链路。

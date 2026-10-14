@@ -58,6 +58,7 @@ jobs:
           sh -n _fine_sync.sh
 
       - name: Build Fine pool
+        if: ${{ !startsWith(github.event.head_commit.message || '', 'routing-only:') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GLOBALPING_API_TOKEN: ${{ secrets.GLOBALPING_API_TOKEN }}
@@ -65,11 +66,11 @@ jobs:
           python fine_clash.py || { echo '--- mihomo logs (build failed) ---'; find /tmp -maxdepth 2 -name mihomo.log -exec echo "== {} ==" \; -exec cat {} \; ; exit 1; }
 
       - name: Build single public profile
-        if: ${{ hashFiles('data/fine_pool.yaml') != '' }}
+        if: ${{ hashFiles('data/fine_pool.yaml') != '' && !startsWith(github.event.head_commit.message || '', 'routing-only:') }}
         run: python build_final.py data/fine_pool.yaml
 
       - name: Validate profile
-        if: ${{ hashFiles('data/fine_pool.yaml') != '' }}
+        if: ${{ hashFiles('data/fine_pool.yaml') != '' && !startsWith(github.event.head_commit.message || '', 'routing-only:') }}
         run: |
           set -euo pipefail
           test -s live_clash.yaml
@@ -107,8 +108,42 @@ jobs:
           fi
           mihomo -t -f live_clash.yaml
 
+      - name: Validate routing-only profile without rebuilding nodes
+        if: ${{ startsWith(github.event.head_commit.message || '', 'routing-only:') }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+
+          path = Path("live_clash.yaml")
+          assert path.is_file() and path.stat().st_size > 0, "live profile missing or empty"
+          cfg = yaml.safe_load(path.read_text(encoding="utf-8"))
+          assert cfg.get("mode") == "rule", "unexpected routing mode"
+
+          groups = {group["name"]: group for group in cfg.get("proxy-groups", [])}
+          assert set(groups) == {"Fine", "AUTO"}, f"unexpected group set: {set(groups)}"
+          assert groups["Fine"]["type"] == "select"
+          assert groups["Fine"]["proxies"][:2] == ["AUTO", "DIRECT"]
+          assert groups["AUTO"]["type"] == "url-test" and groups["AUTO"].get("hidden") is True
+
+          rules = cfg.get("rules", [])
+          geoip_cn = rules.index("GEOIP,CN,DIRECT")
+          assert rules[-1] == "MATCH,Fine"
+          for domain in ("ozon.ru", "ozon.com", "ozonusercontent.com", "ozoncdn.ru", "ozoncdn.com", "o3.ru", "ozone.ru", "ozonpartners.ru", "ozon.tech", "ozon.by", "ozon.kz"):
+              rule = f"DOMAIN-SUFFIX,{domain},Fine"
+              assert rule in rules and rules.index(rule) < geoip_cn, f"missing or misplaced Ozon route: {rule}"
+          for domain in ("wps.cn", "wps.com", "kdocs.cn", "kdocs.com", "kingsoft.com", "mi.com", "xiaomi.com", "miwifi.com", "miui.com", "mijia.com", "xiaomi.cn", "weixin.qq.com", "wx.qq.com", "wechat.com", "qq.com"):
+              rule = f"DOMAIN-SUFFIX,{domain},DIRECT"
+              assert rule in rules and rules.index(rule) < geoip_cn, f"missing or misplaced direct route: {rule}"
+          assert "IP-CIDR,192.168.0.0/16,DIRECT,no-resolve" in rules
+          assert not any(rule.startswith("DOMAIN-SUFFIX,ozon.ru,DIRECT") for rule in rules)
+          print(f"Routing-only profile passed structural audit: {len(cfg.get('proxies', []))} nodes, {len(rules)} rules.")
+          PY
+          mihomo -t -f live_clash.yaml
+
       - name: Publish
-        if: github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]'
+        if: github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]' && !startsWith(github.event.head_commit.message || '', 'routing-only:')
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
