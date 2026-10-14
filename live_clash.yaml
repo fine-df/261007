@@ -1,4 +1,4 @@
-# fine-clash-unified-v3 | fine-clash-version:20261004110053 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
+# fine-clash-unified-v3 | fine-clash-version:20261015070000 | Fine=validated-pool | Ozon->Fine | CN->DIRECT | MATCH->Fine
 mixed-port: 7890
 allow-lan: true
 bind-address: '*'
@@ -329,9 +329,13 @@ dns:
     geoip: true
     geoip-code: CN
 rules:
-- DOMAIN-SUFFIX,ozon.ru,DIRECT
 - IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
 - IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+- DOMAIN-SUFFIX,wps.cn,DIRECT
+- DOMAIN-SUFFIX,wps.com,DIRECT
+- DOMAIN-SUFFIX,kdocs.cn,DIRECT
+- DOMAIN-SUFFIX,kdocs.com,DIRECT
+- DOMAIN-SUFFIX,kingsoft.com,DIRECT
 - DOMAIN-SUFFIX,lan,DIRECT
 - DOMAIN-SUFFIX,local,DIRECT
 - DOMAIN-SUFFIX,localhost,DIRECT
@@ -344,6 +348,17 @@ rules:
 - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
 - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- DOMAIN-SUFFIX,ozon.ru,Fine
+- DOMAIN-SUFFIX,ozon.com,Fine
+- DOMAIN-SUFFIX,ozonusercontent.com,Fine
+- DOMAIN-SUFFIX,ozoncdn.ru,Fine
+- DOMAIN-SUFFIX,ozoncdn.com,Fine
+- DOMAIN-SUFFIX,o3.ru,Fine
+- DOMAIN-SUFFIX,ozone.ru,Fine
+- DOMAIN-SUFFIX,ozonpartners.ru,Fine
+- DOMAIN-SUFFIX,ozon.tech,Fine
+- DOMAIN-SUFFIX,ozon.by,Fine
+- DOMAIN-SUFFIX,ozon.kz,Fine
 - DOMAIN-SUFFIX,weixin.qq.com,DIRECT
 - DOMAIN-SUFFIX,wx.qq.com,DIRECT
 - DOMAIN-SUFFIX,wechat.com,DIRECT
