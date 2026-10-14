@@ -1,4 +1,4 @@
-# fine-clash-unified-v3 | fine-clash-version:20261004110052 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
+# fine-clash-unified-v3 | fine-clash-version:20261004110053 | Fine=validated-pool | Ozon->DIRECT | CN->DIRECT | MATCH->Fine
 mixed-port: 7890
 allow-lan: true
 bind-address: '*'
@@ -10,225 +10,223 @@ tcp-concurrent: true
 profile:
   store-selected: true
 proxies:
-- udp: true
-  network: tcp
-  type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  servername: freeus.aiage.work
+  flow: xtls-rprx-vision
+  server: freeus.aiage.work
   name: 🇺🇸 United States, Chicago | [BL] [fa982d64]
-  reality-opts:
-    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
-    short-id: ccaf7283610c6fa8
-  tls: true
-  encryption: none
-  server: freeus.aiage.work
+  network: tcp
   client-fingerprint: qq
-  port: 443
-  servername: freeus.aiage.work
-  flow: xtls-rprx-vision
-- udp: true
-  network: tcp
-  type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  name: 🇺🇸 United States, Chicago | [BL] [d31ff88b]
+  encryption: none
   reality-opts:
     public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
     short-id: ccaf7283610c6fa8
   tls: true
-  encryption: none
-  server: freeus.aiage.work
-  client-fingerprint: chrome
+  udp: true
+  type: vless
   port: 443
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   servername: freeus.aiage.work
   flow: xtls-rprx-vision
-- udp: true
+  server: freeus.aiage.work
+  name: 🇺🇸 United States, Chicago | [BL] [d31ff88b]
   network: tcp
-  type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  name: 未知 VLESS-301 | free-nodes
-  reality-opts:
-    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
-    short-id: 10f517
-  tls: true
-  encryption: none
-  server: se3.h1cloud.net
   client-fingerprint: chrome
-  port: 25119
+  encryption: none
+  reality-opts:
+    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
+    short-id: ccaf7283610c6fa8
+  tls: true
+  udp: true
+  type: vless
+  port: 443
+- uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   servername: www.samsung.com
   flow: xtls-rprx-vision
-- udp: true
+  server: se3.h1cloud.net
+  name: 未知 VLESS-301 | free-nodes
   network: tcp
-  type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  name: 🇸🇪 Sweden, Älvsjö | [BL]
+  client-fingerprint: chrome
+  encryption: none
   reality-opts:
     public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
     short-id: 10f517
   tls: true
-  encryption: none
-  server: se3.h1cloud.net
-  client-fingerprint: firefox
+  udp: true
+  type: vless
   port: 25119
+- uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   servername: www.samsung.com
   flow: xtls-rprx-vision
-- udp: true
+  server: se3.h1cloud.net
+  name: 🇸🇪 Sweden, Älvsjö | [BL]
   network: tcp
+  client-fingerprint: firefox
+  encryption: none
+  reality-opts:
+    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
+    short-id: 10f517
+  tls: true
+  udp: true
   type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  port: 25119
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  servername: nl1.aiage.work
+  flow: xtls-rprx-vision
+  server: nl1.aiage.work
   name: 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL] [4b515b31]
+  network: tcp
+  client-fingerprint: firefox
+  encryption: none
   reality-opts:
     public-key: vSa3rWZfq5OftXO2RSgggbTOxbHlWGTLpP8bNDki3wk
     short-id: adcbde41b1cf27ba
   tls: true
-  encryption: none
-  server: nl1.aiage.work
-  client-fingerprint: firefox
-  port: 443
-  servername: nl1.aiage.work
-  flow: xtls-rprx-vision
-- udp: true
-  network: tcp
-  type: vless
-  uuid: b7df9363-087b-48f7-a4ca-6e988ebf7f35
-  name: 🇪🇸 Spain, Navalcarnero | [BL] [0023caa3]
-  reality-opts:
-    public-key: l_qSSfZDQDjpodjZ80CiFCyXY6xssS0IHWxu6n_HN3c
-    short-id: dee4ffbdbe515f0d
-  tls: true
-  encryption: none
-  server: can1.ragnarok-it.xyz
-  client-fingerprint: firefox
-  port: 8449
-  servername: amd.com
-  flow: xtls-rprx-vision
-- udp: true
-  network: tcp
-  type: vless
-  uuid: b7df9363-087b-48f7-a4ca-6e988ebf7f35
-  name: 🇪🇸 Spain, Navalcarnero | [BL] [399d9f04]
-  reality-opts:
-    public-key: l_qSSfZDQDjpodjZ80CiFCyXY6xssS0IHWxu6n_HN3c
-    short-id: dee4ffbdbe515f0d
-  tls: true
-  encryption: none
-  server: can1.ragnarok-it.xyz
-  client-fingerprint: edge
-  port: 8449
-  servername: amd.com
-  flow: xtls-rprx-vision
-- udp: true
-  network: tcp
-  type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  name: 🇲🇩 Moldova, Chisinau | [BL] [ee04e097]
-  reality-opts:
-    public-key: pkKL2cqqPNxc1rqrvhJmexI7NOeZFaGUawAwqQpVY3c
-    short-id: 1d2fecf1d2475168
-  tls: true
-  encryption: none
-  server: ro2.aiage.work
-  client-fingerprint: qq
-  port: 443
-  servername: ro2.aiage.work
-  flow: xtls-rprx-vision
-- udp: true
-  network: tcp
-  type: vless
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  name: 🇲🇩 Moldova, Chisinau | [BL] [52af525b]
-  reality-opts:
-    public-key: pkKL2cqqPNxc1rqrvhJmexI7NOeZFaGUawAwqQpVY3c
-    short-id: 1d2fecf1d2475168
-  tls: true
-  encryption: none
-  server: ro2.aiage.work
-  client-fingerprint: safari
-  port: 443
-  servername: ro2.aiage.work
-  flow: xtls-rprx-vision
-- type: vless
-  name: 🇺🇸_US_美国
-  server: e8439083-5b1f-4a9a-8003-9c143de96941.fly.dev
-  port: 443
   udp: true
-  uuid: a8a4a3c1-1ae9-e9d2-4984-31561b113e87
+  type: vless
+  port: 443
+- uuid: b7df9363-087b-48f7-a4ca-6e988ebf7f35
+  servername: amd.com
+  flow: xtls-rprx-vision
+  server: can1.ragnarok-it.xyz
+  name: 🇪🇸 Spain, Navalcarnero | [BL] [0023caa3]
+  network: tcp
+  client-fingerprint: firefox
   encryption: none
+  reality-opts:
+    public-key: l_qSSfZDQDjpodjZ80CiFCyXY6xssS0IHWxu6n_HN3c
+    short-id: dee4ffbdbe515f0d
   tls: true
+  udp: true
+  type: vless
+  port: 8449
+- uuid: b7df9363-087b-48f7-a4ca-6e988ebf7f35
+  servername: amd.com
+  flow: xtls-rprx-vision
+  server: can1.ragnarok-it.xyz
+  name: 🇪🇸 Spain, Navalcarnero | [BL] [399d9f04]
+  network: tcp
+  client-fingerprint: edge
+  encryption: none
+  reality-opts:
+    public-key: l_qSSfZDQDjpodjZ80CiFCyXY6xssS0IHWxu6n_HN3c
+    short-id: dee4ffbdbe515f0d
+  tls: true
+  udp: true
+  type: vless
+  port: 8449
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  servername: ro2.aiage.work
+  flow: xtls-rprx-vision
+  server: ro2.aiage.work
+  name: 🇲🇩 Moldova, Chisinau | [BL] [ee04e097]
+  network: tcp
+  client-fingerprint: qq
+  encryption: none
+  reality-opts:
+    public-key: pkKL2cqqPNxc1rqrvhJmexI7NOeZFaGUawAwqQpVY3c
+    short-id: 1d2fecf1d2475168
+  tls: true
+  udp: true
+  type: vless
+  port: 443
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  servername: ro2.aiage.work
+  flow: xtls-rprx-vision
+  server: ro2.aiage.work
+  name: 🇲🇩 Moldova, Chisinau | [BL] [52af525b]
+  network: tcp
+  client-fingerprint: safari
+  encryption: none
+  reality-opts:
+    public-key: pkKL2cqqPNxc1rqrvhJmexI7NOeZFaGUawAwqQpVY3c
+    short-id: 1d2fecf1d2475168
+  tls: true
+  udp: true
+  type: vless
+  port: 443
+- uuid: a8a4a3c1-1ae9-e9d2-4984-31561b113e87
   servername: e8439083-5b1f-4a9a-8003-9c143de96941.fly.dev
-  client-fingerprint: chrome
+  server: e8439083-5b1f-4a9a-8003-9c143de96941.fly.dev
+  name: 🇺🇸_US_美国
   network: ws
+  client-fingerprint: chrome
   ws-opts:
     path: /ws/a8a4a3c1-1ae9-e9d2-4984-31561b113e87
     headers:
       Host: e8439083-5b1f-4a9a-8003-9c143de96941.fly.dev
-- type: vless
+  encryption: none
+  tls: true
+  udp: true
+  type: vless
+  port: 443
+- uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  servername: b58e68t.lt1.h1clayd.click
+  server: b58e68t.lt1.h1clayd.click
   name: 🇱🇹 Lithuania, Vilnius | [BL] [522a0357]
-  server: b58e68t.lt1.h1clayd.click
-  port: 443
-  udp: true
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  encryption: none
-  tls: true
-  servername: b58e68t.lt1.h1clayd.click
+  network: tcp
   client-fingerprint: random
+  encryption: none
   reality-opts:
     public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
     short-id: 2301ac8aee8bf6d4
-  network: tcp
-- type: vless
-  name: 🇱🇹 Lithuania, Vilnius | [BL] [8fc3e3d3]
-  server: b58e68t.lt1.h1clayd.click
-  port: 443
-  udp: true
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  encryption: none
   tls: true
+  udp: true
+  type: vless
+  port: 443
+- uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   servername: b58e68t.lt1.h1clayd.click
+  server: b58e68t.lt1.h1clayd.click
+  name: 🇱🇹 Lithuania, Vilnius | [BL] [8fc3e3d3]
+  network: tcp
   client-fingerprint: firefox
+  encryption: none
   reality-opts:
     public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
     short-id: 2301ac8aee8bf6d4
-  network: tcp
-- type: vless
-  name: 🇩🇪_DE_德国->🇱🇰_LK_斯里兰卡
-  server: free.sahanwickramasinghe.me
-  port: 80
+  tls: true
   udp: true
-  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
-  encryption: none
+  type: vless
+  port: 443
+- uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
+  server: free.sahanwickramasinghe.me
+  name: 🇩🇪_DE_德国->🇱🇰_LK_斯里兰卡
   network: ws
   ws-opts:
     path: /
     headers:
       Host: free.sahanwickramasinghe.me
+  encryption: none
+  udp: true
+  type: vless
+  port: 80
 - type: vless
-  name: 🇳🇱 The Netherlands, Amsterdam | [BL] [faea2e26]
-  server: 104.245.103.30
+  name: 🇱🇹 Lithuania, Vilnius | [BL] [c69ef01e]
+  server: b58e68t.lt1.h1clayd.click
   port: 443
   udp: true
-  uuid: 50410ae1-fd32-4553-8dcf-dc83e0aba20e
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   encryption: none
   tls: true
-  servername: portal.citygrainla.com
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
-    short-id: 051f20c2344a2dfd
-  network: tcp
-- type: vless
-  name: 🇳🇱 The Netherlands, Amsterdam | [BL] [3d8f4280]
-  server: 104.245.103.30
-  port: 443
-  udp: true
-  uuid: 50410ae1-fd32-4553-8dcf-dc83e0aba20e
-  encryption: none
-  tls: true
-  servername: portal.citygrainla.com
-  flow: xtls-rprx-vision
+  servername: b58e68t.lt1.h1clayd.click
   client-fingerprint: safari
   reality-opts:
-    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
-    short-id: 051f20c2344a2dfd
+    public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
+    short-id: 2301ac8aee8bf6d4
+  network: tcp
+- type: vless
+  name: 🇱🇹 Lithuania, Vilnius | [BL] [2a8156c1]
+  server: b58e68t.lt1.h1clayd.click
+  port: 443
+  udp: true
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  encryption: none
+  tls: true
+  servername: b58e68t.lt1.h1clayd.click
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
+    short-id: 2301ac8aee8bf6d4
   network: tcp
 proxy-groups:
 - name: Fine
@@ -249,8 +247,8 @@ proxy-groups:
   - 🇱🇹 Lithuania, Vilnius | [BL] [522a0357]
   - 🇱🇹 Lithuania, Vilnius | [BL] [8fc3e3d3]
   - 🇩🇪_DE_德国->🇱🇰_LK_斯里兰卡
-  - 🇳🇱 The Netherlands, Amsterdam | [BL] [faea2e26]
-  - 🇳🇱 The Netherlands, Amsterdam | [BL] [3d8f4280]
+  - 🇱🇹 Lithuania, Vilnius | [BL] [c69ef01e]
+  - 🇱🇹 Lithuania, Vilnius | [BL] [2a8156c1]
   default-selected: 🇺🇸 United States, Chicago | [BL] [fa982d64]
 - name: AUTO
   type: url-test
@@ -268,8 +266,8 @@ proxy-groups:
   - 🇱🇹 Lithuania, Vilnius | [BL] [522a0357]
   - 🇱🇹 Lithuania, Vilnius | [BL] [8fc3e3d3]
   - 🇩🇪_DE_德国->🇱🇰_LK_斯里兰卡
-  - 🇳🇱 The Netherlands, Amsterdam | [BL] [faea2e26]
-  - 🇳🇱 The Netherlands, Amsterdam | [BL] [3d8f4280]
+  - 🇱🇹 Lithuania, Vilnius | [BL] [c69ef01e]
+  - 🇱🇹 Lithuania, Vilnius | [BL] [2a8156c1]
   url: https://play.google.com/store
   interval: 900
   timeout: 8000
