@@ -87,7 +87,7 @@ def main():
             if m: previous_version=int(m.group(1))
         except OSError: pass
     version=str(previous_version+1) if previous_version else datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
-    header=f"# fine-clash-unified-v3 | fine-clash-version:{version} | Fine=validated-pool | Ozon->Fine | CN->DIRECT | MATCH->Fine\n"
+    header=f"# fine-clash-unified-v3 | fine-clash-version:{version} | Fine=validated-pool | CN->DIRECT | MATCH->Fine\n"
     OUT.write_text(header+dumped,encoding="utf-8")
     print(f"written {OUT}: Fine={len(config['proxies'])} validated nodes; rules={len(config['rules'])}")
 
