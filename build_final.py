@@ -12,7 +12,7 @@ SRC = Path("data/fine_pool.yaml")
 
 VIDEO_DOMAINS=["youtube.com","youtu.be","ytimg.com","googlevideo.com","netflix.com","nflxvideo.net","nflximg.net","twitch.tv","ttvnw.net","vimeo.com"]
 STORE_DOMAINS=["play.google.com","googleplay.com","dl.google.com","gvt1.com","gvt2.com","microsoft.com","microsoftstore.com","apps.microsoft.com","steampowered.com","steamcommunity.com"]
-OZON_PROXY=["DOMAIN-SUFFIX,ozon.ru,Fine","DOMAIN-SUFFIX,ozon.com,Fine","DOMAIN-SUFFIX,ozonusercontent.com,Fine","DOMAIN-SUFFIX,ozoncdn.ru,Fine","DOMAIN-SUFFIX,ozoncdn.com,Fine","DOMAIN-SUFFIX,o3.ru,Fine","DOMAIN-SUFFIX,ozone.ru,Fine","DOMAIN-SUFFIX,ozonpartners.ru,Fine","DOMAIN-SUFFIX,ozon.tech,Fine","DOMAIN-SUFFIX,ozon.by,Fine","DOMAIN-SUFFIX,ozon.kz,Fine"]
+OZON_DIREC=["DOMAIN-SUFFIX,ozon.ru,DIREC","DOMAIN-SUFFIX,ozon.com,DIREC","DOMAIN-SUFFIX,ozonusercontent.com,DIREC","DOMAIN-SUFFIX,ozoncdn.ru,DIREC","DOMAIN-SUFFIX,ozoncdn.com,DIREC","DOMAIN-SUFFIX,o3.ru,DIREC","DOMAIN-SUFFIX,ozone.ru,DIREC","DOMAIN-SUFFIX,ozonpartners.ru,DIREC","DOMAIN-SUFFIX,ozon.tech,DIREC","DOMAIN-SUFFIX,ozon.by,DIREC","DOMAIN-SUFFIX,ozon.kz,DIREC"]
 WECHAT_DIRECT=["DOMAIN-SUFFIX,weixin.qq.com,DIRECT","DOMAIN-SUFFIX,wx.qq.com,DIRECT","DOMAIN-SUFFIX,wechat.com,DIRECT","DOMAIN-SUFFIX,qpic.cn,DIRECT","DOMAIN-SUFFIX,qlogo.cn,DIRECT","DOMAIN-SUFFIX,gtimg.cn,DIRECT","DOMAIN-SUFFIX,gtimg.com,DIRECT","DOMAIN-SUFFIX,qq.com,DIRECT","DOMAIN-SUFFIX,tenpay.com,DIRECT","DOMAIN-SUFFIX,wechatpay.cn,DIRECT","DOMAIN-SUFFIX,tencent.com,DIRECT","DOMAIN-SUFFIX,tencent-cloud.com,DIRECT","DOMAIN-SUFFIX,myqcloud.com,DIRECT","DOMAIN-SUFFIX,tencentcos.cn,DIRECT"]
 WPS_DIRECT=["DOMAIN-SUFFIX,wps.cn,DIRECT","DOMAIN-SUFFIX,wps.com,DIRECT","DOMAIN-SUFFIX,kdocs.cn,DIRECT","DOMAIN-SUFFIX,kdocs.com,DIRECT","DOMAIN-SUFFIX,kingsoft.com,DIRECT"]
 XIAOMI_DIRECT=["DOMAIN-SUFFIX,mi.com,DIRECT","DOMAIN-SUFFIX,xiaomi.com,DIRECT","DOMAIN-SUFFIX,miwifi.com,DIRECT","DOMAIN-SUFFIX,miui.com,DIRECT","DOMAIN-SUFFIX,mijia.com,DIRECT","DOMAIN-SUFFIX,xiaomi.cn,DIRECT"]
@@ -64,7 +64,7 @@ def build_config(fine_nodes):
     if not fine_nodes: raise ValueError("Fine pool must be non-empty")
     fine_nodes=unique_node_names(fine_nodes)
     fine_names=[n["name"] for n in fine_nodes]
-    rules=LOCAL_IOT_DIRECT+WPS_DIRECT+PRIVATE_DIRECT+OZON_PROXY+WECHAT_DIRECT+XIAOMI_DIRECT+suffix_rules(VIDEO_DOMAINS,"Fine")+suffix_rules(STORE_DOMAINS,"Fine")+["GEOIP,CN,DIRECT","MATCH,Fine"]
+    rules=LOCAL_IOT_DIRECT+WPS_DIRECT+PRIVATE_DIRECT+OZON_DIRECT+WECHAT_DIRECT+XIAOMI_DIRECT+suffix_rules(VIDEO_DOMAINS,"Fine")+suffix_rules(STORE_DOMAINS,"Fine")+["GEOIP,CN,DIRECT","MATCH,Fine"]
     return {
         "mixed-port":7890,"allow-lan":True,"bind-address":"*","mode":"rule","log-level":"warning","ipv6":False,"unified-delay":False,"tcp-concurrent":True,
         "profile":{"store-selected":True},
