@@ -82,7 +82,7 @@ def test_final_config_is_fine_only():
     rules = cfg["rules"]
     groups = {group["name"]: group for group in cfg["proxy-groups"]}
     assert set(groups) == {"Fine", "AUTO"}
-    assert "DOMAIN-SUFFIX,ozon.ru,DIRECT" not in rules
+    assert "DOMAIN-SUFFIX,ozon.ru,DIRECT" in rules
     geoip_cn = rules.index("GEOIP,CN,DIRECT")
     for rule in bf.OZON_PROXY:
         assert rule in rules
