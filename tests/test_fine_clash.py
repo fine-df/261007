@@ -84,7 +84,7 @@ def test_final_config_is_fine_only():
     assert set(groups) == {"Fine", "AUTO"}
     assert "DOMAIN-SUFFIX,ozon.ru,DIRECT" in rules
     geoip_cn = rules.index("GEOIP,CN,DIRECT")
-    for rule in bf.OZON_PROXY:
+    for rule in bf.OZON_DIRECT:
         assert rule in rules
         assert rules.index(rule) < geoip_cn  # Ozon must proxy even if its IP geolocates to China
     for rule in bf.WPS_DIRECT:
