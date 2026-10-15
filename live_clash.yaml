@@ -1,4 +1,4 @@
-# fine-clash-unified-v3 | fine-clash-version:20261015070003 | Fine=validated-pool | CN->DIRECT | MATCH->Fine
+# fine-clash-unified-v3 | fine-clash-version:20261015070004 | Fine=validated-pool | CN->DIRECT | MATCH->Fine
 mixed-port: 7890
 allow-lan: true
 bind-address: '*'
@@ -10,295 +10,292 @@ tcp-concurrent: true
 profile:
   store-selected: true
 proxies:
-- type: vless
+- name: 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL] [4b515b31]
+  port: 443
+  network: tcp
+  encryption: none
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  client-fingerprint: firefox
+  server: nl1.aiage.work
+  flow: xtls-rprx-vision
   reality-opts:
     public-key: vSa3rWZfq5OftXO2RSgggbTOxbHlWGTLpP8bNDki3wk
     short-id: adcbde41b1cf27ba
-  tls: true
-  network: tcp
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  flow: xtls-rprx-vision
-  name: 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL] [4b515b31]
   udp: true
-  port: 443
   servername: nl1.aiage.work
-  encryption: none
-  server: nl1.aiage.work
-  client-fingerprint: firefox
-- type: vless
-  reality-opts:
-    public-key: pkKL2cqqPNxc1rqrvhJmexI7NOeZFaGUawAwqQpVY3c
-    short-id: 1d2fecf1d2475168
   tls: true
-  network: tcp
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  flow: xtls-rprx-vision
-  name: 🇲🇩 Moldova, Chisinau | [BL] [ee04e097]
-  udp: true
+  type: vless
+- name: 🇲🇩 Moldova, Chisinau | [BL] [ee04e097]
   port: 443
-  servername: ro2.aiage.work
+  network: tcp
   encryption: none
-  server: ro2.aiage.work
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   client-fingerprint: qq
-- type: vless
+  server: ro2.aiage.work
+  flow: xtls-rprx-vision
   reality-opts:
     public-key: pkKL2cqqPNxc1rqrvhJmexI7NOeZFaGUawAwqQpVY3c
     short-id: 1d2fecf1d2475168
-  tls: true
-  network: tcp
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  flow: xtls-rprx-vision
-  name: 🇲🇩 Moldova, Chisinau | [BL] [52af525b]
   udp: true
-  port: 443
   servername: ro2.aiage.work
+  tls: true
+  type: vless
+- name: 🇲🇩 Moldova, Chisinau | [BL] [52af525b]
+  port: 443
+  network: tcp
   encryption: none
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  client-fingerprint: safari
   server: ro2.aiage.work
-  client-fingerprint: safari
-- type: vless
+  flow: xtls-rprx-vision
   reality-opts:
-    public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
-    short-id: 2301ac8aee8bf6d4
-  tls: true
-  network: tcp
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  name: 🇱🇹 Lithuania, Vilnius | [BL] [522a0357]
+    public-key: pkKL2cqqPNxc1rqrvhJmexI7NOeZFaGUawAwqQpVY3c
+    short-id: 1d2fecf1d2475168
   udp: true
+  servername: ro2.aiage.work
+  tls: true
+  type: vless
+- name: 🇱🇹 Lithuania, Vilnius | [BL] [522a0357]
   port: 443
-  servername: b58e68t.lt1.h1clayd.click
+  network: tcp
   encryption: none
-  server: b58e68t.lt1.h1clayd.click
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   client-fingerprint: random
-- type: vless
+  server: b58e68t.lt1.h1clayd.click
   reality-opts:
     public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
     short-id: 2301ac8aee8bf6d4
-  tls: true
-  network: tcp
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  name: 🇱🇹 Lithuania, Vilnius | [BL] [8fc3e3d3]
   udp: true
-  port: 443
   servername: b58e68t.lt1.h1clayd.click
+  tls: true
+  type: vless
+- name: 🇱🇹 Lithuania, Vilnius | [BL] [8fc3e3d3]
+  port: 443
+  network: tcp
   encryption: none
-  server: b58e68t.lt1.h1clayd.click
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   client-fingerprint: firefox
-- type: vless
+  server: b58e68t.lt1.h1clayd.click
   reality-opts:
     public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
     short-id: 2301ac8aee8bf6d4
-  tls: true
-  network: tcp
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  name: 🇱🇹 Lithuania, Vilnius | [BL] [c69ef01e]
   udp: true
-  port: 443
   servername: b58e68t.lt1.h1clayd.click
+  tls: true
+  type: vless
+- name: 🇱🇹 Lithuania, Vilnius | [BL] [c69ef01e]
+  port: 443
+  network: tcp
   encryption: none
-  server: b58e68t.lt1.h1clayd.click
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
   client-fingerprint: safari
-- type: vless
+  server: b58e68t.lt1.h1clayd.click
   reality-opts:
     public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
     short-id: 2301ac8aee8bf6d4
-  tls: true
-  network: tcp
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  name: 🇱🇹 Lithuania, Vilnius | [BL] [2a8156c1]
   udp: true
-  port: 443
   servername: b58e68t.lt1.h1clayd.click
+  tls: true
+  type: vless
+- name: 🇱🇹 Lithuania, Vilnius | [BL] [2a8156c1]
+  port: 443
+  network: tcp
   encryption: none
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  client-fingerprint: chrome
   server: b58e68t.lt1.h1clayd.click
-  client-fingerprint: chrome
-- type: vless
-  tls: true
-  network: ws
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  name: 🇺🇸 United States, Dallas | [BL] [ca085a0f]
-  ws-opts:
-    path: /Dallas1
-    headers:
-      Host: usa.lovehk.xyz
+  reality-opts:
+    public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
+    short-id: 2301ac8aee8bf6d4
   udp: true
+  servername: b58e68t.lt1.h1clayd.click
+  tls: true
+  type: vless
+- name: 🇺🇸 United States, Dallas | [BL] [ca085a0f]
   port: 443
+  network: ws
   encryption: none
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  client-fingerprint: chrome
   server: 172.67.139.229
-  client-fingerprint: chrome
-- type: vless
-  tls: true
-  network: ws
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  name: 🇺🇸 United States, Dallas | [BL] [99078920]
   ws-opts:
     path: /Dallas1
     headers:
       Host: usa.lovehk.xyz
   udp: true
+  tls: true
+  type: vless
+- name: 🇺🇸 United States, Dallas | [BL] [99078920]
   port: 443
+  network: ws
   encryption: none
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  client-fingerprint: chrome
   server: 104.21.80.203
-  client-fingerprint: chrome
-- type: vless
-  tls: true
-  network: ws
-  uuid: 70008803-ed47-4181-bf10-dc8f5362f42d
-  name: 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL] [d55ee67f]
   ws-opts:
-    path: /
+    path: /Dallas1
     headers:
-      Host: a.benyamin-benshop.ir
+      Host: usa.lovehk.xyz
   udp: true
-  port: 443
-  servername: a.benyamin-benshop.ir
-  encryption: none
-  server: server56.smvx.ir
-  client-fingerprint: chrome
-- type: vless
   tls: true
+  type: vless
+- name: 🇯🇵 Japan, Shibuya City | [BL] [37862a23]
+  port: 443
   network: ws
+  encryption: none
   uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  name: 🇯🇵 Japan, Shibuya City | [BL] [37862a23]
-  ws-opts:
-    path: /Tokyo1
-    headers:
-      Host: jp.lovehk.xyz
-  udp: true
-  port: 443
-  encryption: none
+  client-fingerprint: chrome
   server: 172.67.194.64
-  client-fingerprint: chrome
-- type: vless
-  tls: true
-  network: ws
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  name: 🇯🇵 Japan, Shibuya City | [BL] [64716540]
   ws-opts:
     path: /Tokyo1
     headers:
       Host: jp.lovehk.xyz
   udp: true
-  port: 443
-  encryption: none
-  server: 104.21.81.50
-  client-fingerprint: chrome
-- type: vless
   tls: true
+  type: vless
+- name: 🇯🇵 Japan, Shibuya City | [BL] [64716540]
+  port: 443
   network: ws
+  encryption: none
   uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  name: 🇸🇬 Singapore, Singapore | [BL]
+  client-fingerprint: chrome
+  server: 104.21.81.50
+  ws-opts:
+    path: /Tokyo1
+    headers:
+      Host: jp.lovehk.xyz
+  udp: true
+  tls: true
+  type: vless
+- name: 🇸🇬 Singapore, Singapore | [BL]
+  port: 443
+  network: ws
+  encryption: none
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  client-fingerprint: chrome
+  server: 104.21.83.194
   ws-opts:
     path: /Singapore1
     headers:
       Host: sg.lovehk.xyz
   udp: true
-  port: 443
-  encryption: none
-  server: 104.21.83.194
-  client-fingerprint: chrome
-- type: vless
   tls: true
+  type: vless
+- name: 🇹🇼 Taiwan, Taipei | 🌐 | [BL]
+  port: 443
   network: ws
+  encryption: none
   uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  name: 🇹🇼 Taiwan, Taipei | 🌐 | [BL]
+  client-fingerprint: chrome
+  server: 104.21.30.70
   ws-opts:
     path: /Tw01
     headers:
       Host: tw.lovehk.xyz
   udp: true
-  port: 443
-  encryption: none
-  server: 104.21.30.70
-  client-fingerprint: chrome
-- type: vless
   tls: true
-  network: ws
-  uuid: 70008803-ed47-4181-bf10-dc8f5362f42d
-  name: 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL] [7e06aaac]
-  ws-opts:
-    path: /
-    headers:
-      Host: a.benyamin-benshop.ir
-  udp: true
-  port: 443
-  encryption: none
-  server: server56.smvx.ir
-  client-fingerprint: chrome
-- type: vless
-  reality-opts:
-    public-key: DsPuscZooSV32qg3HfGnrGKXI36Iq3fl0BGqUEUsayM
-    short-id: '70738781'
-  tls: true
+  type: vless
+- name: 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL] [ed2163bd]
+  port: 47832
   network: tcp
-  uuid: 9f494aef-712d-4b4c-8130-f4e0902def28
-  flow: xtls-rprx-vision
-  name: 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL] [9612d4f5]
-  udp: true
-  port: 443
-  servername: www.bing.com
   encryption: none
-  server: 179.255.140.244
+  uuid: 6b042879-f382-46ce-8965-866186eb7e33
   client-fingerprint: chrome
-- type: vless
+  server: 216.234.140.15
+  flow: xtls-rprx-vision
   reality-opts:
     public-key: hDRm-rHVu-ClNhBhPfp-JUGtFM91NGjlhVf-JjnPCnI
     short-id: 058ea2b1
-  tls: true
-  network: tcp
-  uuid: 6b042879-f382-46ce-8965-866186eb7e33
-  flow: xtls-rprx-vision
-  name: 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL] [ed2163bd]
   udp: true
-  port: 47832
   servername: www.amd.com
-  encryption: none
-  server: 216.234.140.15
-  client-fingerprint: chrome
-- type: vless
-  name: 🇧🇬 Bulgaria, Sofia | [BL] [57eeae82]
-  server: nl5.hap-plus.ru
-  port: 8443
-  udp: true
-  uuid: 05d7a479-a099-40cf-aecf-41aa934767b0
-  encryption: none
   tls: true
-  servername: nl5.hap-plus.ru
+  type: vless
+- name: 🇧🇬 Bulgaria, Sofia | [BL] [57eeae82]
+  port: 8443
+  network: ws
+  encryption: none
+  uuid: 05d7a479-a099-40cf-aecf-41aa934767b0
   client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /api/v1/events
-    headers:
-      Host: nl5.hap-plus.ru
-- type: vless
-  name: 🇧🇬 Bulgaria, Sofia | [BL] [ef589ac5]
   server: nl5.hap-plus.ru
-  port: 8443
-  udp: true
-  uuid: 05d7a479-a099-40cf-aecf-41aa934767b0
-  encryption: none
-  tls: true
-  servername: nl5.hap-plus.ru
-  client-fingerprint: chrome
-  network: ws
   ws-opts:
     path: /api/v1/events
     headers:
       Host: nl5.hap-plus.ru
-- type: vless
-  name: 🇲🇩 Moldova, Chisinau (Sectorul Buiucani) | [BL]
-  server: md1.aiage.work
+  udp: true
+  servername: nl5.hap-plus.ru
+  tls: true
+  type: vless
+- name: 🇧🇬 Bulgaria, Sofia | [BL] [ef589ac5]
+  port: 8443
+  network: ws
+  encryption: none
+  uuid: 05d7a479-a099-40cf-aecf-41aa934767b0
+  client-fingerprint: chrome
+  server: nl5.hap-plus.ru
+  ws-opts:
+    path: /api/v1/events
+    headers:
+      Host: nl5.hap-plus.ru
+  udp: true
+  servername: nl5.hap-plus.ru
+  tls: true
+  type: vless
+- name: 🇲🇩 Moldova, Chisinau (Sectorul Buiucani) | [BL]
   port: 443
-  udp: true
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  network: tcp
   encryption: none
-  tls: true
-  servername: md1.aiage.work
-  flow: xtls-rprx-vision
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   client-fingerprint: firefox
+  server: md1.aiage.work
+  flow: xtls-rprx-vision
   reality-opts:
     public-key: 0dtXhkhkh-_MBFoGwzdW4PdlJtVX9oswhJZHbUPGCmo
     short-id: e829f50f0a3f416b
-  network: tcp
+  udp: true
+  servername: md1.aiage.work
+  tls: true
+  type: vless
+- type: vless
+  name: 🇺🇸_US_美国
+  server: e8439083-5b1f-4a9a-8003-9c143de96941.fly.dev
+  port: 443
+  udp: true
+  uuid: a8a4a3c1-1ae9-e9d2-4984-31561b113e87
+  encryption: none
+  tls: true
+  servername: e8439083-5b1f-4a9a-8003-9c143de96941.fly.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws/a8a4a3c1-1ae9-e9d2-4984-31561b113e87
+    headers:
+      Host: e8439083-5b1f-4a9a-8003-9c143de96941.fly.dev
+- type: vless
+  name: 🇧🇬 Bulgaria, Sofia | [BL]
+  server: nl5.hap-plus.ru
+  port: 8443
+  udp: true
+  uuid: 05d7a479-a099-40cf-aecf-41aa934767b0
+  encryption: none
+  tls: true
+  servername: nl5.hap-plus.ru
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v1/events
+- type: vless
+  name: 🇨🇭 Switzerland, Zurich | [BL]
+  server: 45.133.151.186
+  port: 25393
+  udp: true
+  uuid: d54a7512-dda3-4218-8ae7-c591d300fd7c
+  encryption: none
+  tls: true
+  servername: www.samsung.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 04F4vhrx_H_SHsrsVw1eCpwlysu4kL3hTl9GAr00XkI
+    short-id: bcc707a7148e4a0c
 proxy-groups:
 - name: Fine
   type: select
@@ -314,17 +311,17 @@ proxy-groups:
   - 🇱🇹 Lithuania, Vilnius | [BL] [2a8156c1]
   - 🇺🇸 United States, Dallas | [BL] [ca085a0f]
   - 🇺🇸 United States, Dallas | [BL] [99078920]
-  - 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL] [d55ee67f]
   - 🇯🇵 Japan, Shibuya City | [BL] [37862a23]
   - 🇯🇵 Japan, Shibuya City | [BL] [64716540]
   - 🇸🇬 Singapore, Singapore | [BL]
   - 🇹🇼 Taiwan, Taipei | 🌐 | [BL]
-  - 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL] [7e06aaac]
-  - 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL] [9612d4f5]
   - 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL] [ed2163bd]
   - 🇧🇬 Bulgaria, Sofia | [BL] [57eeae82]
   - 🇧🇬 Bulgaria, Sofia | [BL] [ef589ac5]
   - 🇲🇩 Moldova, Chisinau (Sectorul Buiucani) | [BL]
+  - 🇺🇸_US_美国
+  - 🇧🇬 Bulgaria, Sofia | [BL]
+  - 🇨🇭 Switzerland, Zurich | [BL]
   default-selected: 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL] [4b515b31]
 - name: AUTO
   type: url-test
@@ -338,17 +335,17 @@ proxy-groups:
   - 🇱🇹 Lithuania, Vilnius | [BL] [2a8156c1]
   - 🇺🇸 United States, Dallas | [BL] [ca085a0f]
   - 🇺🇸 United States, Dallas | [BL] [99078920]
-  - 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL] [d55ee67f]
   - 🇯🇵 Japan, Shibuya City | [BL] [37862a23]
   - 🇯🇵 Japan, Shibuya City | [BL] [64716540]
   - 🇸🇬 Singapore, Singapore | [BL]
   - 🇹🇼 Taiwan, Taipei | 🌐 | [BL]
-  - 🇩🇪 Germany, Frankfurt am Main (Innenstadt I) | [BL] [7e06aaac]
-  - 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL] [9612d4f5]
   - 🇺🇸 United States, Los Angeles (Central-Alameda) | 🌐 | [BL] [ed2163bd]
   - 🇧🇬 Bulgaria, Sofia | [BL] [57eeae82]
   - 🇧🇬 Bulgaria, Sofia | [BL] [ef589ac5]
   - 🇲🇩 Moldova, Chisinau (Sectorul Buiucani) | [BL]
+  - 🇺🇸_US_美国
+  - 🇧🇬 Bulgaria, Sofia | [BL]
+  - 🇨🇭 Switzerland, Zurich | [BL]
   url: https://play.google.com/store
   interval: 900
   timeout: 8000
