@@ -1,4 +1,4 @@
-# fine-clash-unified-v3 | fine-clash-version:20261015070006 | Fine=validated-pool | CN->DIRECT | MATCH->Fine
+# fine-clash-unified-v3 | fine-clash-version:20261015070007 | Fine=validated-pool | CN->DIRECT | MATCH->Fine
 mixed-port: 7890
 allow-lan: true
 bind-address: '*'
@@ -10,300 +10,300 @@ tcp-concurrent: true
 profile:
   store-selected: true
 proxies:
-- server: nl1.aiage.work
-  type: vless
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
   client-fingerprint: firefox
   servername: nl1.aiage.work
+  port: 443
+  udp: true
   reality-opts:
     public-key: vSa3rWZfq5OftXO2RSgggbTOxbHlWGTLpP8bNDki3wk
     short-id: adcbde41b1cf27ba
   network: tcp
-  encryption: none
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  type: vless
   name: 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL] [4b515b31]
-  port: 443
-- server: 172.67.139.229
-  type: vless
-  udp: true
+  flow: xtls-rprx-vision
   tls: true
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /Dallas1
-    headers:
-      Host: usa.lovehk.xyz
+  server: nl1.aiage.work
+- uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
   encryption: none
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  client-fingerprint: chrome
+  port: 443
+  udp: true
+  network: ws
+  type: vless
   name: 🇺🇸 United States, Dallas | [BL] [ca085a0f]
-  port: 443
-- server: 104.21.80.203
-  type: vless
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  network: ws
   ws-opts:
     path: /Dallas1
     headers:
       Host: usa.lovehk.xyz
+  tls: true
+  server: 172.67.139.229
+- uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
   encryption: none
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  client-fingerprint: chrome
+  port: 443
+  udp: true
+  network: ws
+  type: vless
   name: 🇺🇸 United States, Dallas | [BL] [99078920]
-  port: 443
-- server: 172.67.194.64
-  type: vless
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  network: ws
   ws-opts:
-    path: /Tokyo1
+    path: /Dallas1
     headers:
-      Host: jp.lovehk.xyz
+      Host: usa.lovehk.xyz
+  tls: true
+  server: 104.21.80.203
+- uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
   encryption: none
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  client-fingerprint: chrome
+  port: 443
+  udp: true
+  network: ws
+  type: vless
   name: 🇯🇵 Japan, Shibuya City | [BL] [37862a23]
-  port: 443
-- server: 104.21.81.50
-  type: vless
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  network: ws
   ws-opts:
     path: /Tokyo1
     headers:
       Host: jp.lovehk.xyz
-  encryption: none
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  name: 🇯🇵 Japan, Shibuya City | [BL] [64716540]
-  port: 443
-- server: 104.21.83.194
-  type: vless
-  udp: true
   tls: true
+  server: 172.67.194.64
+- uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  encryption: none
   client-fingerprint: chrome
+  port: 443
+  udp: true
   network: ws
+  type: vless
+  name: 🇯🇵 Japan, Shibuya City | [BL] [64716540]
+  ws-opts:
+    path: /Tokyo1
+    headers:
+      Host: jp.lovehk.xyz
+  tls: true
+  server: 104.21.81.50
+- uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  encryption: none
+  client-fingerprint: chrome
+  port: 443
+  udp: true
+  network: ws
+  type: vless
+  name: 🇸🇬 Singapore, Singapore | [BL]
   ws-opts:
     path: /Singapore1
     headers:
       Host: sg.lovehk.xyz
-  encryption: none
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  name: 🇸🇬 Singapore, Singapore | [BL]
-  port: 443
-- server: 104.21.30.70
-  type: vless
-  udp: true
   tls: true
+  server: 104.21.83.194
+- uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  encryption: none
   client-fingerprint: chrome
+  port: 443
+  udp: true
   network: ws
+  type: vless
+  name: 🇹🇼 Taiwan, Taipei | 🌐 | [BL]
   ws-opts:
     path: /Tw01
     headers:
       Host: tw.lovehk.xyz
-  encryption: none
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  name: 🇹🇼 Taiwan, Taipei | 🌐 | [BL]
-  port: 443
-- server: md1.aiage.work
-  type: vless
-  udp: true
-  flow: xtls-rprx-vision
   tls: true
+  server: 104.21.30.70
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
   client-fingerprint: firefox
   servername: md1.aiage.work
+  port: 443
+  udp: true
   reality-opts:
     public-key: 0dtXhkhkh-_MBFoGwzdW4PdlJtVX9oswhJZHbUPGCmo
     short-id: e829f50f0a3f416b
   network: tcp
-  encryption: none
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  type: vless
   name: 🇲🇩 Moldova, Chisinau (Sectorul Buiucani) | [BL]
-  port: 443
-- server: freeus.aiage.work
-  type: vless
-  udp: true
   flow: xtls-rprx-vision
   tls: true
+  server: md1.aiage.work
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
   client-fingerprint: safari
   servername: freeus.aiage.work
+  port: 443
+  udp: true
   reality-opts:
     public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
     short-id: ccaf7283610c6fa8
   network: tcp
-  encryption: none
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  type: vless
   name: 🇺🇸 United States, Chicago | [BL] [6f182460]
-  port: 443
-- server: freeus.aiage.work
-  type: vless
-  udp: true
   flow: xtls-rprx-vision
   tls: true
-  client-fingerprint: edge
-  servername: freeus.aiage.work
-  reality-opts:
-    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
-    short-id: ccaf7283610c6fa8
-  network: tcp
-  encryption: none
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  name: 🇺🇸 United States, Chicago | [BL] [1f69266e]
-  port: 443
-- server: hu1.aiage.work
-  type: vless
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  client-fingerprint: edge
-  servername: hu1.aiage.work
-  reality-opts:
-    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
-    short-id: f8379ce795f2e5ed
-  network: tcp
-  encryption: none
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  name: 🇭🇺 Hungary, Budapest | [BL] [b0fd783e]
-  port: 443
-- server: hu1.aiage.work
-  type: vless
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  client-fingerprint: safari
-  servername: hu1.aiage.work
-  reality-opts:
-    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
-    short-id: f8379ce795f2e5ed
-  network: tcp
-  encryption: none
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  name: 🇭🇺 Hungary, Budapest | [BL] [fa6829c4]
-  port: 443
-- type: vless
-  name: 🇺🇸 United States [*CIDR]
-  server: app-twa-24.statsmarket-wb.com
-  port: 443
-  udp: true
-  uuid: 05c8eabe-96af-4db2-bb2f-a24fa84344ba
-  encryption: none
-  tls: true
-  servername: assets-twa-24.statsmarket-wb.com
-  flow: xtls-rprx-vision
-  client-fingerprint: randomized
-  reality-opts:
-    public-key: 1_OWsItY2tun-1VVH14F-kqS6hSM6SVuNS0I2xMWzAw
-    short-id: b5c618f38a8640fe
-  network: tcp
-- type: vless
-  name: 🇺🇸 United States, Chicago | [BL] [4d01a0d0]
   server: freeus.aiage.work
-  port: 443
-  udp: true
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
   encryption: none
-  tls: true
-  servername: freeus.aiage.work
-  flow: xtls-rprx-vision
-  client-fingerprint: ios
-  reality-opts:
-    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
-    short-id: ccaf7283610c6fa8
-  network: tcp
-- type: vless
-  name: 🇺🇸 United States, Chicago | [BL] [6310143a]
-  server: 212.104.141.233
-  port: 443
-  udp: true
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  encryption: none
-  tls: true
-  servername: freeus.aiage.work
-  flow: xtls-rprx-vision
-  client-fingerprint: qq
-  reality-opts:
-    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
-    short-id: ccaf7283610c6fa8
-  network: tcp
-- type: vless
-  name: 🇧🇾 Belarus [SNI-RU] ads.x5.ru [69e21dd0]
-  server: 178.172.227.124
-  port: 10444
-  udp: true
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  encryption: none
-  tls: true
-  servername: ads.x5.ru
-  flow: xtls-rprx-vision
   client-fingerprint: edge
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  network: tcp
-- type: vless
-  name: 🇧🇾 Belarus [SNI-RU] ads.x5.ru [d6b8c77e]
-  server: 178.172.227.124
-  port: 10444
+  servername: freeus.aiage.work
+  port: 443
   udp: true
-  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-  encryption: none
-  tls: true
-  servername: ads.x5.ru
-  flow: xtls-rprx-vision
-  client-fingerprint: safari
   reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
+    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
+    short-id: ccaf7283610c6fa8
   network: tcp
-- type: vless
-  name: 🇭🇺 Hungary | 🌐 | [BL]
+  type: vless
+  name: 🇺🇸 United States, Chicago | [BL] [1f69266e]
+  flow: xtls-rprx-vision
+  tls: true
+  server: freeus.aiage.work
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
+  client-fingerprint: edge
+  servername: hu1.aiage.work
+  port: 443
+  udp: true
+  reality-opts:
+    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
+    short-id: f8379ce795f2e5ed
+  network: tcp
+  type: vless
+  name: 🇭🇺 Hungary, Budapest | [BL] [b0fd783e]
+  flow: xtls-rprx-vision
+  tls: true
   server: hu1.aiage.work
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
+  client-fingerprint: safari
+  servername: hu1.aiage.work
   port: 443
   udp: true
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  encryption: none
-  tls: true
-  servername: hu1.aiage.work
-  flow: xtls-rprx-vision
-  client-fingerprint: firefox
   reality-opts:
     public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
     short-id: f8379ce795f2e5ed
   network: tcp
-- type: vless
-  name: 🇭🇺 Hungary, Budapest (XI. kerület) | [BL] [e3fa39c2]
-  server: 85.155.242.38
+  type: vless
+  name: 🇭🇺 Hungary, Budapest | [BL] [fa6829c4]
+  flow: xtls-rprx-vision
+  tls: true
+  server: hu1.aiage.work
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
+  client-fingerprint: ios
+  servername: freeus.aiage.work
   port: 443
   udp: true
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  encryption: none
-  tls: true
-  servername: hu1.aiage.work
-  flow: xtls-rprx-vision
-  client-fingerprint: firefox
   reality-opts:
-    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
-    short-id: f8379ce795f2e5ed
+    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
+    short-id: ccaf7283610c6fa8
   network: tcp
-- type: vless
-  name: 🇭🇺 Hungary, Budapest (XI. kerület) | [BL] [851a4b4a]
-  server: 85.155.242.38
+  type: vless
+  name: 🇺🇸 United States, Chicago | [BL] [4d01a0d0]
+  flow: xtls-rprx-vision
+  tls: true
+  server: freeus.aiage.work
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
+  client-fingerprint: qq
+  servername: freeus.aiage.work
   port: 443
   udp: true
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
-  encryption: none
-  tls: true
-  servername: hu1.aiage.work
+  reality-opts:
+    public-key: pxLk0ocXqKYYqUFyALvH2BVXaswI-6NE00posKNayy0
+    short-id: ccaf7283610c6fa8
+  network: tcp
+  type: vless
+  name: 🇺🇸 United States, Chicago | [BL] [6310143a]
   flow: xtls-rprx-vision
+  tls: true
+  server: 212.104.141.233
+- uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
+  encryption: none
   client-fingerprint: edge
+  servername: ads.x5.ru
+  port: 10444
+  udp: true
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
+  type: vless
+  name: 🇧🇾 Belarus [SNI-RU] ads.x5.ru [69e21dd0]
+  flow: xtls-rprx-vision
+  tls: true
+  server: 178.172.227.124
+- uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
+  encryption: none
+  client-fingerprint: safari
+  servername: ads.x5.ru
+  port: 10444
+  udp: true
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  network: tcp
+  type: vless
+  name: 🇧🇾 Belarus [SNI-RU] ads.x5.ru [d6b8c77e]
+  flow: xtls-rprx-vision
+  tls: true
+  server: 178.172.227.124
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
+  client-fingerprint: firefox
+  servername: hu1.aiage.work
+  port: 443
+  udp: true
   reality-opts:
     public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
     short-id: f8379ce795f2e5ed
   network: tcp
+  type: vless
+  name: 🇭🇺 Hungary | 🌐 | [BL]
+  flow: xtls-rprx-vision
+  tls: true
+  server: hu1.aiage.work
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
+  client-fingerprint: firefox
+  servername: hu1.aiage.work
+  port: 443
+  udp: true
+  reality-opts:
+    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
+    short-id: f8379ce795f2e5ed
+  network: tcp
+  type: vless
+  name: 🇭🇺 Hungary, Budapest (XI. kerület) | [BL] [e3fa39c2]
+  flow: xtls-rprx-vision
+  tls: true
+  server: 85.155.242.38
+- uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  encryption: none
+  client-fingerprint: edge
+  servername: hu1.aiage.work
+  port: 443
+  udp: true
+  reality-opts:
+    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
+    short-id: f8379ce795f2e5ed
+  network: tcp
+  type: vless
+  name: 🇭🇺 Hungary, Budapest (XI. kerület) | [BL] [851a4b4a]
+  flow: xtls-rprx-vision
+  tls: true
+  server: 85.155.242.38
+- type: vless
+  name: 🇩🇪 Germany | 🌐 | [BL]
+  server: cdn.topingr.ir
+  port: 443
+  udp: true
+  uuid: 497f5381-3533-4c6a-939c-66eb3a7de108
+  encryption: none
+  tls: true
+  servername: cdn.topingr.ir
+  client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /gropcdn
+    headers:
+      Host: cdn.topingr.ir
 proxy-groups:
 - name: Fine
   type: select
@@ -322,7 +322,6 @@ proxy-groups:
   - 🇺🇸 United States, Chicago | [BL] [1f69266e]
   - 🇭🇺 Hungary, Budapest | [BL] [b0fd783e]
   - 🇭🇺 Hungary, Budapest | [BL] [fa6829c4]
-  - 🇺🇸 United States [*CIDR]
   - 🇺🇸 United States, Chicago | [BL] [4d01a0d0]
   - 🇺🇸 United States, Chicago | [BL] [6310143a]
   - 🇧🇾 Belarus [SNI-RU] ads.x5.ru [69e21dd0]
@@ -330,6 +329,7 @@ proxy-groups:
   - 🇭🇺 Hungary | 🌐 | [BL]
   - 🇭🇺 Hungary, Budapest (XI. kerület) | [BL] [e3fa39c2]
   - 🇭🇺 Hungary, Budapest (XI. kerület) | [BL] [851a4b4a]
+  - 🇩🇪 Germany | 🌐 | [BL]
   default-selected: 🇳🇱 The Netherlands, Amsterdam | 🌐 | [BL] [4b515b31]
 - name: AUTO
   type: url-test
@@ -346,7 +346,6 @@ proxy-groups:
   - 🇺🇸 United States, Chicago | [BL] [1f69266e]
   - 🇭🇺 Hungary, Budapest | [BL] [b0fd783e]
   - 🇭🇺 Hungary, Budapest | [BL] [fa6829c4]
-  - 🇺🇸 United States [*CIDR]
   - 🇺🇸 United States, Chicago | [BL] [4d01a0d0]
   - 🇺🇸 United States, Chicago | [BL] [6310143a]
   - 🇧🇾 Belarus [SNI-RU] ads.x5.ru [69e21dd0]
@@ -354,6 +353,7 @@ proxy-groups:
   - 🇭🇺 Hungary | 🌐 | [BL]
   - 🇭🇺 Hungary, Budapest (XI. kerület) | [BL] [e3fa39c2]
   - 🇭🇺 Hungary, Budapest (XI. kerület) | [BL] [851a4b4a]
+  - 🇩🇪 Germany | 🌐 | [BL]
   url: https://play.google.com/store
   interval: 900
   timeout: 8000
